@@ -234,6 +234,7 @@ if ( typeof Object.create !== 'function' ) {
 				// Adjust the margin for continuous sliding
 				if (self.options.continuous) {self.marginLeft = -(self.currentTab * self.panelWidth ) - self.panelWidth;}
 				else {self.marginLeft = -(self.currentTab * self.panelWidth );}
+				console.log(self.marginLeft);
 				// Animate the slider
 				(self.panelContainer).animate({
 					'margin-left': self.marginLeft
