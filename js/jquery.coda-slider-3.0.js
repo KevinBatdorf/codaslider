@@ -117,7 +117,7 @@ if ( typeof Object.create !== 'function' ) {
 			// Add labels
 			$.each(
 				(self.$elem).find(self.options.panelTitleSelector), function(n) {
-					$($(self.sliderId).parent()).find('.coda-nav ul').append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '">' + $(this).text() + '</a></li>');
+					$($(self.sliderId).parent()).find('.coda-nav ul').append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '" title="' + $(this).text() + '">' + $(this).text() + '</a></li>');
 				}
 			);
 		},
@@ -155,12 +155,12 @@ if ( typeof Object.create !== 'function' ) {
 			var self = this;
 			$(self.sliderId).parent().addClass("arrows");
 			if(self.options.dynamicArrowsGraphical){
-				$(self.sliderId).before('<div class="coda-nav-left-arrow" data-dir="prev"><a href="#"></a></div>');
-				$(self.sliderId).after('<div class="coda-nav-right-arrow" data-dir="next"><a href="#"></a></div>');
+				$(self.sliderId).before('<div class="coda-nav-left-arrow" data-dir="prev" title="Slide left"><a href="#"></a></div>');
+				$(self.sliderId).after('<div class="coda-nav-right-arrow" data-dir="next" title="Slide right"><a href="#"></a></div>');
 			}
 			else{
-				$(self.sliderId).before('<div class="coda-nav-left" data-dir="prev"><a href="#">' + self.options.dynamicArrowLeftText + '</a></div>');
-				$(self.sliderId).after('<div class="coda-nav-right" data-dir="next"><a href="#">' + self.options.dynamicArrowRightText + '</a></div>');
+				$(self.sliderId).before('<div class="coda-nav-left" data-dir="prev" title="Slide left"><a href="#">' + self.options.dynamicArrowLeftText + '</a></div>');
+				$(self.sliderId).after('<div class="coda-nav-right" data-dir="next" title="Slide right"><a href="#">' + self.options.dynamicArrowRightText + '</a></div>');
 			}
 			
 		},

@@ -44,6 +44,19 @@
         });
       });
       </script>
+      <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32725877-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
   </head>
   <body>
 
@@ -148,15 +161,31 @@
         <!-- Dynamic Tabs Slider -->
         <div class="coda-slider"  id="dynamic-tabs">
           <div>
-            <h2 class="title">Tab 1</h2>
+            <h2 class="title">Dynamic Positioning</h2>
             <p>The tabs are dynamically positioned based on the settings. Options include "top", "bottom", "left", "right" and "center"</p>
           </div>
           <div>
-            <h2 class="title">Tab 2</h2>
+            <h2 class="title">Hard-coded Positioning</h2>
+            <p>If you prefer, you can hard-code the naviation and tabs to get the perfect design. You must be sure to set both <code>dynamicTabs</code> and <code>dynamicArrows</code> to false in the settings. Then, use the following as a guide when building your html:</p>
+           <pre><code>&lt;div class=&#34;coda-nav-left&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;prev&#34; title=&#34;Slide left&#34;&gt;&#171; left&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&#34;coda-nav&#34;&gt;
+  &lt;ul&gt;
+    &lt;li class=&#34;tab1&#34;&gt;&lt;a href=&#34;#1&#34; title=&#34;Panel 1&#34;&gt;Panel 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&#34;tab2&#34;&gt;&lt;a href=&#34;#2&#34; title=&#34;Panel 2&#34;&gt;Panel 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&#34;tab3&#34;&gt;&lt;a href=&#34;#3&#34; title=&#34;Panel 3&#34;&gt;Panel 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&#34;tab4&#34;&gt;&lt;a href=&#34;#4&#34; title=&#34;Panel 4&#34;&gt;Panel 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;coda-nav-right&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;next&#34; title=&#34;Slide right&#34;&gt;&#187; right&lt;/a&gt;&lt;/div&gt;</code></pre>
+
+
+          </div>
+          <div>
+            <h2 class="title">CSS</h2>
             <p>The entire panel is styled with CSS exactly how you would expect. You can make changes directly to the included CSS file, or you can create your own style sheet. If you are using SASS, I have also included a SCSS stylesheet for your convenience.</p>
           </div>
           <div>
-            <h2 class="title">Tab 3</h2>
+            <h2 class="title">Cross-linking</h2>
             <p>Cross-linking is simple. The links below were created as follows:</p>
             <pre><code>&lt;a href="#1" rel="dynamic-tabs"&gt;Tab 1&lt;/a&gt;</code></pre>
             <p> the #1 points to the 1st tab, and the rel attribute points to the slider ID. Note that it's possible to link to multible sliders by separating the ids with a space, for example:</p>
@@ -164,10 +193,11 @@
           </div>
         </div>
         <div id="dynamic-cross-links">
-        <p>Here are some cross-links (see <a href="#3" rel="dynamic-tabs">Tab 3</a> for more info):</p>
-          <a href="#1" rel="dynamic-tabs">Tab 1</a><br />
-          <a href="#2" rel="dynamic-tabs">Second Tab</a><br />
-          <a href="#3" rel="dynamic-tabs">3rd Tab</a>
+        <p>Here are some cross-links (see <a href="#4" rel="dynamic-tabs">Tab 4</a> for more info):</p>
+          <a href="#1" rel="dynamic-tabs">Dynamic Positioning</a><br />
+          <a href="#2" rel="dynamic-tabs">Hard-coded Positioning</a><br />
+          <a href="#3" rel="dynamic-tabs">CSS</a><br />
+          <a href="#4" rel="dynamic-tabs">Cross-linking</a>
         </div>
 
         <!-- End Dynamic Tabs Slider -->
@@ -211,7 +241,7 @@
         <a href="#1" rel="main-slider information">... back</a>
   </div>
   <div>
-    <h2 class="title">Dynamic tabs</h2>
+    <h2 class="title">Dynamic Arrows & Tabs</h2>
     <p>Tabs are dynamically created based and positioned based on the settings. The positioning can be achieved as follows. Check the settings section below for other options.</p>
     <pre><code>&lt;/script&gt;
   $().ready(function() {
@@ -232,7 +262,7 @@
           <p>Click to learn more and see it in action.</p>
 
           <a class="button" href="#2" rel="main-slider information">Continuous Sliding</a>
-          <a class="button" href="#3" rel="main-slider information">Dynamic Tabs</a>
+          <a class="button" href="#3" rel="main-slider information">Dynamic Arrows & Tabs</a>
 
 
         </section>
@@ -381,7 +411,7 @@
       <sidebar class="right">
         <h3>This is a donate button</h3>
         <p>Coda Slider will always be free, but if you want to help out, consider a small donation.</p>
-        <form style="padding:0;" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <form style="padding:0;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="KYU9V5SAZA7YU">
           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
@@ -389,8 +419,8 @@
 
 
         <h3>These are Affiliate banners</h3>
-        <img src="./img/50dollarblogs.png" width="300px" height="225px" alt="Start a Blog.">
-        <img src="./img/tf_300x250_v1.gif" width="300px" height="250px" alt="Theme Forest">
+        <a href="http://50dollarblogs.net/giggidy/?a_aid=4fa8e53f377b5" target="_blank"><img src="./img/50dollarblogs.png" width="300px" height="225px" alt="Start a Blog."></a>
+        <a href="http://www.themeforest.com?ref=kevinbatdorf" target="_blank"><img src="./img/tf_300x250_v1.gif" width="300px" height="250px" alt="Theme Forest"></a>
       </sidebar>
 
     </section>
