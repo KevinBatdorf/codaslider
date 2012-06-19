@@ -1369,7 +1369,7 @@ Full-Width Styles
 #api-settings pre {
   overflow: hidden; }
 /* line 430, ../sass/style.scss */
-#api-settings h4 {
+#api-settings .h4 {
   color: #0090ff;
   margin: -5px;
   font-size: 20px;
