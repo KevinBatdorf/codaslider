@@ -3,7 +3,7 @@
 
   <head>
     <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="description" content="Codaslider : JQuery Slider Plugin" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
@@ -117,7 +117,7 @@
                 <div style="margin-bottom:10px;">Here's an example of a contact form.</div>
                 <div class="myRow">
                   <label class="labelCol" for="myName">Name:</label> 
-                  <input type=" text" name=" myName" id=" myName" /> 
+                  <input type="text" name="myName" id="myName" /> 
                 </div>
                 <div class="myRow">
                   <label class="labelCol" for="myEmail">E-mail:</label>
@@ -140,18 +140,18 @@
           <div>
             <h2>Angkor Wat</h2>
             <div class="title">*</div>
-            <img src="./img/angkor_wat.png" alt="Angkor Wat" height="280px" width="660px" />
+            <img src="./img/angkor_wat.png" alt="Angkor Wat" height="280" width="660" />
             <p>Cambodia's Angkor Wat temple.</p> 
           </div>
           <div>
             <h2>Sihanoukville Beach</h2>
             <div class="title">*</div>
-            <img src="./img/beach.png" alt="Angkor Wat" height="280px" width="660px" />
+            <img src="./img/beach.png" alt="Angkor Wat" height="280" width="660" />
           </div>
           <div>
             <h2>Ayutthaya, Thailand</h2>
             <div class="title">*</div>
-            <img src="./img/monk.png" alt="Angkor Wat" height="280px" width="660px" />
+            <img src="./img/monk.png" alt="Angkor Wat" height="280" width="660" />
           </div>
         </div>
         <!-- End Continuous Slider -->
@@ -187,17 +187,17 @@
           <div>
             <h2 class="title">Cross-linking</h2>
             <p>Cross-linking is simple. The links below were created as follows:</p>
-            <pre><code>&lt;a href="#1" rel="dynamic-tabs"&gt;Tab 1&lt;/a&gt;</code></pre>
+            <pre><code>&lt;a href="#1" data-ref="dynamic-tabs"&gt;Tab 1&lt;/a&gt;</code></pre>
             <p> the #1 points to the 1st tab, and the rel attribute points to the slider ID. Note that it's possible to link to multible sliders by separating the ids with a space, for example:</p>
-            <pre><code>&lt;a href="#1" rel="dynamic-tabs another-slider"&gt;Tab 1&lt;/a&gt;</code></pre>
+            <pre><code>&lt;a href="#1" data-ref="dynamic-tabs another-slider"&gt;Tab 1&lt;/a&gt;</code></pre>
           </div>
         </div>
         <div id="dynamic-cross-links">
-        <p>Here are some cross-links (see <a href="#4" rel="dynamic-tabs">Tab 4</a> for more info):</p>
-          <a href="#1" rel="dynamic-tabs">Dynamic Positioning</a><br />
-          <a href="#2" rel="dynamic-tabs">Hard-coded Positioning</a><br />
-          <a href="#3" rel="dynamic-tabs">CSS</a><br />
-          <a href="#4" rel="dynamic-tabs">Cross-linking</a>
+        <p>Here are some cross-links (see <a href="#4" data-ref="dynamic-tabs">Tab 4</a> for more info):</p>
+          <a href="#1" data-ref="dynamic-tabs">Dynamic Positioning</a><br />
+          <a href="#2" data-ref="dynamic-tabs">Hard-coded Positioning</a><br />
+          <a href="#3" data-ref="dynamic-tabs">CSS</a><br />
+          <a href="#4" data-ref="dynamic-tabs">Cross-linking</a>
         </div>
 
         <!-- End Dynamic Tabs Slider -->
@@ -238,7 +238,7 @@
 });
 &lt;/script&gt;</code></pre>
 
-        <a href="#1" rel="main-slider information">... back</a>
+        <a href="#1" data-ref="main-slider information">... back</a>
   </div>
   <div>
     <h2 class="title">Dynamic Arrows & Tabs</h2>
@@ -253,7 +253,7 @@
 });
 &lt;/script&gt;</code></pre>
 
-        <a href="#1" rel="main-slider information">... back</a>
+        <a href="#1" data-ref="main-slider information">... back</a>
   </div>
 </div>
 <!-- End Information Slider -->
@@ -261,8 +261,8 @@
           <h3>Features</h3>
           <p>Click to learn more and see it in action.</p>
 
-          <a class="button" href="#2" rel="main-slider information">Continuous Sliding</a>
-          <a class="button" href="#3" rel="main-slider information">Dynamic Arrows & Tabs</a>
+          <a class="button" href="#2" data-ref="main-slider information">Continuous Sliding</a>
+          <a class="button" href="#3" data-ref="main-slider information">Dynamic Arrows & Tabs</a>
 
 
         </section>
@@ -330,7 +330,7 @@
   Description: Sets the easing effect for the slider. <a href="http://jqueryui.com/demos/effect/easing.html" title="jQuery easing effects" target="_blank">See all available</a>
     </code></pre>
     
-    <pre class="api-clickable";><code><h4>Auto Height</h4>
+    <pre class="api-clickable"><code><h4>Auto Height</h4>
 <strong>autoHeight</strong>
   Default: true
   Description: Automically adjusts the height to match the content, if true.
@@ -344,7 +344,7 @@
   Description: Sets the easing effect for the slider. <a href="http://jqueryui.com/demos/effect/easing.html" title="jQuery easing effects" target="_blank">See all available</a>
     </code></pre>
     
-    <pre class="api-clickable";><code><h4>Auto Slide</h4>
+    <pre class="api-clickable"><code><h4>Auto Slide</h4>
 <strong>autoSlide</strong>
   Default: false
   Description: If true, the slide will automatically slide.
@@ -362,13 +362,13 @@
   Description: The slider will stop if true and the user clicks anywhere on the slider.
     </code></pre>
 
-    <pre class="api-clickable";><code><h4>Continuous Sliding</h4>
+    <pre class="api-clickable"><code><h4>Continuous Sliding</h4>
 <strong>continuous</strong>
   Default: false
   Description: The slider will continuously slide as if it were never-ending.
     </code></pre>
 
-    <pre class="api-clickable";><code><h4>Dynamic Arrows</h4>
+    <pre class="api-clickable"><code><h4>Dynamic Arrows</h4>
 <strong>dynamicArrows</strong>
   Default: true
   Description: If true, the slider will automatically create aarows.
@@ -408,7 +408,7 @@
         </section>
       </section>
 
-      <sidebar class="right">
+      <section class="right">
         <h3>This is a donate button</h3>
         <p>Coda Slider will always be free, but if you want to help out, consider a small donation.</p>
         <form style="padding:0;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
@@ -419,9 +419,9 @@
 
 
         <h3>These are Affiliate banners</h3>
-        <a href="http://50dollarblogs.net/giggidy/?a_aid=4fa8e53f377b5" target="_blank"><img src="./img/50dollarblogs.png" width="300px" height="225px" alt="Start a Blog."></a>
-        <a href="http://www.themeforest.com?ref=kevinbatdorf" target="_blank"><img src="./img/tf_300x250_v1.gif" width="300px" height="250px" alt="Theme Forest"></a>
-      </sidebar>
+        <a href="http://50dollarblogs.net/giggidy/?a_aid=4fa8e53f377b5" target="_blank"><img src="./img/50dollarblogs.png" width="300" height="225" alt="Start a Blog."></a>
+        <a href="http://www.themeforest.com?ref=kevinbatdorf" target="_blank"><img src="./img/tf_300x250_v1.gif" width="300" height="250" alt="Theme Forest"></a>
+      </section>
 
     </section>
     </div>

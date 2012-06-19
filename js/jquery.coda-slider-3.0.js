@@ -18,7 +18,7 @@ if ( typeof Object.create !== 'function' ) {
 			$("body").removeClass("coda-slider-no-js");
 
 			//add preloader class (backwards compatible)
-			$('.coda-slider').prepend('<p class="loading">Loading...<br /><img src="./img/ajax-loader.gif" width="220px" height="19px" alt="loading..." /></p>');
+			$('.coda-slider').prepend('<p class="loading">Loading...<br /><img src="./img/ajax-loader.gif" width="220" height="19" alt="loading..." /></p>');
 
 
 			// Cache the element
@@ -184,7 +184,7 @@ if ( typeof Object.create !== 'function' ) {
 
 			});
 			// Click cross links
-			$('[rel*=' + (self.sliderId).split('#')[1] + ']').on('click', function(e){
+			$('[data-ref*=' + (self.sliderId).split('#')[1] + ']').on('click', function(e){
 				if (!self.clickable && self.options.continuous) {return false;}
 				self.setCurrent( parseInt( $(this).attr('href').split('#')[1] -1, 10 ) );
 				if (self.options.continuous) {self.clickable = false;}
