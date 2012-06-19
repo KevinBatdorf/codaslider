@@ -1,1 +1,307 @@
-.coda-slider-wrapper{padding:20px 0}.coda-slider-wrapper div,.coda-slider-wrapper span,.coda-slider-wrapper applet,.coda-slider-wrapper object,.coda-slider-wrapper iframe,.coda-slider-wrapper h1,.coda-slider-wrapper h2,.coda-slider-wrapper h3,.coda-slider-wrapper h4,.coda-slider-wrapper h5,.coda-slider-wrapper h6,.coda-slider-wrapper p,.coda-slider-wrapper blockquote,.coda-slider-wrapper pre,.coda-slider-wrapper a,.coda-slider-wrapper abbr,.coda-slider-wrapper acronym,.coda-slider-wrapper address,.coda-slider-wrapper big,.coda-slider-wrapper cite,.coda-slider-wrapper code,.coda-slider-wrapper del,.coda-slider-wrapper dfn,.coda-slider-wrapper em,.coda-slider-wrapper font,.coda-slider-wrapper img,.coda-slider-wrapper ins,.coda-slider-wrapper kbd,.coda-slider-wrapper q,.coda-slider-wrapper s,.coda-slider-wrapper samp,.coda-slider-wrapper small,.coda-slider-wrapper strike,.coda-slider-wrapper strong,.coda-slider-wrapper sub,.coda-slider-wrapper sup,.coda-slider-wrapper tt,.coda-slider-wrapper var,.coda-slider-wrapper b,.coda-slider-wrapper u,.coda-slider-wrapper i,.coda-slider-wrapper center,.coda-slider-wrapper dl,.coda-slider-wrapper dt,.coda-slider-wrapper dd,.coda-slider-wrapper ol,.coda-slider-wrapper ul,.coda-slider-wrapper li,.coda-slider-wrapper fieldset,.coda-slider-wrapper form,.coda-slider-wrapper label,.coda-slider-wrapper legend,.coda-slider-wrapper table,.coda-slider-wrapper caption,.coda-slider-wrapper tbody,.coda-slider-wrapper tfoot,.coda-slider-wrapper thead,.coda-slider-wrapper tr,.coda-slider-wrapper th,.coda-slider-wrapper td{margin:0;padding:0;border:0;box-shadow:none;outline:0;font-size:100%;vertical-align:baseline;background:transparent}.coda-slider-wrapper body{line-height:1}.coda-slider-wrapper ol,.coda-slider-wrapper ul{list-style:none}.coda-slider-wrapper blockquote,.coda-slider-wrapper q{quotes:none}.coda-slider-wrapper blockquote:before,.coda-slider-wrapper blockquote:after,.coda-slider-wrapper q:before,.coda-slider-wrapper q:after{content:'';content:none}.coda-slider-wrapper .coda-slider{background:#f2f2f2;width:700px}.coda-slider-wrapper .coda-slider .coda-nav .current{background:#0090FF}.coda-slider-wrapper .coda-slider .coda-nav a{background:#000;color:#fff;margin-right:1px;padding:3px 6px}.coda-slider-wrapper .coda-slider .coda-nav a:hover{background:#000;color:#fff;text-shadow:none}.coda-slider-wrapper .coda-slider .coda-nav-left a,.coda-slider-wrapper .coda-slider .coda-nav-right a{background:#000;color:#fff;padding:5px;width:100px}.coda-slider-wrapper .coda-slider .arrows .coda-slider{margin:0 10px}.coda-slider-wrapper .coda-slider .coda-nav-left-arrow{width:42px;height:107px;background:url(../img/arrow.png) no-repeat bottom left}.coda-slider-wrapper .coda-slider .coda-nav-right-arrow{width:42px;height:107px;background:url(../img/arrow.png) no-repeat bottom right}.coda-slider-wrapper .coda-slider .panel{width:700px}.coda-slider-wrapper .coda-slider .panel .panel-wrapper{padding:20px}.coda-slider-wrapper .coda-slider .loading{height:100%;padding:20px;text-align:center}.coda-slider-wrapper{clear:both;overflow:auto}.coda-slider-wrapper .coda-slider{float:left;overflow:hidden;position:relative}.coda-slider-wrapper .coda-slider .coda-nav ul{clear:both;display:block;margin:auto;overflow:hidden}.coda-slider-wrapper .coda-slider .coda-nav ul li{display:inline}.coda-slider-wrapper .coda-slider .coda-nav ul li a{display:block;float:left;text-decoration:none}.coda-slider-wrapper .coda-slider .coda-nav-left-arrow,.coda-slider-wrapper .coda-slider .coda-nav-right-arrow{cursor:pointer;float:left;margin-top:50px}.coda-slider-wrapper .coda-slider .coda-nav-left-arrow a,.coda-slider-wrapper .coda-slider .coda-nav-right-arrow a{display:block}.coda-slider-wrapper .coda-slider .coda-nav-left-arrow:active,.coda-slider-wrapper .coda-slider .coda-nav-right-arrow:active{margin-top:55px}.coda-slider-wrapper .coda-slider .coda-nav-left,.coda-slider-wrapper .coda-slider .coda-nav-right{float:left}.coda-slider-wrapper .coda-slider .coda-nav-left a,.coda-slider-wrapper .coda-slider .coda-nav-right a{display:block;text-align:center;text-decoration:none}.coda-slider-wrapper .coda-slider .coda-nav-left,.coda-slider-wrapper .coda-slider .coda-nav-left-arrow{clear:both}.coda-slider-wrapper .coda-slider .panel-container{position:relative}.coda-slider-wrapper .coda-slider .panel-container .panel{display:block;float:left}
+/***********************************************************************
+	jQuery Coda-Slider v3.0 - kevinbatdorf.github.com/codaslider
+	Copyright (c) 2012 Kevin Batdorf
+	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
+************************************************************************/
+/********************************************
+SASS stylesheet.
+
+No idea what CSS preprocessing is all about? No problem... just use the style.css file instead.
+If you want to learn more, check out this article by Chris Coyier
+
+css-tricks.com/musings-on-preprocessing/
+
+********************************************/
+/* line 18, ../sass/coda-slider.scss */
+.coda-slider-wrapper {
+  /* Eric Meyer's reset http://meyerweb.com/eric/tools/css/ */
+  /*******************************************************
+  *
+  * Most common stuff you'll need to change 
+  * will be below this line.
+  *
+  ********************************************************/
+  /******************************************************
+  * 
+  * Main wrapper padding 
+  *
+  *******************************************************/
+  padding: 20px 0; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper div, .coda-slider-wrapper span, .coda-slider-wrapper applet, .coda-slider-wrapper object, .coda-slider-wrapper iframe, .coda-slider-wrapper h1, .coda-slider-wrapper h2, .coda-slider-wrapper h3, .coda-slider-wrapper h4, .coda-slider-wrapper h5, .coda-slider-wrapper h6, .coda-slider-wrapper p, .coda-slider-wrapper blockquote, .coda-slider-wrapper pre, .coda-slider-wrapper a, .coda-slider-wrapper abbr, .coda-slider-wrapper acronym, .coda-slider-wrapper address, .coda-slider-wrapper big, .coda-slider-wrapper cite, .coda-slider-wrapper code, .coda-slider-wrapper del, .coda-slider-wrapper dfn, .coda-slider-wrapper em, .coda-slider-wrapper font, .coda-slider-wrapper img, .coda-slider-wrapper ins, .coda-slider-wrapper kbd, .coda-slider-wrapper q, .coda-slider-wrapper s, .coda-slider-wrapper samp, .coda-slider-wrapper small, .coda-slider-wrapper strike, .coda-slider-wrapper strong, .coda-slider-wrapper sub, .coda-slider-wrapper sup, .coda-slider-wrapper tt, .coda-slider-wrapper var, .coda-slider-wrapper b, .coda-slider-wrapper u, .coda-slider-wrapper i, .coda-slider-wrapper center, .coda-slider-wrapper dl, .coda-slider-wrapper dt, .coda-slider-wrapper dd, .coda-slider-wrapper ol, .coda-slider-wrapper ul, .coda-slider-wrapper li, .coda-slider-wrapper fieldset, .coda-slider-wrapper form, .coda-slider-wrapper label, .coda-slider-wrapper legend, .coda-slider-wrapper table, .coda-slider-wrapper caption, .coda-slider-wrapper tbody, .coda-slider-wrapper tfoot, .coda-slider-wrapper thead, .coda-slider-wrapper tr, .coda-slider-wrapper th, .coda-slider-wrapper td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper body {
+    line-height: 1; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper ol, .coda-slider-wrapper ul {
+    list-style: none; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper blockquote, .coda-slider-wrapper q {
+    quotes: none; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper blockquote:before, .coda-slider-wrapper blockquote:after, .coda-slider-wrapper q:before, .coda-slider-wrapper q:after {
+    content: '';
+    content: none; }
+  /* line 37, ../sass/coda-slider.scss */
+  .coda-slider-wrapper .coda-slider {
+    /******************************************************
+    * 
+    * Inner wrapper styles 
+    *
+    *******************************************************/
+    background: #f2f2f2;
+    /******************************************************
+    * 
+    * Width of the container. Typically you will want to 
+    * match this with the width of the panel as well. 
+    *
+    *******************************************************/
+    width: 700px; }
+    /* line 53, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav {
+      /******************************************************
+      * 
+      * Tab styles 
+      *
+      *******************************************************/ }
+      /* line 60, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav .current {
+        /******************************************************
+        * 
+        * Current tab styles 
+        *
+        *******************************************************/
+        background: #0090FF; }
+      /* line 69, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav a {
+        /******************************************************
+        * 
+        * Tab styles 
+        *
+        *******************************************************/
+        background: #000;
+        color: #fff;
+        margin-right: 1px;
+        padding: 3px 6px; }
+      /* line 81, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav a:hover {
+        /******************************************************
+        * 
+        * Tab styles 
+        *
+        *******************************************************/
+        background: #000;
+        color: #fff;
+        text-shadow: none; }
+    /* line 93, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left, .coda-slider-wrapper .coda-slider .coda-nav-right {
+      /******************************************************
+      * 
+      * Arrow Styles 
+      *
+      *******************************************************/ }
+      /* line 100, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav-left a, .coda-slider-wrapper .coda-slider .coda-nav-right a {
+        /******************************************************
+        * 
+        * Arrow Styles 
+        *
+        *******************************************************/
+        background: #000;
+        color: #fff;
+        padding: 5px;
+        width: 100px; }
+    /* line 113, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .arrows .coda-slider {
+      /******************************************************
+      * 
+      * Margin between slider and arrows 
+      *
+      *******************************************************/
+      margin: 0 10px; }
+    /* line 122, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left-arrow {
+      /******************************************************
+      * 
+      * Graphical arrow styles 
+      *
+      *******************************************************/
+      width: 42px;
+      height: 107px;
+      background: url(../img/arrow.png) no-repeat bottom left; }
+    /* line 133, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-right-arrow {
+      /******************************************************
+      * 
+      * Graphical arrow styles 
+      *
+      *******************************************************/
+      width: 42px;
+      height: 107px;
+      background: url(../img/arrow.png) no-repeat bottom right; }
+    /* line 144, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .panel {
+      /******************************************************
+      * 
+      * Width of each individual panel. 
+      * Typically you will want to match this with the width 
+      * of the container as well. 
+      *
+      *******************************************************/
+      width: 700px; }
+      /* line 154, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .panel .panel-wrapper {
+        /******************************************************
+        * 
+        * Panel wrapper styles 
+        *
+        *******************************************************/
+        padding: 20px; }
+    /* line 164, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .loading {
+      /******************************************************
+      * 
+      * Style for preloader 
+      *
+      *******************************************************/
+      height: 100%;
+      padding: 20px;
+      text-align: center; }
+
+/**********************************************************************
+*
+* Don't change anything below here unless you know what you're doing 
+*
+***********************************************************************/
+/* line 183, ../sass/coda-slider.scss */
+.coda-slider-wrapper {
+  /************************************************
+  * 
+  * Wrapper styles 
+  *
+  *************************************************/
+  clear: both;
+  overflow: auto; }
+  /* line 192, ../sass/coda-slider.scss */
+  .coda-slider-wrapper .coda-slider {
+    /************************************************
+    * 
+    * slider styles 
+    *
+    *************************************************/
+    float: left;
+    overflow: hidden;
+    position: relative; }
+    /* line 202, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav {
+      /************************************************
+      * 
+      * Navigation tabs 
+      *
+      *************************************************/ }
+      /* line 209, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav ul {
+        /************************************************
+        * 
+        * Navigation tabs 
+        *
+        *************************************************/
+        clear: both;
+        display: block;
+        margin: auto;
+        overflow: hidden; }
+        /* line 220, ../sass/coda-slider.scss */
+        .coda-slider-wrapper .coda-slider .coda-nav ul li {
+          /************************************************
+          * 
+          * Navigation tabs 
+          *
+          *************************************************/
+          display: inline; }
+          /* line 228, ../sass/coda-slider.scss */
+          .coda-slider-wrapper .coda-slider .coda-nav ul li a {
+            /************************************************
+            * 
+            * Navigation tabs 
+            *
+            *************************************************/
+            display: block;
+            float: left;
+            text-decoration: none; }
+    /* line 242, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left-arrow, .coda-slider-wrapper .coda-slider .coda-nav-right-arrow {
+      /************************************************
+      * 
+      * Graphical arrows 
+      *
+      *************************************************/
+      cursor: pointer;
+      float: left;
+      margin-top: 50px; }
+      /* line 252, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav-left-arrow a, .coda-slider-wrapper .coda-slider .coda-nav-right-arrow a {
+        /************************************************
+        * 
+        * Graphical arrows 
+        *
+        *************************************************/
+        display: block; }
+      /* line 261, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav-left-arrow:active, .coda-slider-wrapper .coda-slider .coda-nav-right-arrow:active {
+        /************************************************
+        * 
+        * Graphical arrows 
+        *
+        *************************************************/
+        margin-top: 55px; }
+    /* line 271, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left, .coda-slider-wrapper .coda-slider .coda-nav-right {
+      /************************************************
+      * 
+      * Html arrows 
+      *
+      *************************************************/
+      float: left; }
+      /* line 278, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav-left a, .coda-slider-wrapper .coda-slider .coda-nav-right a {
+        /************************************************
+        * 
+        * Html arrow styles 
+        *
+        *************************************************/
+        display: block;
+        text-align: center;
+        text-decoration: none; }
+    /* line 290, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left, .coda-slider-wrapper .coda-slider .coda-nav-left-arrow {
+      /************************************************
+      * 
+      * Html and graphical arrow styles 
+      *
+      *************************************************/
+      clear: both; }
+    /* line 299, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .panel-container {
+      /************************************************
+      * 
+      * Panel container styles 
+      *
+      *************************************************/
+      position: relative; }
+      /* line 307, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .panel-container .panel {
+        /************************************************
+        * 
+        * Panel styles 
+        *
+        *************************************************/
+        display: block;
+        float: left; }
