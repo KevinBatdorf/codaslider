@@ -1,4 +1,3 @@
-
 // Utility for creating objects in older browsers
 if ( typeof Object.create !== 'function' ) {
 	Object.create = function( obj ) {
