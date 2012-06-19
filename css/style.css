@@ -1371,7 +1371,7 @@ Full-Width Styles
 /* line 430, ../sass/style.scss */
 #api-settings .h4 {
   color: #0090ff;
-  margin: -5px;
+  margin: 0;
   font-size: 20px;
   letter-spacing: 1.5px; }
 
