@@ -18,7 +18,7 @@ if ( typeof Object.create !== 'function' ) {
 			$("body").removeClass("coda-slider-no-js");
 
 			//add preloader class (backwards compatible)
-			$('.coda-slider').prepend('<p class="loading" style="height:100%">Loading...<br /><img src="images/ajax-loader.gif" alt="loading..." /></p>');
+			$('.coda-slider').prepend('<p class="loading">Loading...<br /><img src="./img/ajax-loader.gif" width="220px" height="19px" alt="loading..." /></p>');
 
 
 			// Cache the element
@@ -52,7 +52,7 @@ if ( typeof Object.create !== 'function' ) {
 			var self = this;
 
 			// Wrap the entire slider (backwards compatible)
-			( $(self.sliderId).parent().attr('class') === 'coda-slider-wrapper' ) ? '' : $(self.sliderId).wrap('<div class="coda-slider-wrapper"></div>');
+			( $(self.sliderId).parent().attr('class') === 'coda-slider-wrapper' ) ? '' : $(self.sliderId).wrap('<div id="' + ( self.$elem ).attr('id') + '-wrapper" class="coda-slider-wrapper"></div>');
 			
 			// Add the .panel class to the individual panels (backwards compatable)
 			self.panelClass = self.sliderId + ' .' + $(self.sliderId + " > div").addClass('panel').attr('class');
@@ -75,6 +75,10 @@ if ( typeof Object.create !== 'function' ) {
 			// Build navigation arrows
 			if (self.options.dynamicArrows) { self.addArrows(); }
 
+			// Create a container width to allow for a smooth float right.
+			self.totalSliderWidth = $(self.sliderId).outerWidth(true) + $($(self.sliderId).parent()).children('[class^=coda-nav-left]').outerWidth(true) + $($(self.sliderId).parent()).children('[class^=coda-nav-right]').outerWidth(true);
+			$($(self.sliderId).parent()).css('width', self.totalSliderWidth);
+
 			// Align navigation tabs
 			if (self.options.dynamicTabs) { self.alignNavigation(); }
 
@@ -90,7 +94,7 @@ if ( typeof Object.create !== 'function' ) {
 
 			// Count the number of panels and get the combined width
 			self.panelCount = $(self.panelClass).length;
-			self.panelWidth = $(self.panelClass).width();
+			self.panelWidth = $(self.panelClass).outerWidth();
 			self.totalWidth = self.panelCount * self.panelWidth;
 
 			// Configure the current tab
@@ -113,7 +117,7 @@ if ( typeof Object.create !== 'function' ) {
 			// Add labels
 			$.each(
 				(self.$elem).find(self.options.panelTitleSelector), function(n) {
-					$($(self.sliderId).parent()).find('.coda-nav ul').append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '">' + $(this).text() + '</a></li>');
+					$($(self.sliderId).parent()).find('.coda-nav ul').append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '" title="' + $(this).text() + '">' + $(this).text() + '</a></li>');
 				}
 			);
 		},
@@ -121,34 +125,44 @@ if ( typeof Object.create !== 'function' ) {
 		alignNavigation: function() {
 			var self = this;
 			self.totalNavWidth = 0;
+			var arrow = '';
 
-			// Create a container width to allow for a smooth float right.
-			self.totalSliderWidth = $(self.sliderId).outerWidth(true) + $($(self.sliderId).parent()).children('.coda-nav-left').outerWidth(true) + $($(self.sliderId).parent()).children('.coda-nav-right').outerWidth(true);
-
-			$($(self.sliderId).parent()).css('width', self.totalSliderWidth);
+			if (self.options.dynamicArrowsGraphical) {arrow = '-arrow';}
 
 			// Set the alignment
 			if (self.options.dynamicTabsAlign != 'center') {
 				$($(self.sliderId).parent()).find('.coda-nav ul').css(
 					'margin-' + self.options.dynamicTabsAlign,
-						$($(self.sliderId).parent()).find('.coda-nav-' + self.options.dynamicTabsAlign).outerWidth(true) + parseInt($(self.sliderId).css('margin-'+ self.options.dynamicTabsAlign))
+					// Finds the width of the aarows and the margin
+						$($(self.sliderId).parent()).find(
+							'.coda-nav-' +
+							self.options.dynamicTabsAlign +
+							arrow
+						).outerWidth(true) + parseInt($(self.sliderId).css('margin-'+ self.options.dynamicTabsAlign), 10)
 				);
 				$($(self.sliderId).parent()).find('.coda-nav ul').css('float', self.options.dynamicTabsAlign); // couldn't combine this .css() with the previous??
 			}
 			else {
 				// Get total width of the navigation tabs and center it
-				$($(self.sliderId).parent()).find('.coda-nav li').each(function(){ self.totalNavWidth += $(this).outerWidth(true); });
+				$($(self.sliderId).parent()).find('.coda-nav li a').each(function(){self.totalNavWidth += $(this).outerWidth(true); });
 				if ($.browser.msie) { self.totalNavWidth = self.totalNavWidth + (5);} // Simple IE fix
 				if ($.browser.opera) { self.totalNavWidth = ($($(self.sliderId).parent()).find('.coda-nav li').width()); } // Simple Opera fix
-				$($(self.sliderId).parent()).find('.coda-nav ul').css('width', self.totalNavWidth);
+				$($(self.sliderId).parent()).find('.coda-nav ul').css('width', self.totalNavWidth + 1);
 			}
 		},
 
 		addArrows: function(){
 			var self = this;
 			$(self.sliderId).parent().addClass("arrows");
-			$(self.sliderId).before('<div class="coda-nav-left" style="clear:both;" data-dir="prev"><a href="#">' + self.options.dynamicArrowLeftText + '</a></div>');
-			$(self.sliderId).after('<div class="coda-nav-right" data-dir="next"><a href="#">' + self.options.dynamicArrowRightText + '</a></div>');
+			if(self.options.dynamicArrowsGraphical){
+				$(self.sliderId).before('<div class="coda-nav-left-arrow" data-dir="prev" title="Slide left"><a href="#"></a></div>');
+				$(self.sliderId).after('<div class="coda-nav-right-arrow" data-dir="next" title="Slide right"><a href="#"></a></div>');
+			}
+			else{
+				$(self.sliderId).before('<div class="coda-nav-left" data-dir="prev" title="Slide left"><a href="#">' + self.options.dynamicArrowLeftText + '</a></div>');
+				$(self.sliderId).after('<div class="coda-nav-right" data-dir="next" title="Slide right"><a href="#">' + self.options.dynamicArrowRightText + '</a></div>');
+			}
+			
 		},
 
 		events: function(){
@@ -164,15 +178,15 @@ if ( typeof Object.create !== 'function' ) {
 			// Click tabs
 			$($(self.sliderId).parent()).find('[class^=coda-nav] li').on('click', function(e){
 				if (!self.clickable && self.options.continuous) {return false;}
-				self.setCurrent(parseInt( $(this).attr('class').split('tab')[1]) - 1 );
+				self.setCurrent(parseInt( $(this).attr('class').split('tab')[1], 10) - 1 );
 				if (self.options.continuous) {self.clickable = false;}
 				return false;
 
 			});
 			// Click cross links
-			$('[rel=' + ( self.$elem ).attr('id') + ']').on('click', function(e){
+			$('[rel*=' + (self.sliderId).split('#')[1] + ']').on('click', function(e){
 				if (!self.clickable && self.options.continuous) {return false;}
-				self.setCurrent( parseInt( $(this).attr('href').split('#')[1] -1 ) );
+				self.setCurrent( parseInt( $(this).attr('href').split('#')[1] -1, 10 ) );
 				if (self.options.continuous) {self.clickable = false;}
 				return false;
 			});
@@ -211,10 +225,11 @@ if ( typeof Object.create !== 'function' ) {
 					self.setTab = self.currentTab;
 				}
 				// Add and remove current class.
-				$($(self.sliderId).parent()).find('.tab' + (self.setTab + 1) + ' a')
+				if (self.options.dynamicTabs){
+					$($(self.sliderId).parent()).find('.tab' + (self.setTab + 1) + ' a:first')
 					.addClass('current')
 					.parent().siblings().children().removeClass('current');
-
+				}
 				this.transition();
 			}
 		},
@@ -249,7 +264,7 @@ if ( typeof Object.create !== 'function' ) {
 			var self = this;
 
 			if (self.options.autoSlideInterval < self.options.slideEaseDuration) {self.options.autoSlideInterval = self.options.slideEaseDuration;}
-
+			if (self.options.continuous) {self.clickable = false;}
 			self.autoslideTimeout = setTimeout(function() {
 				// Slide left or right
 				self.setCurrent( self.options.autoSliderDirection );
@@ -293,19 +308,20 @@ if ( typeof Object.create !== 'function' ) {
 		autoHeight: true,
 		autoHeightEaseDuration: 7000,
 		autoHeightEaseFunction: "easeInOutExpo",
-		autoSlide: true,
+		autoSlide: false,
 		autoSliderDirection: 'right',
 		autoSlideInterval: 4000,
 		autoSlideStopWhenClicked: true,
-		continuous: true,
-		crossLinking: true,
+		continuous: false,
+		crossLinking: true, // No longer used
 		dynamicArrows: true,
+		dynamicArrowsGraphical: false,
 		dynamicArrowLeftText: "&#171; left",
 		dynamicArrowRightText: "right &#187;",
 		dynamicTabs: true,
 		dynamicTabsAlign: "center",
 		dynamicTabsPosition: "top",
-		externalTriggerSelector: "a.xtrig",
+		externalTriggerSelector: "a.xtrig", //shouldnt need any more
 		firstPanelToLoad: 1,
 		panelTitleSelector: "h2.title",
 		slideEaseDuration: 2000,
