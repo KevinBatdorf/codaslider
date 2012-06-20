@@ -246,8 +246,8 @@ if ( typeof Object.create !== 'function' ) {
 						});
 				}
 				// Adjust the margin for continuous sliding
-				if (self.options.continuous) {self.marginLeft = -(self.currentTab * self.panelWidth ) - self.panelWidth;}
-				else {self.marginLeft = -(self.currentTab * self.panelWidth );}
+				if (self.options.continuous) {self.marginLeft = -(self.currentTab * $(self.sliderId).width() ) - $(self.sliderId).width();}
+				else {self.marginLeft = -(self.currentTab * $(self.sliderId).width() );}
 				// Animate the slider
 				(self.panelContainer).animate({
 					'margin-left': self.marginLeft
@@ -255,7 +255,7 @@ if ( typeof Object.create !== 'function' ) {
 					easing: self.options.slideEaseFunction,
 					duration: self.options.slideEaseDuration,
 					queue: false,
-					complete: self.continuousSlide(self.options.slideEaseDuration + 50)
+					complete: self.continuousSlide(self.options.slideEaseDuration + 50) // This OK?
 				});
 		},
 
@@ -279,12 +279,12 @@ if ( typeof Object.create !== 'function' ) {
 				self.continuousTimeout = setTimeout(function() {
 					// If on the last panel (the clone of panel 1), set the margin to the original.
 					if (self.currentTab === self.panelCount - 2){
-						$(self.panelContainer).css('margin-left', -self.panelWidth);
+						$(self.panelContainer).css('margin-left', -$(self.sliderId).width());
 						self.currentTab = 0;
 					}
 					// If on the first panel 9the clone of the last panel), set the margin to the original.
 					else if (self.currentTab === -1){
-						$(self.panelContainer).css('margin-left', -( (self.panelWidth * self.panelCount) - (self.panelWidth * 2) ));
+						$(self.panelContainer).css('margin-left', -( ($(self.sliderId).width() * self.panelCount) - ($(self.sliderId).width() * 2) ));
 						self.currentTab = (self.panelCount - 3);
 					}
 					self.clickable = true;
