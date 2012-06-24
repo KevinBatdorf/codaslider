@@ -6,12 +6,12 @@ A jQuery HTML Content Slider Plugin
 Features
 --------
 
-Continuous sliding
-Dynamic tabs & arrows
+Continuous sliding  
+Dynamic tabs & arrows  
 Cross linking
 
-Beta (Download [Here](https://github.com/KevinBatdorf/codaslider/tree/experimental)
-----
+Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/tree/experimental) )
+-------------
 
 Responsive 
 
@@ -22,29 +22,30 @@ See [here](http://kevinbatdorf.github.com/codaslider) for further details.
 
 Install the slider in the head after jQuery.
 
-....
-$().ready(function(){
-      $('#slider-id').codaSlider();
+....  
+    $().ready(function(){
+        $('#slider-id').codaSlider();
+      });
 ....
 
 Where the slider-id matches the id of the content, as follows:
 
-....
-    <div class="coda-slider"  id="slider-id">
-        <div>
-          <h2 class="title">Panel 1</h2>
-          <p>Content</p>
-        </div>
-        <div>
-          <h2 class="title">Panel 2</h2>
-          <p>Content</p>
-        </div>
-    </div>
+....  
+      <iv class="coda-slider"  id="slider-id">
+          <div>
+            <h2 class="title">Panel 1</h2>
+            <p>Content</p>
+          </div>
+          <div>
+            <h2 class="title">Panel 2</h2>
+            <p>Content</p>
+          </div>
+      </div>
 ....
 
 Add as many panels as you like within the `<div class="coda-slider id="slider-id"></div>`
 
-....
+....  
     <div>
       <h2 class="title">Panel 1</h2>
       <p>Content</p>
@@ -70,7 +71,7 @@ https://github.com/kevinbatdorf/codaslider/issues
 
 Default Settings
 ----------------
-....
+....  
               autoHeight: true,
       autoHeightEaseDuration: 7000,
       autoHeightEaseFunction: "easeInOutExpo",
