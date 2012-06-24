@@ -51,7 +51,7 @@ if ( typeof Object.create !== 'function' ) {
 			var self = this;
 
 			// Wrap the entire slider (backwards compatible)
-			( $(self.sliderId).parent().attr('class') === 'coda-slider-wrapper' ) ? '' : $(self.sliderId).wrap('<div id="' + ( self.$elem ).attr('id') + '-wrapper" class="coda-slider-wrapper"></div>');
+			if ( $(self.sliderId).parent().attr('class') != 'coda-slider-wrapper' ) {$(self.sliderId).wrap('<div id="' + ( self.$elem ).attr('id') + '-wrapper" class="coda-slider-wrapper"></div>'); }
 			
 			// Add the .panel class to the individual panels (backwards compatable)
 			self.panelClass = self.sliderId + ' .' + $(self.sliderId + " > div").addClass('panel').attr('class');
@@ -59,7 +59,7 @@ if ( typeof Object.create !== 'function' ) {
 
 			// Wrap all panels in a div, and wrap inner content in a div (backwards ccompatible)
 			$(self.panelClass).wrapAll('<div class="panel-container"></div>');
-			( $(self.panelClass).children().attr('class') === 'panel-wrapper' ) ? '' : $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>');
+			if ( $(self.panelClass).children().attr('class') != 'panel-wrapper' ) { $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>'); }
 			self.panelContainer = ($(self.panelClass).parent());
 
 			// Store current tab
@@ -112,7 +112,8 @@ if ( typeof Object.create !== 'function' ) {
 			var dynamicTabs = '<div class="coda-nav"><ul></ul></div>';
 
 			// Add basic frame
-			(self.options.dynamicTabsPosition === 'bottom') ? $(self.sliderId).after(dynamicTabs) : $(self.sliderId).before(dynamicTabs);
+			if (self.options.dynamicTabsPosition === 'bottom') { $(self.sliderId).after(dynamicTabs); }
+			else{ $(self.sliderId).before(dynamicTabs); }
 			// Add labels
 			$.each(
 				(self.$elem).find(self.options.panelTitleSelector), function(n) {
@@ -192,7 +193,9 @@ if ( typeof Object.create !== 'function' ) {
 			// Click to stop autoslider
 			$($(self.sliderId).parent()).find('*').on('click', function(e){
 				if (!self.clickable) {return false;}
-				(self.options.autoSlideStopWhenClicked) ? clearTimeout(self.autoslideTimeout) :  self.autoSlide(clearTimeout(self.autoslideTimeout));
+				// Clear the timeout
+				if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
+				else self.autoSlide(clearTimeout(self.autoslideTimeout));
 				// Stops from speedy clicking for continuous sliding.
 				if (self.options.continuous) {clearTimeout(self.continuousTimeout);}
 			});
