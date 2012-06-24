@@ -6,9 +6,9 @@ A jQuery HTML Content Slider Plugin
 Features
 --------
 
-Continuous sliding  
-Dynamic tabs & arrows  
-Cross linking
+Continuous Sliding  
+Dynamic Tabs & Arrows  
+Cross Linking
 
 Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/tree/experimental) )
 -------------
