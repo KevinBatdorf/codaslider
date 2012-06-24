@@ -13,7 +13,7 @@ Cross linking
 Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/tree/experimental) )
 -------------
 
-Responsive 
+Responsive Design 
 
 How to Use
 -----------
@@ -22,16 +22,16 @@ See [here](http://kevinbatdorf.github.com/codaslider) for further details.
 
 Install the slider in the head after jQuery.
 
-`
+```  
     $().ready(function(){
         $('#slider-id').codaSlider();
       });
-`
+```
 
 Where the slider-id matches the id of the content, as follows:
 
-`
-      <iv class="coda-slider"  id="slider-id">
+```html
+      <div class="coda-slider"  id="slider-id">
           <div>
             <h2 class="title">Panel 1</h2>
             <p>Content</p>
@@ -41,16 +41,16 @@ Where the slider-id matches the id of the content, as follows:
             <p>Content</p>
           </div>
       </div>
-`
+```
 
 Add as many panels as you like within the `<div class="coda-slider id="slider-id"></div>`
 
-`
+```html
     <div>
-      <h2 class="title">Panel 1</h2>
+      <h2 class="title">Panel</h2>
       <p>Content</p>
     </div>
-`
+```
 
 Maintained by [Kevin Batdorf](http://twitter.com/#!/kevinbatdorf)
 
@@ -71,28 +71,28 @@ https://github.com/kevinbatdorf/codaslider/issues
 
 Default Settings
 ----------------
-`
-              autoHeight: true,
+```javascript
+                  autoHeight: true,
       autoHeightEaseDuration: 7000,
       autoHeightEaseFunction: "easeInOutExpo",
-             autoSlide: false,
-       autoSliderDirection: 'right',
-         autoSlideInterval: 4000,
+                   autoSlide: false,
+         autoSliderDirection: 'right',
+           autoSlideInterval: 4000,
     autoSlideStopWhenClicked: true,
-              continuous: true,
+                  continuous: true,
                dynamicArrows: true,
       dynamicArrowsGraphical: false,
         dynamicArrowLeftText: "&#171; left",
        dynamicArrowRightText: "right &#187;",
-               dynamicTabs: true,
-          dynamicTabsAlign: "center",
-       dynamicTabsPosition: "top",
-          firstPanelToLoad: 1,
-        panelTitleSelector: "h2.title",
-              responsive: false,
-         slideEaseDuration: 2000,
-         slideEaseFunction: "easeInOutExpo"
-`
+                 dynamicTabs: true,
+            dynamicTabsAlign: "center",
+         dynamicTabsPosition: "top",
+            firstPanelToLoad: 1,
+          panelTitleSelector: "h2.title",
+                  responsive: false,
+           slideEaseDuration: 2000,
+           slideEaseFunction: "easeInOutExpo"
+```
 
 
 Version 3.0
