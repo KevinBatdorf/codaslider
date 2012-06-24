@@ -311,7 +311,7 @@ if ( typeof Object.create !== 'function' ) {
 		autoSliderDirection: 'right',
 		autoSlideInterval: 4000,
 		autoSlideStopWhenClicked: true,
-		continuous: true,
+		continuous: false,
 		crossLinking: true, // No longer used
 		dynamicArrows: true,
 		dynamicArrowsGraphical: false,
