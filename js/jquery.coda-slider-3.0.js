@@ -46,6 +46,7 @@ if ( typeof Object.create !== 'function' ) {
 
 			// Kill the preloader
 			$("p.loading").remove();
+
 		},
 		build: function() {
 			var self = this;
@@ -57,7 +58,7 @@ if ( typeof Object.create !== 'function' ) {
 			self.panelClass = self.sliderId + ' .' + $(self.sliderId + " > div").addClass('panel').attr('class');
 			
 
-			// Wrap all panels in a div, and wrap inner content in a div (backwards ccompatible)
+			// Wrap all panels in a div, and wrap inner content in a div (backwards compatible)
 			$(self.panelClass).wrapAll('<div class="panel-container"></div>');
 			if ( $(self.panelClass).children().attr('class') != 'panel-wrapper' ) { $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>'); }
 			self.panelContainer = ($(self.panelClass).parent());
@@ -66,7 +67,8 @@ if ( typeof Object.create !== 'function' ) {
 			self.currentTab = self.options.firstPanelToLoad - 1;
 
 			// Apply starting height to the container
-			if (this.options.autoHeight) { $(self.panelContainer).parent().css('height', $($(self.panelContainer).children()[self.currentTab]).height());}
+			if (self.options.autoHeight) { $(self.sliderId).css('height', $($(self.panelContainer).children()[self.currentTab]).height() + $(self.sliderId + '-wrapper .coda-nav-right').height());	}
+
 
 			// Build navigation tabs
 			if (self.options.dynamicTabs) { self.addNavigation(); }
@@ -90,11 +92,18 @@ if ( typeof Object.create !== 'function' ) {
 			// Allow the slider to be clicked
 			self.clickable = true;
 
-
 			// Count the number of panels and get the combined width
 			self.panelCount = $(self.panelClass).length;
 			self.panelWidth = $(self.panelClass).outerWidth();
 			self.totalWidth = self.panelCount * self.panelWidth;
+			
+			// Variable for the % sign if needed (responsive), otherwise px
+			self.pSign = 'px';
+
+			self.slideWidth = $(self.sliderId).width();
+
+			// If continuous, set the current margin without animation
+			if (self.options.continuous) { $(self.panelContainer).css('margin-left', -self.slideWidth); }
 
 			// Configure the current tab
 			self.setCurrent(self.currentTab);
@@ -102,18 +111,17 @@ if ( typeof Object.create !== 'function' ) {
 			// Apply the width to the panel container
 			$(self.sliderId + ' .panel-container').css('width', self.totalWidth);
 
-
-			// Adjust the margin if continuous is enabled
-			if (self.options.continuous) { $(self.panelContainer).css('margin-left', -self.panelWidth);}
 		},
 
 		addNavigation: function(){
 			var self = this;
-			var dynamicTabs = '<div class="coda-nav"><ul></ul></div>';
+			// The id is assigned here to allow for the responsive setting
+			var dynamicTabs = '<div class="coda-nav"><ul id="' + ( self.$elem ).attr('id') + '-nav-ul"></ul></div>';
 
 			// Add basic frame
 			if (self.options.dynamicTabsPosition === 'bottom') { $(self.sliderId).after(dynamicTabs); }
 			else{ $(self.sliderId).before(dynamicTabs); }
+
 			// Add labels
 			$.each(
 				(self.$elem).find(self.options.panelTitleSelector), function(n) {
@@ -181,7 +189,6 @@ if ( typeof Object.create !== 'function' ) {
 				self.setCurrent(parseInt( $(this).attr('class').split('tab')[1], 10) - 1 );
 				if (self.options.continuous) {self.clickable = false;}
 				return false;
-
 			});
 			// Click cross links
 			$('[data-ref*=' + (self.sliderId).split('#')[1] + ']').on('click', function(e){
@@ -217,13 +224,13 @@ if ( typeof Object.create !== 'function' ) {
 				// This is so the height will match the current panel, ignoring the clones.
 				// It also adjusts the count for the "currrent" class that's applied
 				if (self.options.continuous) {
-					self.panelHeight = self.currentTab + 1;
+					self.panelHeightCount = self.currentTab + 1;
 					if (self.currentTab === self.panelCount - 2){self.setTab = 0;}
 					else if (self.currentTab === -1) {self.setTab = self.panelCount - 3;}
 					else {self.setTab = self.currentTab;}
 				}
 				else{
-					self.panelHeight = self.currentTab;
+					self.panelHeightCount = self.currentTab;
 					self.setTab = self.currentTab;
 				}
 				// Add and remove current class.
@@ -233,6 +240,7 @@ if ( typeof Object.create !== 'function' ) {
 					.parent().siblings().children().removeClass('current');
 				}
 				this.transition();
+				
 			}
 		},
 		
@@ -241,24 +249,26 @@ if ( typeof Object.create !== 'function' ) {
 				// Adjust the height
 				if (self.options.autoHeight) {
 					$(self.panelContainer).parent().animate({
-						'height': $($(self.panelContainer).children()[self.panelHeight]).height()
+						'height': $($(self.panelContainer).children()[self.panelHeightCount]).height()
 					}, {
 						easing: self.options.slideEaseFunction,
 						duration: self.options.slideEaseDuration,
 						queue: false
 						});
 				}
+				
 				// Adjust the margin for continuous sliding
-				if (self.options.continuous) {self.marginLeft = -(self.currentTab * self.panelWidth ) - self.panelWidth;}
-				else {self.marginLeft = -(self.currentTab * self.panelWidth );}
+				if (self.options.continuous) {self.marginLeft = -(self.currentTab * self.slideWidth ) - self.slideWidth;}
+				// Otherwise adjust as normal
+				else {self.marginLeft = -(self.currentTab * self.slideWidth ); }
 				// Animate the slider
 				(self.panelContainer).animate({
-					'margin-left': self.marginLeft
+					'margin-left': self.marginLeft + self.pSign
 				}, {
 					easing: self.options.slideEaseFunction,
 					duration: self.options.slideEaseDuration,
 					queue: false,
-					complete: self.continuousSlide(self.options.slideEaseDuration + 50)
+					complete: self.continuousSlide(self.options.slideEaseDuration + 50) // Wonder about this "+50", so far so good...
 				});
 		},
 
@@ -280,14 +290,15 @@ if ( typeof Object.create !== 'function' ) {
 
 			if (self.options.continuous) {
 				self.continuousTimeout = setTimeout(function() {
+
 					// If on the last panel (the clone of panel 1), set the margin to the original.
 					if (self.currentTab === self.panelCount - 2){
-						$(self.panelContainer).css('margin-left', -self.panelWidth);
+						$(self.panelContainer).css('margin-left', -self.slideWidth + self.pSign);
 						self.currentTab = 0;
 					}
-					// If on the first panel 9the clone of the last panel), set the margin to the original.
+					// If on the first panel the clone of the last panel), set the margin to the original.
 					else if (self.currentTab === -1){
-						$(self.panelContainer).css('margin-left', -( (self.panelWidth * self.panelCount) - (self.panelWidth * 2) ));
+						$(self.panelContainer).css('margin-left', -( ((self.slideWidth * self.panelCount) - (self.slideWidth * 2))) + self.pSign );
 						self.currentTab = (self.panelCount - 3);
 					}
 					self.clickable = true;
@@ -329,7 +340,5 @@ if ( typeof Object.create !== 'function' ) {
 		slideEaseDuration: 2000,
 		slideEaseFunction: "easeInOutExpo"
 	};
-	
-
 
 })( jQuery, window, document );
