@@ -116,7 +116,7 @@ if ( typeof Object.create !== 'function' ) {
 		addNavigation: function(){
 			var self = this;
 			// The id is assigned here to allow for the responsive setting
-			var dynamicTabs = '<div class="coda-nav"><ul id="' + ( self.$elem ).attr('id') + '-nav-ul"></ul></div>';
+			var dynamicTabs = '<div class="coda-nav"><ul></ul></div>';
 
 			// Add basic frame
 			if (self.options.dynamicTabsPosition === 'bottom') { $(self.sliderId).after(dynamicTabs); }
@@ -251,8 +251,8 @@ if ( typeof Object.create !== 'function' ) {
 					$(self.panelContainer).parent().animate({
 						'height': $($(self.panelContainer).children()[self.panelHeightCount]).height()
 					}, {
-						easing: self.options.slideEaseFunction,
-						duration: self.options.slideEaseDuration,
+						easing: self.options.autoHeightEaseFunction,
+						duration: self.options.autoHeightEaseDuration,
 						queue: false
 						});
 				}
@@ -268,7 +268,7 @@ if ( typeof Object.create !== 'function' ) {
 					easing: self.options.slideEaseFunction,
 					duration: self.options.slideEaseDuration,
 					queue: false,
-					complete: self.continuousSlide(self.options.slideEaseDuration + 50) // Wonder about this "+50", so far so good...
+					complete: self.continuousSlide(self.options.slideEaseDuration + 50)
 				});
 		},
 
