@@ -19,7 +19,6 @@ if ( typeof Object.create !== 'function' ) {
 			//add preloader class (backwards compatible)
 			$('.coda-slider').prepend('<p class="loading">Loading...<br /><img src="./img/ajax-loader.gif" width="220" height="19" alt="loading..." /></p>');
 
-
 			// Cache the element
 			self.elem = elem;
 			self.$elem = $( elem );
@@ -57,7 +56,6 @@ if ( typeof Object.create !== 'function' ) {
 			// Add the .panel class to the individual panels (backwards compatable)
 			self.panelClass = self.sliderId + ' .' + $(self.sliderId + " > div").addClass('panel').attr('class');
 			
-
 			// Wrap all panels in a div, and wrap inner content in a div (backwards compatible)
 			$(self.panelClass).wrapAll('<div class="panel-container"></div>');
 			if ( $(self.panelClass).children().attr('class') != 'panel-wrapper' ) { $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>'); }
@@ -68,7 +66,6 @@ if ( typeof Object.create !== 'function' ) {
 
 			// Apply starting height to the container
 			if (self.options.autoHeight) { $(self.sliderId).css('height', $($(self.panelContainer).children()[self.currentTab]).height() + $(self.sliderId + '-wrapper .coda-nav-right').height());	}
-
 
 			// Build navigation tabs
 			if (self.options.dynamicTabs) { self.addNavigation(); }
@@ -102,8 +99,9 @@ if ( typeof Object.create !== 'function' ) {
 
 			self.slideWidth = $(self.sliderId).width();
 
-			// If continuous, set the current margin without animation
-			if (self.options.continuous) { $(self.panelContainer).css('margin-left', -self.slideWidth); }
+			// Puts the margin at the starting point with no animation. Made for both continuous and firstPanelToLoad features.
+			// ~~(self.options.continuous) will equal 1 if true, otherwise 0
+			$(self.panelContainer).css('margin-left', ( -self.slideWidth * ~~(self.options.continuous)) + (-self.slideWidth * self.currentTab) );
 
 			// Configure the current tab
 			self.setCurrent(self.currentTab);
@@ -170,7 +168,6 @@ if ( typeof Object.create !== 'function' ) {
 				$(self.sliderId).before('<div class="coda-nav-left" data-dir="prev" title="Slide left"><a href="#">' + self.options.dynamicArrowLeftText + '</a></div>');
 				$(self.sliderId).after('<div class="coda-nav-right" data-dir="next" title="Slide right"><a href="#">' + self.options.dynamicArrowRightText + '</a></div>');
 			}
-			
 		},
 
 		events: function(){
@@ -199,10 +196,18 @@ if ( typeof Object.create !== 'function' ) {
 			});
 			// Click to stop autoslider
 			$($(self.sliderId).parent()).find('*').on('click', function(e){
-				if (!self.clickable) {return false;}
-				// Clear the timeout
-				if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
-				else self.autoSlide(clearTimeout(self.autoslideTimeout));
+				if (!self.clickable && self.options.continuous) {
+					if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
+					return false;
+				}
+				if (self.options.autoSlide) {
+					// Clear the timeout
+					if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
+					else {
+						self.autoSlide(clearTimeout(self.autoslideTimeout));
+						self.clickable = true;
+					}
+				}
 				// Stops from speedy clicking for continuous sliding.
 				if (self.options.continuous) {clearTimeout(self.continuousTimeout);}
 			});
@@ -240,42 +245,43 @@ if ( typeof Object.create !== 'function' ) {
 					.parent().siblings().children().removeClass('current');
 				}
 				this.transition();
-				
 			}
 		},
 		
 		transition: function(){
 			var self = this;
-				// Adjust the height
-				if (self.options.autoHeight) {
-					$(self.panelContainer).parent().animate({
-						'height': $($(self.panelContainer).children()[self.panelHeightCount]).height()
-					}, {
-						easing: self.options.autoHeightEaseFunction,
-						duration: self.options.autoHeightEaseDuration,
-						queue: false
-						});
-				}
-				
-				// Adjust the margin for continuous sliding
-				if (self.options.continuous) {self.marginLeft = -(self.currentTab * self.slideWidth ) - self.slideWidth;}
-				// Otherwise adjust as normal
-				else {self.marginLeft = -(self.currentTab * self.slideWidth ); }
-				// Animate the slider
-				(self.panelContainer).animate({
-					'margin-left': self.marginLeft + self.pSign
+			// Adjust the height
+			if (self.options.autoHeight) {
+				$(self.panelContainer).parent().animate({
+					'height': $($(self.panelContainer).children()[self.panelHeightCount]).height()
 				}, {
-					easing: self.options.slideEaseFunction,
-					duration: self.options.slideEaseDuration,
-					queue: false,
-					complete: self.continuousSlide(self.options.slideEaseDuration + 50)
-				});
+					easing: self.options.autoHeightEaseFunction,
+					duration: self.options.autoHeightEaseDuration,
+					queue: false
+					});
+			}
+			
+			// Adjust the margin for continuous sliding
+			if (self.options.continuous) {self.marginLeft = -(self.currentTab * self.slideWidth ) - self.slideWidth;}
+			// Otherwise adjust as normal
+			else {self.marginLeft = -(self.currentTab * self.slideWidth ); }
+			// Animate the slider
+			(self.panelContainer).animate({
+				'margin-left': self.marginLeft + self.pSign
+			}, {
+				easing: self.options.slideEaseFunction,
+				duration: self.options.slideEaseDuration,
+				queue: false,
+				complete: self.continuousSlide(self.options.slideEaseDuration + 50)
+			});
 		},
 
 		autoSlide: function(){
 			var self = this;
-
-			if (self.options.autoSlideInterval < self.options.slideEaseDuration) {self.options.autoSlideInterval = self.options.slideEaseDuration;}
+			// Can't set the autoslide slower than the easing ;-)
+			if (self.options.autoSlideInterval < self.options.slideEaseDuration) {
+				self.options.autoSlideInterval = (self.options.slideEaseDuration > self.options.autoHeightEaseDuration) ? self.options.slideEaseDuration : self.options.autoHeightEaseDuration;
+			}
 			if (self.options.continuous) {self.clickable = false;}
 			self.autoslideTimeout = setTimeout(function() {
 				// Slide left or right
@@ -319,11 +325,11 @@ if ( typeof Object.create !== 'function' ) {
 	
 	$.fn.codaSlider.options = {
 		autoHeight: true,
-		autoHeightEaseDuration: 2000,
+		autoHeightEaseDuration: 1500,
 		autoHeightEaseFunction: "easeInOutExpo",
 		autoSlide: false,
 		autoSliderDirection: 'right',
-		autoSlideInterval: 4000,
+		autoSlideInterval: 7000,
 		autoSlideStopWhenClicked: true,
 		continuous: true,
 		crossLinking: true, // No longer used
@@ -337,7 +343,7 @@ if ( typeof Object.create !== 'function' ) {
 		externalTriggerSelector: "a.xtrig", //shouldnt need any more
 		firstPanelToLoad: 1,
 		panelTitleSelector: "h2.title",
-		slideEaseDuration: 2000,
+		slideEaseDuration: 1500,
 		slideEaseFunction: "easeInOutExpo"
 	};
 
