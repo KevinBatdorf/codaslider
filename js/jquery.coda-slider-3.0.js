@@ -319,7 +319,7 @@ if ( typeof Object.create !== 'function' ) {
 	
 	$.fn.codaSlider.options = {
 		autoHeight: true,
-		autoHeightEaseDuration: 7000,
+		autoHeightEaseDuration: 2000,
 		autoHeightEaseFunction: "easeInOutExpo",
 		autoSlide: false,
 		autoSliderDirection: 'right',
