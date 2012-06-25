@@ -298,8 +298,8 @@ if ( typeof Object.create !== 'function' ) {
 					$(self.panelContainer).parent().animate({
 						'height': $($(self.panelContainer).children()[self.panelHeightCount]).height()
 					}, {
-						easing: self.options.slideEaseFunction,
-						duration: self.options.slideEaseDuration,
+						easing: self.options.autoHeightEaseFunction,
+						duration: self.options.autoHeightEaseDuration,
 						queue: false
 						});
 				}
