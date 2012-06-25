@@ -32,7 +32,7 @@ css-tricks.com/musings-on-preprocessing/
 	* Main wrapper padding 
 	*
 	*******************************************************/
-	padding: 20px 0;	
+	//padding: 20px 0;	
 
 	.coda-slider { 
 		/******************************************************
@@ -67,7 +67,7 @@ css-tricks.com/musings-on-preprocessing/
 				* Panel wrapper styles 
 				*
 				*******************************************************/
-				padding: 20px;			
+				padding:20px;		
 			}
 		}	
 	}	
@@ -124,6 +124,8 @@ css-tricks.com/musings-on-preprocessing/
 			* 
 			* Arrow Styles 
 			*
+			* If in responsive mode, check the settings below too.
+			*
 			*******************************************************/
 			background: #000; 
 			color: #fff; 
@@ -140,7 +142,26 @@ css-tricks.com/musings-on-preprocessing/
 		*******************************************************/
 		width:42px;
 		height:25px;
-		background: url(../img/arrow.png) no-repeat bottom left;
+		background: url(../img/arrow.png) no-repeat top left;
+		margin-top:50px;
+
+		&:hover{
+			/************************************************
+			* 
+			* Graphical arrows hover
+			*
+			*************************************************/
+			background: url(../img/arrow.png) no-repeat bottom left;
+		}
+
+		&:active{
+			/************************************************
+			* 
+			* Graphical arrows click
+			*
+			*************************************************/
+			margin-top:55px;
+		}
 	}
 
 	.coda-nav-right-arrow{
@@ -151,8 +172,27 @@ css-tricks.com/musings-on-preprocessing/
 		*******************************************************/
 		width:42px;
 		height:25px;
-		background: url(../img/arrow.png) no-repeat bottom right;
-	}		
+		background: url(../img/arrow.png) no-repeat top right;
+		margin-top:50px;
+
+		&:hover{
+			/************************************************
+			* 
+			* Graphical arrows hover
+			*
+			*************************************************/
+			background: url(../img/arrow.png) no-repeat bottom right;
+		}
+
+		&:active{
+			/************************************************
+			* 
+			* Graphical arrows click
+			*
+			*************************************************/
+			margin-top:55px;
+		}
+	}
 
 	.loading { 
 		/******************************************************
@@ -163,9 +203,9 @@ css-tricks.com/musings-on-preprocessing/
 		height:100%;
 		padding:20px; 
 		text-align:center;
-	}
-	
+	}	
 }
+
 .arrows .coda-slider {
 	/******************************************************
 	* 
@@ -174,6 +214,64 @@ css-tricks.com/musings-on-preprocessing/
 	*******************************************************/
 	margin:0 10px;
 }		
+
+.coda-responsive {
+		/******************************************************
+		* 
+		* Responsive styles 
+		*
+		*******************************************************/
+		.coda-slider{
+			width:100%;
+			margin:0;
+
+			.panel .panel-wrapper {
+				padding:20px 35px;
+			}
+		}
+		.coda-nav-left {
+			position:absolute;
+			left:0;
+			z-index:1;
+			a{background:#9A9A9A;width:80px;}
+			a:hover{background:darken(#9A9A9A, 15%);}
+		}
+		.coda-nav-right {
+			position:absolute;
+			right:0;
+			z-index:1;
+			a{background:#9A9A9A;width:80px;}
+			a:hover{background:darken(#9A9A9A, 15%);}
+		}
+		.coda-nav-left-arrow {
+			position:absolute;
+			left:0;
+			z-index:1;
+			margin-top:5px;
+			&:active{margin-top:10px;}
+		}
+		.coda-nav-right-arrow{
+			position:absolute;
+			right:0;
+			z-index:1;
+			margin-top:5px;
+			&:active{margin-top:10px;}
+		}
+		.small-tabs {
+			width:100%!important;
+
+			li a{
+				float:none!important;
+				display: block;
+				padding: 10px;
+				border-bottom: 1px solid #eee; 
+			}
+			.current {
+
+			}
+		}
+
+	}
 
 
 /**********************************************************************
@@ -190,6 +288,7 @@ css-tricks.com/musings-on-preprocessing/
 	*************************************************/
 	clear:both; 
 	overflow:auto;
+	position:relative;
 
 	.coda-slider {
 		/************************************************
@@ -269,7 +368,6 @@ css-tricks.com/musings-on-preprocessing/
 		*************************************************/
 		cursor:pointer;
 		float:left; 
-		margin-top:50px;
 
 		a { 
 			/************************************************
@@ -280,14 +378,6 @@ css-tricks.com/musings-on-preprocessing/
 			display: block; 
 		}
 
-		&:active{
-			/************************************************
-			* 
-			* Graphical arrows 
-			*
-			*************************************************/
-			margin-top:55px;
-		}
 	}
 
 	.coda-nav-left, .coda-nav-right {
