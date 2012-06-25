@@ -10,10 +10,12 @@ Continuous Sliding
 Dynamic Tabs & Arrows  
 Cross Linking
 
-Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/tree/experimental) )
+Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/zipball/experimental) )
 -------------
 
 Responsive Design 
+
+Beta is not supported and not promised to work.
 
 How to Use
 -----------
