@@ -46,12 +46,13 @@ if ( typeof Object.create !== 'function' ) {
 
 			// Kill the preloader
 			$("p.loading").remove();
+
 		},
 		build: function() {
 			var self = this;
 
 			// Wrap the entire slider (backwards compatible)
-			( $(self.sliderId).parent().attr('class') === 'coda-slider-wrapper' ) ? '' : $(self.sliderId).wrap('<div id="' + ( self.$elem ).attr('id') + '-wrapper" class="coda-slider-wrapper"></div>');
+			if ( $(self.sliderId).parent().attr('class') != 'coda-slider-wrapper' ) {$(self.sliderId).wrap('<div id="' + ( self.$elem ).attr('id') + '-wrapper" class="coda-slider-wrapper"></div>'); }
 			
 			// Add the .panel class to the individual panels (backwards compatable)
 			self.panelClass = self.sliderId + ' .' + $(self.sliderId + " > div").addClass('panel').attr('class');
@@ -59,14 +60,18 @@ if ( typeof Object.create !== 'function' ) {
 
 			// Wrap all panels in a div, and wrap inner content in a div (backwards ccompatible)
 			$(self.panelClass).wrapAll('<div class="panel-container"></div>');
-			( $(self.panelClass).children().attr('class') === 'panel-wrapper' ) ? '' : $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>');
+			if ( $(self.panelClass).children().attr('class') != 'panel-wrapper' ) { $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>'); }
 			self.panelContainer = ($(self.panelClass).parent());
 
 			// Store current tab
 			self.currentTab = self.options.firstPanelToLoad - 1;
 
+			// TODO fix this. If responsive, disable auto height to start (only way to work so far)
+			if (self.options.responsive) { self.options.autoHeight = false;}
+
 			// Apply starting height to the container
-			if (this.options.autoHeight) { $(self.panelContainer).parent().css('height', $($(self.panelContainer).children()[self.currentTab]).height());}
+			if (self.options.autoHeight) { $(self.sliderId).css('height', $($(self.panelContainer).children()[self.currentTab]).height() + $(self.sliderId + '-wrapper .coda-nav-right').height());	}
+
 
 			// Build navigation tabs
 			if (self.options.dynamicTabs) { self.addNavigation(); }
@@ -90,11 +95,23 @@ if ( typeof Object.create !== 'function' ) {
 			// Allow the slider to be clicked
 			self.clickable = true;
 
-
 			// Count the number of panels and get the combined width
 			self.panelCount = $(self.panelClass).length;
 			self.panelWidth = $(self.panelClass).outerWidth();
 			self.totalWidth = self.panelCount * self.panelWidth;
+			
+			// Variable for the % sign if needed (responsive), otherwise px
+			self.pSign = 'px';
+
+			// Create a variable for responsive setting
+			if (self.options.responsive) { self.slideWidth = 100; self.pSign = '%';}
+			else { self.slideWidth = $(self.sliderId).width(); }
+
+			// If continuous, set the current margin without animation
+			if (self.options.continuous) {
+				if (self.options.responsive) { $(self.panelContainer).css('margin-left', -self.slideWidth + self.pSign); }
+				else { $(self.panelContainer).css('margin-left', -self.slideWidth); }
+			}
 
 			// Configure the current tab
 			self.setCurrent(self.currentTab);
@@ -103,22 +120,28 @@ if ( typeof Object.create !== 'function' ) {
 			$(self.sliderId + ' .panel-container').css('width', self.totalWidth);
 
 
-			// Adjust the margin if continuous is enabled
-			if (self.options.continuous) { $(self.panelContainer).css('margin-left', -self.panelWidth);}
+			// Make responsive (beta)
+			//if (self.options.responsive) {self.makeResponsive();}
+
 		},
 
 		addNavigation: function(){
 			var self = this;
-			var dynamicTabs = '<div class="coda-nav"><ul></ul></div>';
+			// The id is assigned here to allow for responsive
+			var dynamicTabs = '<div class="coda-nav"><ul id="' + ( self.$elem ).attr('id') + '-nav-ul"></ul></div>';
 
 			// Add basic frame
-			(self.options.dynamicTabsPosition === 'bottom') ? $(self.sliderId).after(dynamicTabs) : $(self.sliderId).before(dynamicTabs);
+			if (self.options.dynamicTabsPosition === 'bottom') { $(self.sliderId).after(dynamicTabs); }
+			else{ $(self.sliderId).before(dynamicTabs); }
+
 			// Add labels
 			$.each(
 				(self.$elem).find(self.options.panelTitleSelector), function(n) {
 					$($(self.sliderId).parent()).find('.coda-nav ul').append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '" title="' + $(this).text() + '">' + $(this).text() + '</a></li>');
 				}
 			);
+
+			// TODO Add dropdown navigation for smaller screens if responsive
 		},
 
 		alignNavigation: function() {
@@ -164,6 +187,39 @@ if ( typeof Object.create !== 'function' ) {
 			
 		},
 
+		/**********************************
+
+		makeResponsive: function(){
+			var self = this;
+
+			// Adjust widths and add classes to make responsive
+			$(self.sliderId + '-wrapper').addClass('coda-responsive').css({
+				'max-width': $(self.sliderId + ' .panel').outerWidth(true),
+				'width': '100%'
+			});
+			$(self.sliderId + ' .panel-container').css('width', 100 * self.panelCount + self.pSign);
+			$(self.sliderId + ' .panel').css('width', 100 / self.panelCount + self.pSign);
+
+			
+			if (self.options.dynamicArrows || self.options.dynamicArrowsGraphical) {
+				// Add padding to the top equal to the height of the arrows to make room for arrows, if enabled..
+				$(self.sliderId).css('padding-top', $(self.sliderId + '-wrapper .coda-nav-right').css('height') );
+			}
+
+			// Enable autoslide again. (Need to eliminate the need for this)
+			self.options.autoHeight = true;
+
+			// Apply a class to navigation when the screen size is too small.
+			if ( $(self.sliderId).width() < self.totalNavWidth ) { $(self.sliderId + '-nav-ul').addClass('small-tabs'); console.log('true'); }
+			// Apply a class to navigation if the user resizes the screen.
+			$(window).bind('resize', function(){
+				if ( $(self.sliderId).width() < self.totalNavWidth ) { $(self.sliderId + '-nav-ul').addClass('small-tabs'); console.log('true'); }
+				else { $(self.sliderId + '-nav-ul').removeClass('small-tabs');console.log('false'); }
+			});
+
+		},
+		************************************/
+
 		events: function(){
 			var self = this;
 			// CLick arrows
@@ -180,7 +236,6 @@ if ( typeof Object.create !== 'function' ) {
 				self.setCurrent(parseInt( $(this).attr('class').split('tab')[1], 10) - 1 );
 				if (self.options.continuous) {self.clickable = false;}
 				return false;
-
 			});
 			// Click cross links
 			$('[data-ref*=' + (self.sliderId).split('#')[1] + ']').on('click', function(e){
@@ -192,7 +247,9 @@ if ( typeof Object.create !== 'function' ) {
 			// Click to stop autoslider
 			$($(self.sliderId).parent()).find('*').on('click', function(e){
 				if (!self.clickable) {return false;}
-				(self.options.autoSlideStopWhenClicked) ? clearTimeout(self.autoslideTimeout) :  self.autoSlide(clearTimeout(self.autoslideTimeout));
+				// Clear the timeout
+				if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
+				else self.autoSlide(clearTimeout(self.autoslideTimeout));
 				// Stops from speedy clicking for continuous sliding.
 				if (self.options.continuous) {clearTimeout(self.continuousTimeout);}
 			});
@@ -214,13 +271,13 @@ if ( typeof Object.create !== 'function' ) {
 				// This is so the height will match the current panel, ignoring the clones.
 				// It also adjusts the count for the "currrent" class that's applied
 				if (self.options.continuous) {
-					self.panelHeight = self.currentTab + 1;
+					self.panelHeightCount = self.currentTab + 1;
 					if (self.currentTab === self.panelCount - 2){self.setTab = 0;}
 					else if (self.currentTab === -1) {self.setTab = self.panelCount - 3;}
 					else {self.setTab = self.currentTab;}
 				}
 				else{
-					self.panelHeight = self.currentTab;
+					self.panelHeightCount = self.currentTab;
 					self.setTab = self.currentTab;
 				}
 				// Add and remove current class.
@@ -230,6 +287,7 @@ if ( typeof Object.create !== 'function' ) {
 					.parent().siblings().children().removeClass('current');
 				}
 				this.transition();
+				
 			}
 		},
 		
@@ -238,24 +296,26 @@ if ( typeof Object.create !== 'function' ) {
 				// Adjust the height
 				if (self.options.autoHeight) {
 					$(self.panelContainer).parent().animate({
-						'height': $($(self.panelContainer).children()[self.panelHeight]).height()
+						'height': $($(self.panelContainer).children()[self.panelHeightCount]).height()
 					}, {
 						easing: self.options.slideEaseFunction,
 						duration: self.options.slideEaseDuration,
 						queue: false
 						});
 				}
+				
 				// Adjust the margin for continuous sliding
-				if (self.options.continuous) {self.marginLeft = -(self.currentTab * $(self.sliderId).width() ) - $(self.sliderId).width();}
-				else {self.marginLeft = -(self.currentTab * $(self.sliderId).width() );}
+				if (self.options.continuous) {self.marginLeft = -(self.currentTab * self.slideWidth ) - self.slideWidth;}
+				// Otherwise adjust as normal
+				else {self.marginLeft = -(self.currentTab * self.slideWidth ); }
 				// Animate the slider
 				(self.panelContainer).animate({
-					'margin-left': self.marginLeft
+					'margin-left': self.marginLeft + self.pSign
 				}, {
 					easing: self.options.slideEaseFunction,
 					duration: self.options.slideEaseDuration,
 					queue: false,
-					complete: self.continuousSlide(self.options.slideEaseDuration + 50) // This OK?
+					complete: self.continuousSlide(self.options.slideEaseDuration + 50) // Wonder about this "+50", so far so good...
 				});
 		},
 
@@ -277,14 +337,15 @@ if ( typeof Object.create !== 'function' ) {
 
 			if (self.options.continuous) {
 				self.continuousTimeout = setTimeout(function() {
+
 					// If on the last panel (the clone of panel 1), set the margin to the original.
 					if (self.currentTab === self.panelCount - 2){
-						$(self.panelContainer).css('margin-left', -$(self.sliderId).width());
+						$(self.panelContainer).css('margin-left', -self.slideWidth + self.pSign);
 						self.currentTab = 0;
 					}
-					// If on the first panel 9the clone of the last panel), set the margin to the original.
+					// If on the first panel the clone of the last panel), set the margin to the original.
 					else if (self.currentTab === -1){
-						$(self.panelContainer).css('margin-left', -( ($(self.sliderId).width() * self.panelCount) - ($(self.sliderId).width() * 2) ));
+						$(self.panelContainer).css('margin-left', -( ((self.slideWidth * self.panelCount) - (self.slideWidth * 2))) + self.pSign );
 						self.currentTab = (self.panelCount - 3);
 					}
 					self.clickable = true;
@@ -323,6 +384,7 @@ if ( typeof Object.create !== 'function' ) {
 		externalTriggerSelector: "a.xtrig", //shouldnt need any more
 		firstPanelToLoad: 1,
 		panelTitleSelector: "h2.title",
+		//responsive:false,
 		slideEaseDuration: 2000,
 		slideEaseFunction: "easeInOutExpo"
 	};
