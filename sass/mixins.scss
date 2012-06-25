@@ -197,10 +197,11 @@ BUTTONS
 	text-decoration: none;
 	text-shadow: 0 1px rgba(0,0,0, .75);
 	cursor: pointer;
-	margin-bottom: 20px;
+	margin: 0 5px 20px;
 	line-height: 21px;
 	@include borderRadius(4px);
 	@include css-gradient($blue,darken($blue, 5%));
+	@include box-shadow(1px 1px 2px 0 black);
 
 
 	&:hover, &:focus {

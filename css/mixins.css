@@ -54,7 +54,7 @@ BUTTONS
   text-decoration: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   cursor: pointer;
-  margin-bottom: 20px;
+  margin: 0 5px 20px;
   line-height: 21px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -67,8 +67,13 @@ BUTTONS
   background-image: -moz-linear-gradient(top, #0090ff, #0082e6);
   background-image: -o-linear-gradient(top, #0090ff, #0082e6);
   background-image: -ms-linear-gradient(top, #0090ff, #0082e6);
-  background-image: linear-gradient(top, #0090ff, #0082e6); }
-  /* line 206, ../sass/mixins.scss */
+  background-image: linear-gradient(top, #0090ff, #0082e6);
+  -webkit-box-shadow: 1px 1px 2px 0 black;
+  -moz-box-shadow: 1px 1px 2px 0 black;
+  -ms-box-shadow: 1px 1px 2px 0 black;
+  -o-box-shadow: 1px 1px 2px 0 black;
+  box-shadow: 1px 1px 2px 0 black; }
+  /* line 207, ../sass/mixins.scss */
   .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
     color: white;
     border: 1px solid #006bbd;
@@ -81,7 +86,7 @@ BUTTONS
     background-image: -o-linear-gradient(top, #0082e6, #0073cc);
     background-image: -ms-linear-gradient(top, #0082e6, #0073cc);
     background-image: linear-gradient(top, #0082e6, #0073cc); }
-  /* line 214, ../sass/mixins.scss */
+  /* line 215, ../sass/mixins.scss */
   .button:active, .button:visited:active {
     background-color: #0090ff;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#0082e6), to(#0090ff));
@@ -94,11 +99,11 @@ BUTTONS
 /*********************
 TYPOGRAPHY
 *********************/
-/* line 224, ../sass/mixins.scss */
+/* line 225, ../sass/mixins.scss */
 .sans-serif {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-/* line 227, ../sass/mixins.scss */
+/* line 228, ../sass/mixins.scss */
 .serif {
   font-family: "Georgia", Cambria, Times New Roman, Times, serif; }
 
@@ -124,26 +129,26 @@ TYPOGRAPHY
 use the best ampersand 
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 255, ../sass/mixins.scss */
+/* line 256, ../sass/mixins.scss */
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif;
   font-style: italic; }
 
 /* text alignment */
-/* line 261, ../sass/mixins.scss */
+/* line 262, ../sass/mixins.scss */
 .text-left {
   text-align: left; }
 
-/* line 262, ../sass/mixins.scss */
+/* line 263, ../sass/mixins.scss */
 .text-center {
   text-align: center; }
 
-/* line 263, ../sass/mixins.scss */
+/* line 264, ../sass/mixins.scss */
 .text-right {
   text-align: right; }
 
 /* alerts & notices */
-/* line 267, ../sass/mixins.scss */
+/* line 268, ../sass/mixins.scss */
 .help, .info, .error, .success {
   margin: 10px;
   padding: 5px 18px;
@@ -156,22 +161,22 @@ span.amp {
   border-radius: 15px;
   text-align: center; }
 
-/* line 276, ../sass/mixins.scss */
+/* line 277, ../sass/mixins.scss */
 .help {
   border-color: #ffe033;
   background: #ffe44d; }
 
-/* line 281, ../sass/mixins.scss */
+/* line 282, ../sass/mixins.scss */
 .info {
   border-color: #0082e6;
   background: #0090ff; }
 
-/* line 286, ../sass/mixins.scss */
+/* line 287, ../sass/mixins.scss */
 .error {
   border-color: #f8cdce;
   background: #fbe3e4; }
 
-/* line 291, ../sass/mixins.scss */
+/* line 292, ../sass/mixins.scss */
 .success {
   border-color: #e5e5e5;
   background: #f2f2f2; }

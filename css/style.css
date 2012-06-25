@@ -1,1 +1,1564 @@
-/* normalize.css 2011-11-04T15:38 UTC - http://github.com/necolas/normalize.css */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}body,button,input,select,textarea{font-family:sans-serif}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}pre,code,kbd,samp{font-family:monospace, serif;_font-family:'courier new', monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}ul,ol{margin-left:0;padding:0 0 0 40px}dd{margin:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}ul,ol{padding:0;list-style-type:none}dd{margin:0}.sidebar ul,.sidebar ol,.commentlist{list-style:none}p{-webkit-hyphens:auto;-moz-hyphens:auto;-epub-hyphens:auto;hyphens:auto}b,strong,.strong{font-weight:bold}dfn,em,.em{font-style:italic}small,.small{font-size:75%}.clearfix:before,.clearfix:after,.nav .menu ul:before,.nav .menu ul:after{content:"";display:table}.clearfix:after,.nav .menu ul:after{clear:both}.clearfix,.nav .menu ul{zoom:1}.button,.button:visited{border:1px solid #006bbd;border-top-color:#007cdb;border-left-color:#007cdb;padding:4px 12px;color:#fff;display:inline-block;font-size:17px;font-weight:bold;text-decoration:none;text-shadow:0 1px rgba(0,0,0,0.75);cursor:pointer;margin-bottom:20px;line-height:21px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;border-radius:4px;background-color:#0082e6;background-image:-webkit-gradient(linear, left top, left bottom, from(#0090ff), to(#0082e6));background-image:-webkit-linear-gradient(top, #0090ff, #0082e6);background-image:-moz-linear-gradient(top, #0090ff, #0082e6);background-image:-o-linear-gradient(top, #0090ff, #0082e6);background-image:-ms-linear-gradient(top, #0090ff, #0082e6);background-image:linear-gradient(top, #0090ff,#0082e6)}.button:hover,.button:focus,.button:visited:hover,.button:visited:focus{color:#fff;border:1px solid #006bbd;border-top-color:#005699;border-left-color:#005699;background-color:#0073cc;background-image:-webkit-gradient(linear, left top, left bottom, from(#0082e6), to(#0073cc));background-image:-webkit-linear-gradient(top, #0082e6, #0073cc);background-image:-moz-linear-gradient(top, #0082e6, #0073cc);background-image:-o-linear-gradient(top, #0082e6, #0073cc);background-image:-ms-linear-gradient(top, #0082e6, #0073cc);background-image:linear-gradient(top, #0082e6,#0073cc)}.button:active,.button:visited:active{background-color:#0090ff;background-image:-webkit-gradient(linear, left top, left bottom, from(#0082e6), to(#0090ff));background-image:-webkit-linear-gradient(top, #0082e6, #0090ff);background-image:-moz-linear-gradient(top, #0082e6, #0090ff);background-image:-o-linear-gradient(top, #0082e6, #0090ff);background-image:-ms-linear-gradient(top, #0082e6, #0090ff);background-image:linear-gradient(top, #0082e6,#0090ff)}.sans-serif{font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}.serif{font-family:"Georgia", Cambria, Times New Roman, Times, serif}span.amp{font-family:Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif;font-style:italic}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.help,.info,.error,.success{margin:10px;padding:5px 18px;border:1px solid;clear:both;-webkit-border-radius:15px;-moz-border-radius:15px;-ms-border-radius:15px;-o-border-radius:15px;border-radius:15px;text-align:center}.help{border-color:#ffe033;background:#ffe44d}.info{border-color:#0082e6;background:#0090ff}.error{border-color:#f8cdce;background:#fbe3e4}.success{border-color:#e5e5e5;background:#f2f2f2}.coda-slider-wrapper{padding:20px 0}.coda-slider-wrapper div,.coda-slider-wrapper span,.coda-slider-wrapper applet,.coda-slider-wrapper object,.coda-slider-wrapper iframe,.coda-slider-wrapper h1,.coda-slider-wrapper h2,.coda-slider-wrapper h3,.coda-slider-wrapper h4,.coda-slider-wrapper h5,.coda-slider-wrapper h6,.coda-slider-wrapper p,.coda-slider-wrapper blockquote,.coda-slider-wrapper pre,.coda-slider-wrapper a,.coda-slider-wrapper abbr,.coda-slider-wrapper acronym,.coda-slider-wrapper address,.coda-slider-wrapper big,.coda-slider-wrapper cite,.coda-slider-wrapper code,.coda-slider-wrapper del,.coda-slider-wrapper dfn,.coda-slider-wrapper em,.coda-slider-wrapper font,.coda-slider-wrapper img,.coda-slider-wrapper ins,.coda-slider-wrapper kbd,.coda-slider-wrapper q,.coda-slider-wrapper s,.coda-slider-wrapper samp,.coda-slider-wrapper small,.coda-slider-wrapper strike,.coda-slider-wrapper strong,.coda-slider-wrapper sub,.coda-slider-wrapper sup,.coda-slider-wrapper tt,.coda-slider-wrapper var,.coda-slider-wrapper b,.coda-slider-wrapper u,.coda-slider-wrapper i,.coda-slider-wrapper center,.coda-slider-wrapper dl,.coda-slider-wrapper dt,.coda-slider-wrapper dd,.coda-slider-wrapper ol,.coda-slider-wrapper ul,.coda-slider-wrapper li,.coda-slider-wrapper fieldset,.coda-slider-wrapper form,.coda-slider-wrapper label,.coda-slider-wrapper legend,.coda-slider-wrapper table,.coda-slider-wrapper caption,.coda-slider-wrapper tbody,.coda-slider-wrapper tfoot,.coda-slider-wrapper thead,.coda-slider-wrapper tr,.coda-slider-wrapper th,.coda-slider-wrapper td{margin:0;padding:0;border:0;box-shadow:none;outline:0;font-size:100%;vertical-align:baseline;background:transparent}.coda-slider-wrapper body{line-height:1}.coda-slider-wrapper ol,.coda-slider-wrapper ul{list-style:none}.coda-slider-wrapper blockquote,.coda-slider-wrapper q{quotes:none}.coda-slider-wrapper blockquote:before,.coda-slider-wrapper blockquote:after,.coda-slider-wrapper q:before,.coda-slider-wrapper q:after{content:'';content:none}.coda-slider-wrapper .coda-slider{background:#f2f2f2;width:700px}.coda-slider-wrapper .coda-slider .coda-nav .current{background:#0090FF}.coda-slider-wrapper .coda-slider .coda-nav a{background:#000;color:#fff;margin-right:1px;padding:3px 6px}.coda-slider-wrapper .coda-slider .coda-nav a:hover{background:#000;color:#fff;text-shadow:none}.coda-slider-wrapper .coda-slider .coda-nav-left a,.coda-slider-wrapper .coda-slider .coda-nav-right a{background:#000;color:#fff;padding:5px;width:100px}.coda-slider-wrapper .coda-slider .arrows .coda-slider{margin:0 10px}.coda-slider-wrapper .coda-slider .coda-nav-left-arrow{width:42px;height:107px;background:url(../img/arrow.png) no-repeat bottom left}.coda-slider-wrapper .coda-slider .coda-nav-right-arrow{width:42px;height:107px;background:url(../img/arrow.png) no-repeat bottom right}.coda-slider-wrapper .coda-slider .panel{width:700px}.coda-slider-wrapper .coda-slider .panel .panel-wrapper{padding:20px}.coda-slider-wrapper .coda-slider .loading{height:100%;padding:20px;text-align:center}.coda-slider-wrapper{clear:both;overflow:auto}.coda-slider-wrapper .coda-slider{float:left;overflow:hidden;position:relative}.coda-slider-wrapper .coda-slider .coda-nav ul{clear:both;display:block;margin:auto;overflow:hidden}.coda-slider-wrapper .coda-slider .coda-nav ul li{display:inline}.coda-slider-wrapper .coda-slider .coda-nav ul li a{display:block;float:left;text-decoration:none}.coda-slider-wrapper .coda-slider .coda-nav-left-arrow,.coda-slider-wrapper .coda-slider .coda-nav-right-arrow{cursor:pointer;float:left;margin-top:50px}.coda-slider-wrapper .coda-slider .coda-nav-left-arrow a,.coda-slider-wrapper .coda-slider .coda-nav-right-arrow a{display:block}.coda-slider-wrapper .coda-slider .coda-nav-left-arrow:active,.coda-slider-wrapper .coda-slider .coda-nav-right-arrow:active{margin-top:55px}.coda-slider-wrapper .coda-slider .coda-nav-left,.coda-slider-wrapper .coda-slider .coda-nav-right{float:left}.coda-slider-wrapper .coda-slider .coda-nav-left a,.coda-slider-wrapper .coda-slider .coda-nav-right a{display:block;text-align:center;text-decoration:none}.coda-slider-wrapper .coda-slider .coda-nav-left,.coda-slider-wrapper .coda-slider .coda-nav-left-arrow{clear:both}.coda-slider-wrapper .coda-slider .panel-container{position:relative}.coda-slider-wrapper .coda-slider .panel-container .panel{display:block;float:left}body{box-sizing:border-box;color:#373737;font-size:16px;font-family:'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;background:url("../img/arrows.png") repeat-x}h1,h2,h3,h4,h5,h6{margin:10px 0;font-weight:700;color:#222222;font-family:'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;letter-spacing:-1px}h1{font-size:36px;font-weight:700}h2{padding-bottom:10px;font-size:32px;background:url("../img/bg_hr.png") repeat-x bottom}h3{font-size:24px}h4{font-size:21px}h5{font-size:18px}h6{font-size:16px}p{margin:10px 0 15px 0}footer p{color:#f2f2f2}a{text-decoration:none;color:#007edf;text-shadow:none;transition:color 0.5s ease;transition:text-shadow 0.5s ease;-webkit-transition:color 0.5s ease;-webkit-transition:text-shadow 0.5s ease;-moz-transition:color 0.5s ease;-moz-transition:text-shadow 0.5s ease;-o-transition:color 0.5s ease;-o-transition:text-shadow 0.5s ease;-ms-transition:color 0.5s ease;-ms-transition:text-shadow 0.5s ease}a:hover{color:#0069ba;text-shadow:#0090ff 0px 0px 2px}footer a:hover{color:#43adff;text-shadow:#0090ff 0px 0px 2px}em{font-style:italic}strong{font-weight:bold}img{position:relative;max-width:1080px;padding:5px;margin:10px 0 10px 0;border:1px solid #ebebeb;-webkit-box-shadow:0px 0px 5px 2px #ccc;-moz-box-shadow:0px 0px 5px 2px #ccc;-ms-box-shadow:0px 0px 5px 2px #ccc;-o-box-shadow:0px 0px 5px 2px #ccc;box-shadow:0px 0px 5px 2px #ccc}pre,code{width:100%;color:#222;background-color:#fff;font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:14px;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px}pre{width:74%;padding:10px;box-shadow:0 0 10px rgba(0,0,0,0.1);overflow:auto}code{padding:3px;margin:0 3px;box-shadow:0 0 10px rgba(0,0,0,0.1)}pre code{display:block;box-shadow:none}blockquote{color:#666;margin-bottom:20px;padding:0 0 0 20px;border-left:3px solid #bbb}ul,ol,dl{margin-bottom:15px}ul li{list-style:inside;padding-left:20px}ol li{list-style:decimal inside;padding-left:20px}dl dt{font-weight:bold}dl dd{padding-left:20px;font-style:italic}dl p{padding-left:20px;font-style:italic}hr{height:1px;margin-bottom:5px;border:none;background:url("../img/bg_hr.png") repeat-x center}table{border:1px solid #373737;margin-bottom:20px;text-align:left}th{font-family:'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;padding:10px;background:#373737;color:#fff}td{padding:10px;border:1px solid #373737}form{background:#f2f2f2;padding:20px}img{width:100%;max-width:100%}.coda-slider-wrapper h1,.coda-slider-wrapper h2,.coda-slider-wrapper h3,.coda-slider-wrapper h4,.coda-slider-wrapper h5,.coda-slider-wrapper h6{margin:10px 0;font-weight:700;color:#222222;font-family:'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;letter-spacing:-1px}.coda-slider-wrapper h1{font-size:36px;font-weight:700}.coda-slider-wrapper h2{padding-bottom:10px;font-size:32px;background:url("../img/bg_hr.png") repeat-x bottom}.coda-slider-wrapper h3{font-size:24px}.coda-slider-wrapper h4{font-size:21px}.coda-slider-wrapper h5{font-size:18px}.coda-slider-wrapper h6{font-size:16px}.coda-slider-wrapper p{margin:10px 0 15px 0}.coda-slider-wrapper pre,.coda-slider-wrapper code{width:100%;color:#222;background-color:#fff;font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;font-size:14px;-webkit-border-radius:2px;-moz-border-radius:2px;-ms-border-radius:2px;-o-border-radius:2px;border-radius:2px}.coda-slider-wrapper pre{width:96%;padding:10px;margin:4px;box-shadow:0 0 10px rgba(0,0,0,0.1);overflow:auto}.coda-slider-wrapper pre code{display:block;box-shadow:none}.coda-slider-wrapper code{padding:3px;margin:0 3px;box-shadow:0 0 10px rgba(0,0,0,0.1)}#main-slider-wrapper{width:1240px;margin:0 auto}#main-slider-wrapper #main-slider{width:1175px;height:500px;background:transparent}#main-slider-wrapper #main-slider h2{display:none}#main-slider-wrapper #main-slider .panel{width:1175px;background:transparent}#showcase-wrapper{margin:0 auto}#showcase-wrapper #showcase{width:700px}#showcase-wrapper #showcase .panel{width:700px;height:auto}#showcase-wrapper #showcase h2{display:block}#showcase-wrapper #showcase form .labelCol{float:left;width:100px;text-align:right;padding-right:10px}#showcase-wrapper #showcase form .myRow{padding-bottom:20px}#showcase-wrapper #showcase form textarea{overflow:auto}#showcase-wrapper #showcase form .tweet{margin-top:10px}#showcase-wrapper #showcase img{width:auto}#continuous-wrapper{margin:0 auto}#continuous-wrapper #continuous .panel{width:700px}#continuous-wrapper #continuous .panel .title{display:none}#continuous-wrapper #continuous .panel p{margin:0;background:#0090ff;width:90%;padding:10px 5%;text-align:right;color:#fff}#continuous-wrapper .coda-nav a{background:transparent;color:#222}#continuous-wrapper .coda-nav a:hover{color:#0090ff}#continuous-wrapper .coda-nav .current,#continuous-wrapper .coda-nav .current:hover{color:#0090ff;background:transparent}#dynamic-tabs-wrapper{margin:0 auto}#dynamic-tabs-wrapper #dynamic-tabs{border:1px solid #e5e5e5;border-top:none;width:650px}#dynamic-tabs-wrapper #dynamic-tabs .panel{width:650px}#dynamic-tabs-wrapper #dynamic-tabs .panel h2{display:block}#dynamic-tabs-wrapper .coda-nav a{-webkit-border-top-right-radius:10px;-webkit-border-top-left-radius:10px;-moz-border-radius-topright:10px;-moz-border-radius-topleft:10px;border-top-right-radius:10px;border-top-left-radius:10px;background:#d8d8d8;color:#222;border:1px solid #e5e5e5;border-bottom:none}#dynamic-tabs-wrapper .coda-nav a:hover{background:#ccc}#dynamic-tabs-wrapper .coda-nav .current,#dynamic-tabs-wrapper .coda-nav .current:hover{background:#f2f2f2}#dynamic-cross-links{width:100%;text-align:center}#information-wrapper{padding:0}#information-wrapper #information .panel-wrapper{padding:0}.install-instructions{height:20px;overflow:hidden}.api-clickable{height:25px;width:22.3%;float:left;margin-right:1%;cursor:pointer}#api-settings pre{overflow:hidden}#api-settings .h4{color:#0090ff;margin:0;font-size:20px;letter-spacing:1.5px}.outer{width:100%;background:url("../img/arrows.png") repeat-x}.inner{position:relative;max-width:1030px;padding:20px 10px;margin:0 auto}.top{max-width:715px}.left{max-width:715px;float:left}.right{width:275px;padding:10px;margin:50px 10px;float:right}#forkme_banner{display:block;position:absolute;top:0;right:10px;z-index:10;padding:10px 50px 10px 10px;color:#fff;background:url("../img/blacktocat.png") #0090ff no-repeat 95% 50%;font-weight:700;box-shadow:0 0 10px rgba(0,0,0,0.62);border-bottom-left-radius:2px;border-bottom-right-radius:2px}#header_wrap .inner{padding:50px 10px 30px 10px}#project_title{margin:0;color:#373737;font-size:5em;font-weight:700}#project_tagline{color:#373737;font-size:1.5em;font-weight:300;background:none;text-align:center}#downloads{position:absolute;width:210px;z-index:10;top:-40px;right:0;height:70px;background:url("../img/icon_download.png") no-repeat 0% 90%}.zip_download_link{display:block;float:right;width:90px;height:70px;text-indent:-5000px;overflow:hidden;background:url(../img/sprite_download.png) no-repeat bottom left}.tar_download_link{display:block;float:right;width:90px;height:70px;text-indent:-5000px;overflow:hidden;background:url(../img/sprite_download.png) no-repeat bottom right;margin-left:10px}.zip_download_link:hover{background:url(../img/sprite_download.png) no-repeat top left}.tar_download_link:hover{background:url(../img/sprite_download.png) no-repeat top right}#main_content_wrap{background:#f2f2f2;border-top:1px solid #111;border-bottom:1px solid #111}#footer_wrap{background:#212121}.soften{height:1px;max-width:780px;margin:0 auto;background-image:-webkit-linear-gradient(left, transparent, rgba(0,0,0,0.1), transparent);background-image:-moz-linear-gradient(left, transparent, rgba(0,0,0,0.1), transparent);background-image:-ms-linear-gradient(left, transparent, rgba(0,0,0,0.1), transparent);background-image:-o-linear-gradient(left, transparent, rgba(0,0,0,0.1), transparent);border:0}@media screen and (max-width: 768px){.right{clear:both;height:300px}}@media screen and (max-width: 480px){body{font-size:14px}#downloads{display:none}.inner{min-width:320px;max-width:480px}.right{clear:both;height:300px}#project_title{font-size:32px}h1{font-size:28px}h2{font-size:24px}h3{font-size:21px}h4{font-size:18px}h5{font-size:14px}h6{font-size:12px}code,pre{min-width:320px;max-width:480px;font-size:11px}}
+/********************
+Kevin Batdorf
+********************/
+/*********************
+IMPORTING STYLES
+*********************/
+/* import reset */
+/* normalize.css 2011-11-04T15:38 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 20, ../sass/normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block; }
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 30, ../sass/normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ */
+/* line 40, ../sass/normalize.scss */
+audio:not([controls]) {
+  display: none; }
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+/* line 49, ../sass/normalize.scss */
+[hidden] {
+  display: none; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Keeps page centred in all browsers regardless of content height
+ * 3. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+/* line 66, ../sass/normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  overflow-y: scroll;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */ }
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+/* line 77, ../sass/normalize.scss */
+body {
+  margin: 0; }
+
+/* 
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+/* line 89, ../sass/normalize.scss */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+/* line 102, ../sass/normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+/* line 112, ../sass/normalize.scss */
+a:hover,
+a:active {
+  outline: 0; }
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Neutralise smaller font-size in 'section' and 'article' in FF4+, Chrome, S5
+ */
+/* line 125, ../sass/normalize.scss */
+h1 {
+  font-size: 2em; }
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+/* line 133, ../sass/normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+/* line 142, ../sass/normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/* line 146, ../sass/normalize.scss */
+blockquote {
+  margin: 1em 40px; }
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+/* line 154, ../sass/normalize.scss */
+dfn {
+  font-style: italic; }
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+/* line 162, ../sass/normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+/* line 175, ../sass/normalize.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+/* line 185, ../sass/normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+/* line 198, ../sass/normalize.scss */
+q {
+  quotes: none; }
+
+/* 2 */
+/* line 205, ../sass/normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+/* line 210, ../sass/normalize.scss */
+small {
+  font-size: 75%; }
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+/* line 220, ../sass/normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 227, ../sass/normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 231, ../sass/normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/* line 241, ../sass/normalize.scss */
+ul,
+ol {
+  margin-left: 0;
+  padding: 0 0 0 40px; }
+
+/* line 246, ../sass/normalize.scss */
+dd {
+  margin: 0 0 0 40px; }
+
+/* line 251, ../sass/normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+/* line 267, ../sass/normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */ }
+
+/*
+ * Corrects overflow displayed oddly in IE9 
+ */
+/* line 276, ../sass/normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+/* line 289, ../sass/normalize.scss */
+figure {
+  margin: 0; }
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+/* line 302, ../sass/normalize.scss */
+form {
+  margin: 0; }
+
+/*
+ * Define consistent border, margin, and padding
+ */
+/* line 310, ../sass/normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects alignment displayed oddly in IE6/7
+ */
+/* line 321, ../sass/normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  *margin-left: -7px;
+  /* 2 */ }
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+/* line 335, ../sass/normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */ }
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+/* line 347, ../sass/normalize.scss */
+button,
+input {
+  line-height: normal;
+  /* 1 */ }
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+/* line 361, ../sass/normalize.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */
+  *overflow: visible;
+  /* 3 */ }
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ */
+/* line 373, ../sass/normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+/* line 383, ../sass/normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Removes inner padding that is displayed in S5, Chrome on OS X
+ */
+/* line 394, ../sass/normalize.scss */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+/* line 404, ../sass/normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+/* line 414, ../sass/normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* 
+ * Remove most spacing between table cells
+ */
+/* line 428, ../sass/normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/******************************************************************
+CUSTOMIZED RESET VALUES
+I added these extra styles as a more personalized reset. Feel free
+to remove them if you like or add your own. If you want to update
+the normalize styles, make sure to edit from this point up.
+******************************************************************/
+/* line 440, ../sass/normalize.scss */
+ul, ol {
+  padding: 0;
+  list-style-type: none; }
+
+/* line 445, ../sass/normalize.scss */
+dd {
+  margin: 0; }
+
+/* line 451, ../sass/normalize.scss */
+.sidebar ul,
+.sidebar ol,
+.commentlist {
+  list-style: none; }
+
+/* proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens) */
+/* line 456, ../sass/normalize.scss */
+p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -epub-hyphens: auto;
+  hyphens: auto; }
+
+/* line 465, ../sass/normalize.scss */
+b,
+strong,
+.strong {
+  font-weight: bold; }
+
+/* line 471, ../sass/normalize.scss */
+dfn,
+em,
+.em {
+  font-style: italic; }
+
+/* line 475, ../sass/normalize.scss */
+small, .small {
+  font-size: 75%; }
+
+/*********************
+CLEARFIXIN'
+*********************/
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+/* line 487, ../sass/normalize.scss */
+.clearfix:before,
+.clearfix:after,
+.nav .menu ul:before,
+.nav .menu ul:after {
+  content: "";
+  display: table; }
+
+/* line 489, ../sass/normalize.scss */
+.clearfix:after,
+.nav .menu ul:after {
+  clear: both; }
+
+/* line 491, ../sass/normalize.scss */
+.clearfix,
+.nav .menu ul {
+  zoom: 1; }
+
+/* import mixins */
+/*****************************************************************
+
+Kevin Batdorf
+
+
+******************************************************************/
+/*********************
+COLORS 
+*********************/
+/* this is pulled from Bootstrap */
+/*********************
+3D Text
+*********************/
+/* @include text3d($black); */
+/*********************
+BORDER RADIUS
+*********************/
+/* @include borderRadius(4px); */
+/* @include borderTopRadius(4px); */
+/* @include borderRightRadius(4px); */
+/* @include borderBottomRadius(4px); */
+/* @include borderLeftRadius(4px); */
+/*********************
+BOX SHADOWS
+*********************/
+/* @include box-shadow(5px 5px 5px 10px #000); */
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdue it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include boxSizing(border-box); */
+/*********************
+BOX SHADOW
+*********************/
+/* @include boxShadow(0 0 4px #444); */
+/*********************
+BUTTONS
+*********************/
+/* line 188, ../sass/mixins.scss */
+.button, .button:visited {
+  border: 1px solid #006bbd;
+  border-top-color: #007cdb;
+  border-left-color: #007cdb;
+  padding: 4px 12px;
+  color: white;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin: 0 5px 20px;
+  line-height: 21px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #0082e6;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0090ff), to(#0082e6));
+  background-image: -webkit-linear-gradient(top, #0090ff, #0082e6);
+  background-image: -moz-linear-gradient(top, #0090ff, #0082e6);
+  background-image: -o-linear-gradient(top, #0090ff, #0082e6);
+  background-image: -ms-linear-gradient(top, #0090ff, #0082e6);
+  background-image: linear-gradient(top, #0090ff, #0082e6);
+  -webkit-box-shadow: 1px 1px 2px 0 black;
+  -moz-box-shadow: 1px 1px 2px 0 black;
+  -ms-box-shadow: 1px 1px 2px 0 black;
+  -o-box-shadow: 1px 1px 2px 0 black;
+  box-shadow: 1px 1px 2px 0 black; }
+  /* line 207, ../sass/mixins.scss */
+  .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
+    color: white;
+    border: 1px solid #006bbd;
+    border-top-color: #005699;
+    border-left-color: #005699;
+    background-color: #0073cc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0082e6), to(#0073cc));
+    background-image: -webkit-linear-gradient(top, #0082e6, #0073cc);
+    background-image: -moz-linear-gradient(top, #0082e6, #0073cc);
+    background-image: -o-linear-gradient(top, #0082e6, #0073cc);
+    background-image: -ms-linear-gradient(top, #0082e6, #0073cc);
+    background-image: linear-gradient(top, #0082e6, #0073cc); }
+  /* line 215, ../sass/mixins.scss */
+  .button:active, .button:visited:active {
+    background-color: #0090ff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#0082e6), to(#0090ff));
+    background-image: -webkit-linear-gradient(top, #0082e6, #0090ff);
+    background-image: -moz-linear-gradient(top, #0082e6, #0090ff);
+    background-image: -o-linear-gradient(top, #0082e6, #0090ff);
+    background-image: -ms-linear-gradient(top, #0082e6, #0090ff);
+    background-image: linear-gradient(top, #0082e6, #0090ff); }
+
+/*********************
+TYPOGRAPHY
+*********************/
+/* line 225, ../sass/mixins.scss */
+.sans-serif {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* line 228, ../sass/mixins.scss */
+.serif {
+  font-family: "Georgia", Cambria, Times New Roman, Times, serif; }
+
+/* 	To embed your own fonts, use this syntax
+	and place your fonts inside the 
+	library/fonts folder. For more information
+	on embedding fonts, go to:
+	http://www.fontsquirrel.com/
+	Be sure to remove the comment brackets.
+*/
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('../fonts/font-name.eot');
+    	src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/font-name.woff') format('woff'),
+             url('../fonts/font-name.ttf') format('truetype'),
+             url('../fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+*/
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/* line 256, ../sass/mixins.scss */
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif;
+  font-style: italic; }
+
+/* text alignment */
+/* line 262, ../sass/mixins.scss */
+.text-left {
+  text-align: left; }
+
+/* line 263, ../sass/mixins.scss */
+.text-center {
+  text-align: center; }
+
+/* line 264, ../sass/mixins.scss */
+.text-right {
+  text-align: right; }
+
+/* alerts & notices */
+/* line 268, ../sass/mixins.scss */
+.help, .info, .error, .success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+  clear: both;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  text-align: center; }
+
+/* line 277, ../sass/mixins.scss */
+.help {
+  border-color: #ffe033;
+  background: #ffe44d; }
+
+/* line 282, ../sass/mixins.scss */
+.info {
+  border-color: #0082e6;
+  background: #0090ff; }
+
+/* line 287, ../sass/mixins.scss */
+.error {
+  border-color: #f8cdce;
+  background: #fbe3e4; }
+
+/* line 292, ../sass/mixins.scss */
+.success {
+  border-color: #e5e5e5;
+  background: #f2f2f2; }
+
+/* import slider */
+/***********************************************************************
+	jQuery Coda-Slider v3.0 - kevinbatdorf.github.com/codaslider
+	Copyright (c) 2012 Kevin Batdorf
+	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
+************************************************************************/
+/********************************************
+SASS stylesheet.
+
+No idea what CSS preprocessing is all about? No problem... just use the style.css file instead.
+If you want to learn more, check out this article by Chris Coyier
+
+css-tricks.com/musings-on-preprocessing/
+
+********************************************/
+/* line 18, ../sass/coda-slider.scss */
+.coda-slider-wrapper {
+  /* Eric Meyer's reset http://meyerweb.com/eric/tools/css/ */
+  /*******************************************************
+  *
+  * Most common stuff you'll need to change 
+  * will be below this line.
+  *
+  ********************************************************/
+  /******************************************************
+  * 
+  * Main wrapper padding 
+  *
+  *******************************************************/
+  padding: 20px 0; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper div, .coda-slider-wrapper span, .coda-slider-wrapper applet, .coda-slider-wrapper object, .coda-slider-wrapper iframe, .coda-slider-wrapper h1, .coda-slider-wrapper h2, .coda-slider-wrapper h3, .coda-slider-wrapper h4, .coda-slider-wrapper h5, .coda-slider-wrapper h6, .coda-slider-wrapper p, .coda-slider-wrapper blockquote, .coda-slider-wrapper pre, .coda-slider-wrapper a, .coda-slider-wrapper abbr, .coda-slider-wrapper acronym, .coda-slider-wrapper address, .coda-slider-wrapper big, .coda-slider-wrapper cite, .coda-slider-wrapper code, .coda-slider-wrapper del, .coda-slider-wrapper dfn, .coda-slider-wrapper em, .coda-slider-wrapper font, .coda-slider-wrapper img, .coda-slider-wrapper ins, .coda-slider-wrapper kbd, .coda-slider-wrapper q, .coda-slider-wrapper s, .coda-slider-wrapper samp, .coda-slider-wrapper small, .coda-slider-wrapper strike, .coda-slider-wrapper strong, .coda-slider-wrapper sub, .coda-slider-wrapper sup, .coda-slider-wrapper tt, .coda-slider-wrapper var, .coda-slider-wrapper b, .coda-slider-wrapper u, .coda-slider-wrapper i, .coda-slider-wrapper center, .coda-slider-wrapper dl, .coda-slider-wrapper dt, .coda-slider-wrapper dd, .coda-slider-wrapper ol, .coda-slider-wrapper ul, .coda-slider-wrapper li, .coda-slider-wrapper fieldset, .coda-slider-wrapper form, .coda-slider-wrapper label, .coda-slider-wrapper legend, .coda-slider-wrapper table, .coda-slider-wrapper caption, .coda-slider-wrapper tbody, .coda-slider-wrapper tfoot, .coda-slider-wrapper thead, .coda-slider-wrapper tr, .coda-slider-wrapper th, .coda-slider-wrapper td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper body {
+    line-height: 1; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper ol, .coda-slider-wrapper ul {
+    list-style: none; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper blockquote, .coda-slider-wrapper q {
+    quotes: none; }
+  /* line 21, ../sass/coda-slider.scss */
+  .coda-slider-wrapper blockquote:before, .coda-slider-wrapper blockquote:after, .coda-slider-wrapper q:before, .coda-slider-wrapper q:after {
+    content: '';
+    content: none; }
+  /* line 37, ../sass/coda-slider.scss */
+  .coda-slider-wrapper .coda-slider {
+    /******************************************************
+    * 
+    * Inner wrapper styles 
+    *
+    *******************************************************/
+    background: #f2f2f2;
+    /******************************************************
+    * 
+    * Width of the container. Typically you will want to 
+    * match this with the width of the panel as well. 
+    *
+    *******************************************************/
+    width: 700px; }
+    /* line 53, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav {
+      /******************************************************
+      * 
+      * Tab styles 
+      *
+      *******************************************************/ }
+      /* line 60, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav .current {
+        /******************************************************
+        * 
+        * Current tab styles 
+        *
+        *******************************************************/
+        background: #0090FF; }
+      /* line 69, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav a {
+        /******************************************************
+        * 
+        * Tab styles 
+        *
+        *******************************************************/
+        background: #000;
+        color: #fff;
+        margin-right: 1px;
+        padding: 3px 6px; }
+      /* line 81, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav a:hover {
+        /******************************************************
+        * 
+        * Tab styles 
+        *
+        *******************************************************/
+        background: #000;
+        color: #fff;
+        text-shadow: none; }
+    /* line 93, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left, .coda-slider-wrapper .coda-slider .coda-nav-right {
+      /******************************************************
+      * 
+      * Arrow Styles 
+      *
+      *******************************************************/ }
+      /* line 100, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav-left a, .coda-slider-wrapper .coda-slider .coda-nav-right a {
+        /******************************************************
+        * 
+        * Arrow Styles 
+        *
+        *******************************************************/
+        background: #000;
+        color: #fff;
+        padding: 5px;
+        width: 100px; }
+    /* line 113, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .arrows .coda-slider {
+      /******************************************************
+      * 
+      * Margin between slider and arrows 
+      *
+      *******************************************************/
+      margin: 0 10px; }
+    /* line 122, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left-arrow {
+      /******************************************************
+      * 
+      * Graphical arrow styles 
+      *
+      *******************************************************/
+      width: 42px;
+      height: 107px;
+      background: url(../img/arrow.png) no-repeat bottom left; }
+    /* line 133, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-right-arrow {
+      /******************************************************
+      * 
+      * Graphical arrow styles 
+      *
+      *******************************************************/
+      width: 42px;
+      height: 107px;
+      background: url(../img/arrow.png) no-repeat bottom right; }
+    /* line 144, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .panel {
+      /******************************************************
+      * 
+      * Width of each individual panel. 
+      * Typically you will want to match this with the width 
+      * of the container as well. 
+      *
+      *******************************************************/
+      width: 700px; }
+      /* line 154, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .panel .panel-wrapper {
+        /******************************************************
+        * 
+        * Panel wrapper styles 
+        *
+        *******************************************************/
+        padding: 20px; }
+    /* line 164, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .loading {
+      /******************************************************
+      * 
+      * Style for preloader 
+      *
+      *******************************************************/
+      height: 100%;
+      padding: 20px;
+      text-align: center; }
+
+/**********************************************************************
+*
+* Don't change anything below here unless you know what you're doing 
+*
+***********************************************************************/
+/* line 183, ../sass/coda-slider.scss */
+.coda-slider-wrapper {
+  /************************************************
+  * 
+  * Wrapper styles 
+  *
+  *************************************************/
+  clear: both;
+  overflow: auto; }
+  /* line 192, ../sass/coda-slider.scss */
+  .coda-slider-wrapper .coda-slider {
+    /************************************************
+    * 
+    * slider styles 
+    *
+    *************************************************/
+    float: left;
+    overflow: hidden;
+    position: relative; }
+    /* line 202, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav {
+      /************************************************
+      * 
+      * Navigation tabs 
+      *
+      *************************************************/ }
+      /* line 209, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav ul {
+        /************************************************
+        * 
+        * Navigation tabs 
+        *
+        *************************************************/
+        clear: both;
+        display: block;
+        margin: auto;
+        overflow: hidden; }
+        /* line 220, ../sass/coda-slider.scss */
+        .coda-slider-wrapper .coda-slider .coda-nav ul li {
+          /************************************************
+          * 
+          * Navigation tabs 
+          *
+          *************************************************/
+          display: inline; }
+          /* line 228, ../sass/coda-slider.scss */
+          .coda-slider-wrapper .coda-slider .coda-nav ul li a {
+            /************************************************
+            * 
+            * Navigation tabs 
+            *
+            *************************************************/
+            display: block;
+            float: left;
+            text-decoration: none; }
+    /* line 242, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left-arrow, .coda-slider-wrapper .coda-slider .coda-nav-right-arrow {
+      /************************************************
+      * 
+      * Graphical arrows 
+      *
+      *************************************************/
+      cursor: pointer;
+      float: left;
+      margin-top: 50px; }
+      /* line 252, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav-left-arrow a, .coda-slider-wrapper .coda-slider .coda-nav-right-arrow a {
+        /************************************************
+        * 
+        * Graphical arrows 
+        *
+        *************************************************/
+        display: block; }
+      /* line 261, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav-left-arrow:active, .coda-slider-wrapper .coda-slider .coda-nav-right-arrow:active {
+        /************************************************
+        * 
+        * Graphical arrows 
+        *
+        *************************************************/
+        margin-top: 55px; }
+    /* line 271, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left, .coda-slider-wrapper .coda-slider .coda-nav-right {
+      /************************************************
+      * 
+      * Html arrows 
+      *
+      *************************************************/
+      float: left; }
+      /* line 278, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .coda-nav-left a, .coda-slider-wrapper .coda-slider .coda-nav-right a {
+        /************************************************
+        * 
+        * Html arrow styles 
+        *
+        *************************************************/
+        display: block;
+        text-align: center;
+        text-decoration: none; }
+    /* line 290, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .coda-nav-left, .coda-slider-wrapper .coda-slider .coda-nav-left-arrow {
+      /************************************************
+      * 
+      * Html and graphical arrow styles 
+      *
+      *************************************************/
+      clear: both; }
+    /* line 299, ../sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-slider .panel-container {
+      /************************************************
+      * 
+      * Panel container styles 
+      *
+      *************************************************/
+      position: relative; }
+      /* line 307, ../sass/coda-slider.scss */
+      .coda-slider-wrapper .coda-slider .panel-container .panel {
+        /************************************************
+        * 
+        * Panel styles 
+        *
+        *************************************************/
+        display: block;
+        float: left; }
+
+/*******************************************************************************
+Theme Styles
+*******************************************************************************/
+/* line 21, ../sass/style.scss */
+body {
+  box-sizing: border-box;
+  color: #373737;
+  font-size: 16px;
+  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: url("../img/arrows.png") repeat-x; }
+
+/* line 31, ../sass/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-weight: 700;
+  color: #222222;
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  letter-spacing: -1px; }
+
+/* line 39, ../sass/style.scss */
+h1 {
+  font-size: 36px;
+  font-weight: 700; }
+
+/* line 44, ../sass/style.scss */
+h2 {
+  padding-bottom: 10px;
+  font-size: 32px;
+  background: url("../img/bg_hr.png") repeat-x bottom; }
+
+/* line 50, ../sass/style.scss */
+h3 {
+  font-size: 24px; }
+
+/* line 54, ../sass/style.scss */
+h4 {
+  font-size: 21px; }
+
+/* line 58, ../sass/style.scss */
+h5 {
+  font-size: 18px; }
+
+/* line 62, ../sass/style.scss */
+h6 {
+  font-size: 16px; }
+
+/* line 66, ../sass/style.scss */
+p {
+  margin: 10px 0 15px 0; }
+
+/* line 70, ../sass/style.scss */
+footer p {
+  color: #f2f2f2; }
+
+/* line 74, ../sass/style.scss */
+a {
+  text-decoration: none;
+  color: #007edf;
+  text-shadow: none;
+  transition: color 0.5s ease;
+  transition: text-shadow 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  -webkit-transition: text-shadow 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -moz-transition: text-shadow 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -o-transition: text-shadow 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -ms-transition: text-shadow 0.5s ease; }
+
+/* line 91, ../sass/style.scss */
+a:hover {
+  color: #0069ba;
+  text-shadow: #0090ff 0px 0px 2px; }
+
+/* line 96, ../sass/style.scss */
+footer a:hover {
+  color: #43adff;
+  text-shadow: #0090ff 0px 0px 2px; }
+
+/* line 101, ../sass/style.scss */
+em {
+  font-style: italic; }
+
+/* line 105, ../sass/style.scss */
+strong {
+  font-weight: bold; }
+
+/* line 109, ../sass/style.scss */
+img {
+  position: relative;
+  max-width: 1080px;
+  padding: 5px;
+  margin: 10px 0 10px 0;
+  border: 1px solid #ebebeb;
+  -webkit-box-shadow: 0px 0px 5px 2px #cccccc;
+  -moz-box-shadow: 0px 0px 5px 2px #cccccc;
+  -ms-box-shadow: 0px 0px 5px 2px #cccccc;
+  -o-box-shadow: 0px 0px 5px 2px #cccccc;
+  box-shadow: 0px 0px 5px 2px #cccccc; }
+
+/* line 119, ../sass/style.scss */
+pre, code {
+  width: 100%;
+  color: #222;
+  background-color: #fff;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px; }
+
+/* line 132, ../sass/style.scss */
+pre {
+  width: 74%;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto; }
+
+/* line 139, ../sass/style.scss */
+code {
+  padding: 3px;
+  margin: 0 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+/* line 145, ../sass/style.scss */
+pre code {
+  display: block;
+  box-shadow: none; }
+
+/* line 150, ../sass/style.scss */
+blockquote {
+  color: #666;
+  margin-bottom: 20px;
+  padding: 0 0 0 20px;
+  border-left: 3px solid #bbb; }
+
+/* line 157, ../sass/style.scss */
+ul, ol, dl {
+  margin-bottom: 15px; }
+
+/* line 161, ../sass/style.scss */
+ul li {
+  list-style: inside;
+  padding-left: 20px; }
+
+/* line 166, ../sass/style.scss */
+ol li {
+  list-style: decimal inside;
+  padding-left: 20px; }
+
+/* line 171, ../sass/style.scss */
+dl dt {
+  font-weight: bold; }
+
+/* line 175, ../sass/style.scss */
+dl dd {
+  padding-left: 20px;
+  font-style: italic; }
+
+/* line 180, ../sass/style.scss */
+dl p {
+  padding-left: 20px;
+  font-style: italic; }
+
+/* line 185, ../sass/style.scss */
+hr {
+  height: 1px;
+  margin-bottom: 5px;
+  border: none;
+  background: url("../img/bg_hr.png") repeat-x center; }
+
+/* line 192, ../sass/style.scss */
+table {
+  border: 1px solid #373737;
+  margin-bottom: 20px;
+  text-align: left; }
+
+/* line 198, ../sass/style.scss */
+th {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 10px;
+  background: #373737;
+  color: #fff; }
+
+/* line 205, ../sass/style.scss */
+td {
+  padding: 10px;
+  border: 1px solid #373737; }
+
+/* line 210, ../sass/style.scss */
+form {
+  background: #f2f2f2;
+  padding: 20px; }
+
+/* line 215, ../sass/style.scss */
+img {
+  width: 100%;
+  max-width: 100%; }
+
+/*******************************************************************************
+Slider Styles
+*******************************************************************************/
+/* line 224, ../sass/style.scss */
+.coda-slider-wrapper h1, .coda-slider-wrapper h2, .coda-slider-wrapper h3, .coda-slider-wrapper h4, .coda-slider-wrapper h5, .coda-slider-wrapper h6 {
+  margin: 10px 0;
+  font-weight: 700;
+  color: #222222;
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  letter-spacing: -1px; }
+/* line 231, ../sass/style.scss */
+.coda-slider-wrapper h1 {
+  font-size: 36px;
+  font-weight: 700; }
+/* line 235, ../sass/style.scss */
+.coda-slider-wrapper h2 {
+  padding-bottom: 10px;
+  font-size: 32px;
+  background: url("../img/bg_hr.png") repeat-x bottom; }
+/* line 240, ../sass/style.scss */
+.coda-slider-wrapper h3 {
+  font-size: 24px; }
+/* line 244, ../sass/style.scss */
+.coda-slider-wrapper h4 {
+  font-size: 21px; }
+/* line 248, ../sass/style.scss */
+.coda-slider-wrapper h5 {
+  font-size: 18px; }
+/* line 252, ../sass/style.scss */
+.coda-slider-wrapper h6 {
+  font-size: 16px; }
+/* line 256, ../sass/style.scss */
+.coda-slider-wrapper p {
+  margin: 10px 0 15px 0; }
+/* line 259, ../sass/style.scss */
+.coda-slider-wrapper pre, .coda-slider-wrapper code {
+  width: 100%;
+  color: #222;
+  background-color: #fff;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 14px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px; }
+/* line 270, ../sass/style.scss */
+.coda-slider-wrapper pre {
+  width: 96%;
+  padding: 10px;
+  margin: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto; }
+  /* line 276, ../sass/style.scss */
+  .coda-slider-wrapper pre code {
+    display: block;
+    box-shadow: none; }
+/* line 281, ../sass/style.scss */
+.coda-slider-wrapper code {
+  padding: 3px;
+  margin: 0 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+/* line 288, ../sass/style.scss */
+#main-slider-wrapper {
+  width: 1240px;
+  margin: 0 auto; }
+  /* line 291, ../sass/style.scss */
+  #main-slider-wrapper #main-slider {
+    width: 1175px;
+    height: 500px;
+    background: transparent; }
+    /* line 295, ../sass/style.scss */
+    #main-slider-wrapper #main-slider h2 {
+      display: none; }
+    /* line 296, ../sass/style.scss */
+    #main-slider-wrapper #main-slider .panel {
+      width: 1175px;
+      background: transparent; }
+
+/* line 303, ../sass/style.scss */
+#showcase-wrapper {
+  margin: 0 auto; }
+  /* line 306, ../sass/style.scss */
+  #showcase-wrapper #showcase {
+    width: 700px; }
+    /* line 308, ../sass/style.scss */
+    #showcase-wrapper #showcase .panel {
+      width: 700px;
+      height: auto; }
+    /* line 312, ../sass/style.scss */
+    #showcase-wrapper #showcase h2 {
+      display: block; }
+    /* line 314, ../sass/style.scss */
+    #showcase-wrapper #showcase form .labelCol {
+      float: left;
+      width: 100px;
+      text-align: right;
+      padding-right: 10px; }
+    /* line 320, ../sass/style.scss */
+    #showcase-wrapper #showcase form .myRow {
+      padding-bottom: 20px; }
+    /* line 323, ../sass/style.scss */
+    #showcase-wrapper #showcase form textarea {
+      overflow: auto; }
+    /* line 324, ../sass/style.scss */
+    #showcase-wrapper #showcase form .tweet {
+      margin-top: 10px; }
+    /* line 326, ../sass/style.scss */
+    #showcase-wrapper #showcase img {
+      width: auto; }
+
+/* line 332, ../sass/style.scss */
+#continuous-wrapper {
+  margin: 0 auto; }
+  /* line 336, ../sass/style.scss */
+  #continuous-wrapper #continuous .panel {
+    width: 700px; }
+    /* line 338, ../sass/style.scss */
+    #continuous-wrapper #continuous .panel .title {
+      display: none; }
+    /* line 341, ../sass/style.scss */
+    #continuous-wrapper #continuous .panel p {
+      margin: 0;
+      background: #0090ff;
+      width: 90%;
+      padding: 10px 5%;
+      text-align: right;
+      color: #fff; }
+  /* line 353, ../sass/style.scss */
+  #continuous-wrapper .coda-nav a {
+    background: transparent;
+    color: #222; }
+  /* line 357, ../sass/style.scss */
+  #continuous-wrapper .coda-nav a:hover {
+    color: #0090ff; }
+  /* line 360, ../sass/style.scss */
+  #continuous-wrapper .coda-nav .current, #continuous-wrapper .coda-nav .current:hover {
+    color: #0090ff;
+    background: transparent; }
+
+/* line 367, ../sass/style.scss */
+#dynamic-tabs-wrapper {
+  margin: 0 auto; }
+  /* line 370, ../sass/style.scss */
+  #dynamic-tabs-wrapper #dynamic-tabs {
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    width: 650px; }
+    /* line 374, ../sass/style.scss */
+    #dynamic-tabs-wrapper #dynamic-tabs .panel {
+      width: 650px; }
+      /* line 375, ../sass/style.scss */
+      #dynamic-tabs-wrapper #dynamic-tabs .panel h2 {
+        display: block; }
+  /* line 380, ../sass/style.scss */
+  #dynamic-tabs-wrapper .coda-nav a {
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-topleft: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #d8d8d8;
+    color: #222;
+    border: 1px solid #e5e5e5;
+    border-bottom: none; }
+  /* line 387, ../sass/style.scss */
+  #dynamic-tabs-wrapper .coda-nav a:hover {
+    background: #cccccc; }
+  /* line 390, ../sass/style.scss */
+  #dynamic-tabs-wrapper .coda-nav .current, #dynamic-tabs-wrapper .coda-nav .current:hover {
+    background: #f2f2f2; }
+
+/* line 395, ../sass/style.scss */
+#dynamic-cross-links {
+  width: 100%;
+  text-align: center; }
+
+/* line 400, ../sass/style.scss */
+#information-wrapper {
+  padding: 0; }
+  /* line 406, ../sass/style.scss */
+  #information-wrapper #information .panel-wrapper {
+    padding: 0; }
+
+/*******************************************************************************
+Full-Width Styles
+*******************************************************************************/
+/* line 416, ../sass/style.scss */
+.install-instructions {
+  height: 20px;
+  overflow: hidden; }
+
+/* line 420, ../sass/style.scss */
+.api-clickable {
+  height: 25px;
+  width: 22.3%;
+  float: left;
+  margin-right: 1%;
+  cursor: pointer; }
+
+/* line 429, ../sass/style.scss */
+#api-settings pre {
+  overflow: hidden; }
+/* line 430, ../sass/style.scss */
+#api-settings .h4 {
+  color: #0090ff;
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 1.5px; }
+
+/* line 437, ../sass/style.scss */
+.outer {
+  width: 100%;
+  background: url("../img/arrows.png") repeat-x; }
+
+/* line 441, ../sass/style.scss */
+.inner {
+  position: relative;
+  max-width: 1030px;
+  padding: 20px 10px;
+  margin: 0 auto; }
+
+/* line 447, ../sass/style.scss */
+.top {
+  max-width: 715px; }
+
+/* line 450, ../sass/style.scss */
+.left {
+  max-width: 715px;
+  float: left; }
+
+/* line 454, ../sass/style.scss */
+.right {
+  width: 275px;
+  padding: 10px;
+  margin: 50px 10px;
+  float: right; }
+
+/* line 461, ../sass/style.scss */
+#forkme_banner {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 10;
+  padding: 10px 50px 10px 10px;
+  color: #fff;
+  background: url("../img/blacktocat.png") #0090ff no-repeat 95% 50%;
+  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.62);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px; }
+
+/* line 477, ../sass/style.scss */
+#header_wrap .inner {
+  padding: 50px 10px 30px 10px; }
+
+/* line 481, ../sass/style.scss */
+#project_title {
+  margin: 0;
+  color: #373737;
+  font-size: 5em;
+  font-weight: 700; }
+
+/* line 488, ../sass/style.scss */
+#project_tagline {
+  color: #373737;
+  font-size: 1.5em;
+  font-weight: 300;
+  background: none;
+  text-align: center; }
+
+/* line 496, ../sass/style.scss */
+#downloads {
+  position: absolute;
+  width: 210px;
+  z-index: 10;
+  top: -40px;
+  right: 0;
+  height: 70px;
+  background: url("../img/icon_download.png") no-repeat 0% 90%; }
+
+/* line 506, ../sass/style.scss */
+.zip_download_link {
+  display: block;
+  float: right;
+  width: 90px;
+  height: 70px;
+  text-indent: -5000px;
+  overflow: hidden;
+  background: url(../img/sprite_download.png) no-repeat bottom left; }
+
+/* line 516, ../sass/style.scss */
+.tar_download_link {
+  display: block;
+  float: right;
+  width: 90px;
+  height: 70px;
+  text-indent: -5000px;
+  overflow: hidden;
+  background: url(../img/sprite_download.png) no-repeat bottom right;
+  margin-left: 10px; }
+
+/* line 527, ../sass/style.scss */
+.zip_download_link:hover {
+  background: url(../img/sprite_download.png) no-repeat top left; }
+
+/* line 531, ../sass/style.scss */
+.tar_download_link:hover {
+  background: url(../img/sprite_download.png) no-repeat top right; }
+
+/* line 535, ../sass/style.scss */
+#main_content_wrap {
+  background: #f2f2f2;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111; }
+
+/* line 544, ../sass/style.scss */
+#footer_wrap {
+  background: #212121; }
+
+/* line 548, ../sass/style.scss */
+.soften {
+  height: 1px;
+  max-width: 780px;
+  margin: 0 auto;
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1), transparent);
+  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1), transparent);
+  background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1), transparent);
+  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.1), transparent);
+  border: 0; }
+
+/*******************************************************************************
+Small Device Styles
+*******************************************************************************/
+@media screen and (max-width: 768px) {
+  /* line 568, ../sass/style.scss */
+  .right {
+    clear: both;
+    height: 300px; } }
+@media screen and (max-width: 480px) {
+  /* line 575, ../sass/style.scss */
+  body {
+    font-size: 14px; }
+
+  /* line 579, ../sass/style.scss */
+  #downloads {
+    display: none; }
+
+  /* line 583, ../sass/style.scss */
+  .inner {
+    min-width: 320px;
+    max-width: 480px; }
+
+  /* line 587, ../sass/style.scss */
+  .right {
+    clear: both;
+    height: 300px; }
+
+  /* line 592, ../sass/style.scss */
+  #project_title {
+    font-size: 32px; }
+
+  /* line 596, ../sass/style.scss */
+  h1 {
+    font-size: 28px; }
+
+  /* line 600, ../sass/style.scss */
+  h2 {
+    font-size: 24px; }
+
+  /* line 604, ../sass/style.scss */
+  h3 {
+    font-size: 21px; }
+
+  /* line 608, ../sass/style.scss */
+  h4 {
+    font-size: 18px; }
+
+  /* line 612, ../sass/style.scss */
+  h5 {
+    font-size: 14px; }
+
+  /* line 616, ../sass/style.scss */
+  h6 {
+    font-size: 12px; }
+
+  /* line 620, ../sass/style.scss */
+  code, pre {
+    min-width: 320px;
+    max-width: 480px;
+    font-size: 11px; } }
