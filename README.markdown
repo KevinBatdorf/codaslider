@@ -10,10 +10,12 @@ Continuous Sliding
 Dynamic Tabs & Arrows  
 Cross Linking
 
-Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/tree/experimental) )
+Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/zipball/experimental) )
 -------------
 
 Responsive Design 
+
+Beta is not supported and not promised to work.
 
 How to Use
 -----------
@@ -58,11 +60,11 @@ Default Settings
 ----------------
 ```javascript
                   autoHeight: true,
-      autoHeightEaseDuration: 1500,
+      autoHeightEaseDuration: 7000,
       autoHeightEaseFunction: "easeInOutExpo",
                    autoSlide: false,
          autoSliderDirection: 'right',
-           autoSlideInterval: 7000,
+           autoSlideInterval: 4000,
     autoSlideStopWhenClicked: true,
                   continuous: true,
                dynamicArrows: true,
@@ -75,7 +77,7 @@ Default Settings
             firstPanelToLoad: 1,
           panelTitleSelector: "h2.title",
                   responsive: false,
-           slideEaseDuration: 1500,
+           slideEaseDuration: 2000,
            slideEaseFunction: "easeInOutExpo"
 ```
 
