@@ -2,13 +2,6 @@
 ============
 A jQuery HTML Content Slider Plugin
 
-Note: This is the Experimental version. Use at your own risk.  
-This has not been tested outside of Chrome 19  
-It should work as expected with the default settings,  
-However, the first panel should be the largest (or all the same size).
-
-Additionally, you are responsible to make sure your CSS inside the slider is responsive.
-
 
 Features
 --------
@@ -17,10 +10,12 @@ Continuous Sliding
 Dynamic Tabs & Arrows  
 Cross Linking
 
-Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/tree/experimental) )
+Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/zipball/experimental) )
 -------------
 
 Responsive Design 
+
+Beta is not supported and not promised to work.
 
 How to Use
 -----------
