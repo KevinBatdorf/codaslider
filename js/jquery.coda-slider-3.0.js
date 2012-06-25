@@ -367,14 +367,13 @@ if ( typeof Object.create !== 'function' ) {
 	
 	$.fn.codaSlider.options = {
 		autoHeight: true,
-		autoHeightEaseDuration: 7000,
+		autoHeightEaseDuration: 1500,
 		autoHeightEaseFunction: "easeInOutExpo",
 		autoSlide: false,
 		autoSliderDirection: 'right',
-		autoSlideInterval: 4000,
+		autoSlideInterval: 7000,
 		autoSlideStopWhenClicked: true,
 		continuous: false,
-		crossLinking: true, // No longer used
 		dynamicArrows: true,
 		dynamicArrowsGraphical: false,
 		dynamicArrowLeftText: "&#171; left",
@@ -382,11 +381,10 @@ if ( typeof Object.create !== 'function' ) {
 		dynamicTabs: true,
 		dynamicTabsAlign: "center",
 		dynamicTabsPosition: "top",
-		externalTriggerSelector: "a.xtrig", //shouldnt need any more
 		firstPanelToLoad: 1,
 		panelTitleSelector: "h2.title",
 		responsive:true,
-		slideEaseDuration: 2000,
+		slideEaseDuration: 1500,
 		slideEaseFunction: "easeInOutExpo"
 	};
 	

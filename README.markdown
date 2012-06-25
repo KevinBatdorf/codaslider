@@ -2,6 +2,13 @@
 ============
 A jQuery HTML Content Slider Plugin
 
+Note: This is the Experimental version. Use at your own risk.  
+This has not been tested outside of Chrome 19  
+It should work as expected with the default settings,  
+However, the first panel should be the largest (or all the same size).
+
+Additionally, you are responsible to make sure your CSS inside the slider is responsive.
+
 
 Features
 --------
@@ -58,11 +65,11 @@ Default Settings
 ----------------
 ```javascript
                   autoHeight: true,
-      autoHeightEaseDuration: 7000,
+      autoHeightEaseDuration: 1500,
       autoHeightEaseFunction: "easeInOutExpo",
                    autoSlide: false,
          autoSliderDirection: 'right',
-           autoSlideInterval: 4000,
+           autoSlideInterval: 7000,
     autoSlideStopWhenClicked: true,
                   continuous: true,
                dynamicArrows: true,
@@ -75,7 +82,7 @@ Default Settings
             firstPanelToLoad: 1,
           panelTitleSelector: "h2.title",
                   responsive: false,
-           slideEaseDuration: 2000,
+           slideEaseDuration: 1500,
            slideEaseFunction: "easeInOutExpo"
 ```
 
