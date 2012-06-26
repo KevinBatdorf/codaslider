@@ -2,6 +2,8 @@
 ============
 A jQuery HTML Content Slider Plugin
 
+[Download](https://github.com/KevinBatdorf/codaslider/zipball/master)
+
 
 Features
 --------
@@ -10,11 +12,12 @@ Continuous Sliding
 Dynamic Tabs & Arrows  
 Cross Linking
 
-Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/zipball/experimental) )
+Beta Features
 -------------
 
-Responsive Design 
+Responsive Design  
 
+Download [Here](https://github.com/KevinBatdorf/codaslider/zipball/experimental)  
 Beta is not supported and not promised to work.
 
 How to Use
