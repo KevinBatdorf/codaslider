@@ -12,7 +12,7 @@ Continuous Sliding
 Dynamic Tabs & Arrows  
 Cross Linking
 
-Beta Features ( )
+Beta Features
 -------------
 
 Responsive Design  
