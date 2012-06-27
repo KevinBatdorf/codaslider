@@ -159,8 +159,18 @@ css-tricks.com/musings-on-preprocessing/
     * Graphical arrow styles 
     *
     *******************************************************/
-    width: 42px;
+    width: 25px;
     height: 25px;
+    background: url(../img/arrow.png) no-repeat top left; 
+    margin-top:50px;
+  }
+
+  .coda-slider-wrapper .coda-nav-left-arrow:hover {
+    /************************************************
+    * 
+    * Graphical arrows hover left
+    *
+    *************************************************/
     background: url(../img/arrow.png) no-repeat bottom left; 
   }
   
@@ -170,9 +180,28 @@ css-tricks.com/musings-on-preprocessing/
     * Graphical arrow styles 
     *
     *******************************************************/
-    width: 42px;
+    width: 25px;
     height: 25px;
+    background: url(../img/arrow.png) no-repeat top right; 
+    margin-top:50px;
+  }
+
+  .coda-slider-wrapper .coda-nav-right-arrow:hover {
+    /************************************************
+    * 
+    * Graphical arrows hover right
+    *
+    *************************************************/
     background: url(../img/arrow.png) no-repeat bottom right; 
+  }
+
+  .coda-slider-wrapper .coda-nav-left-arrow:active, .coda-slider-wrapper .coda-nav-right-arrow:active {
+    /************************************************
+    * 
+    * Graphical arrows active
+    *
+    *************************************************/
+    margin-top: 55px; 
   }
   
   .coda-slider-wrapper .loading {
@@ -185,6 +214,8 @@ css-tricks.com/musings-on-preprocessing/
     padding: 20px;
     text-align: center; 
   }
+
+  
 
 
 .arrows .coda-slider {
@@ -290,7 +321,6 @@ css-tricks.com/musings-on-preprocessing/
     *************************************************/
     cursor: pointer;
     float: left;
-    margin-top: 50px; 
   }
     
     .coda-slider-wrapper .coda-nav-left-arrow a, .coda-slider-wrapper .coda-nav-right-arrow a {
@@ -300,15 +330,6 @@ css-tricks.com/musings-on-preprocessing/
       *
       *************************************************/
       display: block; 
-    }
-    
-    .coda-slider-wrapper .coda-nav-left-arrow:active, .coda-slider-wrapper .coda-nav-right-arrow:active {
-      /************************************************
-      * 
-      * Graphical arrows 
-      *
-      *************************************************/
-      margin-top: 55px; 
     }
   
   .coda-slider-wrapper .coda-nav-left, .coda-slider-wrapper .coda-nav-right {
