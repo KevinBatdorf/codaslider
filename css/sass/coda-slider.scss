@@ -138,9 +138,28 @@ css-tricks.com/musings-on-preprocessing/
 		* Graphical arrow styles 
 		*
 		*******************************************************/
-		width:42px;
+		width:25px;
 		height:25px;
-		background: url(../img/arrow.png) no-repeat bottom left;
+		background: url(../img/arrow.png) no-repeat top left;
+		margin-top:50px;
+
+		&:hover{
+			/************************************************
+			* 
+			* Graphical arrows hover
+			*
+			*************************************************/
+			background: url(../img/arrow.png) no-repeat bottom left;
+		}
+
+		&:active{
+			/************************************************
+			* 
+			* Graphical arrows 
+			*
+			*************************************************/
+			margin-top:55px;
+		}
 	}
 
 	.coda-nav-right-arrow{
@@ -149,9 +168,28 @@ css-tricks.com/musings-on-preprocessing/
 		* Graphical arrow styles 
 		*
 		*******************************************************/
-		width:42px;
+		width:25px;
 		height:25px;
-		background: url(../img/arrow.png) no-repeat bottom right;
+		background: url(../img/arrow.png) no-repeat top right;
+		margin-top:50px;
+
+		&:hover{
+			/************************************************
+			* 
+			* Graphical arrows hover
+			*
+			*************************************************/
+			background: url(../img/arrow.png) no-repeat bottom right;
+		}
+
+		&:active{
+			/************************************************
+			* 
+			* Graphical arrows 
+			*
+			*************************************************/
+			margin-top:55px;
+		}
 	}		
 
 	.loading { 
@@ -269,7 +307,6 @@ css-tricks.com/musings-on-preprocessing/
 		*************************************************/
 		cursor:pointer;
 		float:left; 
-		margin-top:50px;
 
 		a { 
 			/************************************************
@@ -278,15 +315,6 @@ css-tricks.com/musings-on-preprocessing/
 			*
 			*************************************************/
 			display: block; 
-		}
-
-		&:active{
-			/************************************************
-			* 
-			* Graphical arrows 
-			*
-			*************************************************/
-			margin-top:55px;
 		}
 	}
 

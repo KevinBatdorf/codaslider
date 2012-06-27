@@ -144,20 +144,54 @@ css-tricks.com/musings-on-preprocessing/
     * Graphical arrow styles 
     *
     *******************************************************/
-    width: 42px;
+    width: 25px;
     height: 25px;
-    background: url(../img/arrow.png) no-repeat bottom left; }
-  /* line 146, sass/coda-slider.scss */
+    background: url(../img/arrow.png) no-repeat top left;
+    margin-top: 50px; }
+    /* line 146, sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-nav-left-arrow:hover {
+      /************************************************
+      * 
+      * Graphical arrows hover
+      *
+      *************************************************/
+      background: url(../img/arrow.png) no-repeat bottom left; }
+    /* line 155, sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-nav-left-arrow:active {
+      /************************************************
+      * 
+      * Graphical arrows 
+      *
+      *************************************************/
+      margin-top: 55px; }
+  /* line 165, sass/coda-slider.scss */
   .coda-slider-wrapper .coda-nav-right-arrow {
     /******************************************************
     * 
     * Graphical arrow styles 
     *
     *******************************************************/
-    width: 42px;
+    width: 25px;
     height: 25px;
-    background: url(../img/arrow.png) no-repeat bottom right; }
-  /* line 157, sass/coda-slider.scss */
+    background: url(../img/arrow.png) no-repeat top right;
+    margin-top: 50px; }
+    /* line 176, sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-nav-right-arrow:hover {
+      /************************************************
+      * 
+      * Graphical arrows hover
+      *
+      *************************************************/
+      background: url(../img/arrow.png) no-repeat bottom right; }
+    /* line 185, sass/coda-slider.scss */
+    .coda-slider-wrapper .coda-nav-right-arrow:active {
+      /************************************************
+      * 
+      * Graphical arrows 
+      *
+      *************************************************/
+      margin-top: 55px; }
+  /* line 195, sass/coda-slider.scss */
   .coda-slider-wrapper .loading {
     /******************************************************
     * 
@@ -168,7 +202,7 @@ css-tricks.com/musings-on-preprocessing/
     padding: 20px;
     text-align: center; }
 
-/* line 169, sass/coda-slider.scss */
+/* line 207, sass/coda-slider.scss */
 .arrows .coda-slider {
   /******************************************************
   * 
@@ -182,7 +216,7 @@ css-tricks.com/musings-on-preprocessing/
 * Don't change anything below here unless you know what you're doing 
 *
 ***********************************************************************/
-/* line 185, sass/coda-slider.scss */
+/* line 223, sass/coda-slider.scss */
 .coda-slider-wrapper {
   /************************************************
   * 
@@ -191,7 +225,7 @@ css-tricks.com/musings-on-preprocessing/
   *************************************************/
   clear: both;
   overflow: auto; }
-  /* line 194, sass/coda-slider.scss */
+  /* line 232, sass/coda-slider.scss */
   .coda-slider-wrapper .coda-slider {
     /************************************************
     * 
@@ -201,7 +235,7 @@ css-tricks.com/musings-on-preprocessing/
     float: left;
     overflow: hidden;
     position: relative; }
-    /* line 204, sass/coda-slider.scss */
+    /* line 242, sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .panel-container {
       /************************************************
       * 
@@ -209,7 +243,7 @@ css-tricks.com/musings-on-preprocessing/
       *
       *************************************************/
       position: relative; }
-      /* line 212, sass/coda-slider.scss */
+      /* line 250, sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .panel-container .panel {
         /************************************************
         * 
@@ -218,14 +252,14 @@ css-tricks.com/musings-on-preprocessing/
         *************************************************/
         display: block;
         float: left; }
-  /* line 224, sass/coda-slider.scss */
+  /* line 262, sass/coda-slider.scss */
   .coda-slider-wrapper .coda-nav {
     /************************************************
     * 
     * Navigation tabs 
     *
     *************************************************/ }
-    /* line 231, sass/coda-slider.scss */
+    /* line 269, sass/coda-slider.scss */
     .coda-slider-wrapper .coda-nav ul {
       /************************************************
       * 
@@ -236,7 +270,7 @@ css-tricks.com/musings-on-preprocessing/
       display: block;
       margin: auto;
       overflow: hidden; }
-      /* line 242, sass/coda-slider.scss */
+      /* line 280, sass/coda-slider.scss */
       .coda-slider-wrapper .coda-nav ul li {
         /************************************************
         * 
@@ -244,7 +278,7 @@ css-tricks.com/musings-on-preprocessing/
         *
         *************************************************/
         display: inline; }
-        /* line 250, sass/coda-slider.scss */
+        /* line 288, sass/coda-slider.scss */
         .coda-slider-wrapper .coda-nav ul li a {
           /************************************************
           * 
@@ -254,7 +288,7 @@ css-tricks.com/musings-on-preprocessing/
           display: block;
           float: left;
           text-decoration: none; }
-  /* line 264, sass/coda-slider.scss */
+  /* line 302, sass/coda-slider.scss */
   .coda-slider-wrapper .coda-nav-left-arrow, .coda-slider-wrapper .coda-nav-right-arrow {
     /************************************************
     * 
@@ -262,9 +296,8 @@ css-tricks.com/musings-on-preprocessing/
     *
     *************************************************/
     cursor: pointer;
-    float: left;
-    margin-top: 50px; }
-    /* line 274, sass/coda-slider.scss */
+    float: left; }
+    /* line 311, sass/coda-slider.scss */
     .coda-slider-wrapper .coda-nav-left-arrow a, .coda-slider-wrapper .coda-nav-right-arrow a {
       /************************************************
       * 
@@ -272,15 +305,7 @@ css-tricks.com/musings-on-preprocessing/
       *
       *************************************************/
       display: block; }
-    /* line 283, sass/coda-slider.scss */
-    .coda-slider-wrapper .coda-nav-left-arrow:active, .coda-slider-wrapper .coda-nav-right-arrow:active {
-      /************************************************
-      * 
-      * Graphical arrows 
-      *
-      *************************************************/
-      margin-top: 55px; }
-  /* line 293, sass/coda-slider.scss */
+  /* line 321, sass/coda-slider.scss */
   .coda-slider-wrapper .coda-nav-left, .coda-slider-wrapper .coda-nav-right {
     /************************************************
     * 
@@ -288,7 +313,7 @@ css-tricks.com/musings-on-preprocessing/
     *
     *************************************************/
     float: left; }
-    /* line 300, sass/coda-slider.scss */
+    /* line 328, sass/coda-slider.scss */
     .coda-slider-wrapper .coda-nav-left a, .coda-slider-wrapper .coda-nav-right a {
       /************************************************
       * 
@@ -298,7 +323,7 @@ css-tricks.com/musings-on-preprocessing/
       display: block;
       text-align: center;
       text-decoration: none; }
-  /* line 312, sass/coda-slider.scss */
+  /* line 340, sass/coda-slider.scss */
   .coda-slider-wrapper .coda-nav-left, .coda-slider-wrapper .coda-nav-left-arrow {
     /************************************************
     * 
