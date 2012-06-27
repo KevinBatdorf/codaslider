@@ -19,7 +19,6 @@ if ( typeof Object.create !== 'function' ) {
 			//add preloader class (backwards compatible)
 			$('.coda-slider').prepend('<p class="loading">Loading...<br /><img src="./img/ajax-loader.gif" width="220" height="19" alt="loading..." /></p>');
 
-
 			// Cache the element
 			self.elem = elem;
 			self.$elem = $( elem );
@@ -57,8 +56,7 @@ if ( typeof Object.create !== 'function' ) {
 			// Add the .panel class to the individual panels (backwards compatable)
 			self.panelClass = self.sliderId + ' .' + $(self.sliderId + " > div").addClass('panel').attr('class');
 			
-
-			// Wrap all panels in a div, and wrap inner content in a div (backwards ccompatible)
+			// Wrap all panels in a div, and wrap inner content in a div (backwards compatible)
 			$(self.panelClass).wrapAll('<div class="panel-container"></div>');
 			if ( $(self.panelClass).children().attr('class') != 'panel-wrapper' ) { $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>'); }
 			self.panelContainer = ($(self.panelClass).parent());
@@ -66,12 +64,8 @@ if ( typeof Object.create !== 'function' ) {
 			// Store current tab
 			self.currentTab = self.options.firstPanelToLoad - 1;
 
-			// TODO fix this. If responsive, disable auto height to start (only way to work so far)
-			if (self.options.responsive) { self.options.autoHeight = false;}
-
 			// Apply starting height to the container
 			if (self.options.autoHeight) { $(self.sliderId).css('height', $($(self.panelContainer).children()[self.currentTab]).height() + $(self.sliderId + '-wrapper .coda-nav-right').height());	}
-
 
 			// Build navigation tabs
 			if (self.options.dynamicTabs) { self.addNavigation(); }
@@ -103,15 +97,11 @@ if ( typeof Object.create !== 'function' ) {
 			// Variable for the % sign if needed (responsive), otherwise px
 			self.pSign = 'px';
 
-			// Create a variable for responsive setting
-			if (self.options.responsive) { self.slideWidth = 100; self.pSign = '%';}
-			else { self.slideWidth = $(self.sliderId).width(); }
+			self.slideWidth = $(self.sliderId).width();
 
-			// If continuous, set the current margin without animation
-			if (self.options.continuous) {
-				if (self.options.responsive) { $(self.panelContainer).css('margin-left', -self.slideWidth + self.pSign); }
-				else { $(self.panelContainer).css('margin-left', -self.slideWidth); }
-			}
+			// Puts the margin at the starting point with no animation. Made for both continuous and firstPanelToLoad features.
+			// ~~(self.options.continuous) will equal 1 if true, otherwise 0
+			$(self.panelContainer).css('margin-left', ( -self.slideWidth * ~~(self.options.continuous)) + (-self.slideWidth * self.currentTab) );
 
 			// Configure the current tab
 			self.setCurrent(self.currentTab);
@@ -119,16 +109,12 @@ if ( typeof Object.create !== 'function' ) {
 			// Apply the width to the panel container
 			$(self.sliderId + ' .panel-container').css('width', self.totalWidth);
 
-
-			// Make responsive (beta)
-			//if (self.options.responsive) {self.makeResponsive();}
-
 		},
 
 		addNavigation: function(){
 			var self = this;
-			// The id is assigned here to allow for responsive
-			var dynamicTabs = '<div class="coda-nav"><ul id="' + ( self.$elem ).attr('id') + '-nav-ul"></ul></div>';
+			// The id is assigned here to allow for the responsive setting
+			var dynamicTabs = '<div class="coda-nav"><ul></ul></div>';
 
 			// Add basic frame
 			if (self.options.dynamicTabsPosition === 'bottom') { $(self.sliderId).after(dynamicTabs); }
@@ -140,8 +126,6 @@ if ( typeof Object.create !== 'function' ) {
 					$($(self.sliderId).parent()).find('.coda-nav ul').append('<li class="tab' + (n+1) + '"><a href="#' + (n+1) + '" title="' + $(this).text() + '">' + $(this).text() + '</a></li>');
 				}
 			);
-
-			// TODO Add dropdown navigation for smaller screens if responsive
 		},
 
 		alignNavigation: function() {
@@ -184,41 +168,7 @@ if ( typeof Object.create !== 'function' ) {
 				$(self.sliderId).before('<div class="coda-nav-left" data-dir="prev" title="Slide left"><a href="#">' + self.options.dynamicArrowLeftText + '</a></div>');
 				$(self.sliderId).after('<div class="coda-nav-right" data-dir="next" title="Slide right"><a href="#">' + self.options.dynamicArrowRightText + '</a></div>');
 			}
-			
 		},
-
-		/**********************************
-
-		makeResponsive: function(){
-			var self = this;
-
-			// Adjust widths and add classes to make responsive
-			$(self.sliderId + '-wrapper').addClass('coda-responsive').css({
-				'max-width': $(self.sliderId + ' .panel').outerWidth(true),
-				'width': '100%'
-			});
-			$(self.sliderId + ' .panel-container').css('width', 100 * self.panelCount + self.pSign);
-			$(self.sliderId + ' .panel').css('width', 100 / self.panelCount + self.pSign);
-
-			
-			if (self.options.dynamicArrows || self.options.dynamicArrowsGraphical) {
-				// Add padding to the top equal to the height of the arrows to make room for arrows, if enabled..
-				$(self.sliderId).css('padding-top', $(self.sliderId + '-wrapper .coda-nav-right').css('height') );
-			}
-
-			// Enable autoslide again. (Need to eliminate the need for this)
-			self.options.autoHeight = true;
-
-			// Apply a class to navigation when the screen size is too small.
-			if ( $(self.sliderId).width() < self.totalNavWidth ) { $(self.sliderId + '-nav-ul').addClass('small-tabs'); console.log('true'); }
-			// Apply a class to navigation if the user resizes the screen.
-			$(window).bind('resize', function(){
-				if ( $(self.sliderId).width() < self.totalNavWidth ) { $(self.sliderId + '-nav-ul').addClass('small-tabs'); console.log('true'); }
-				else { $(self.sliderId + '-nav-ul').removeClass('small-tabs');console.log('false'); }
-			});
-
-		},
-		************************************/
 
 		events: function(){
 			var self = this;
@@ -246,10 +196,18 @@ if ( typeof Object.create !== 'function' ) {
 			});
 			// Click to stop autoslider
 			$($(self.sliderId).parent()).find('*').on('click', function(e){
-				if (!self.clickable) {return false;}
-				// Clear the timeout
-				if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
-				else self.autoSlide(clearTimeout(self.autoslideTimeout));
+				if (!self.clickable && self.options.continuous) {
+					if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
+					return false;
+				}
+				if (self.options.autoSlide) {
+					// Clear the timeout
+					if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
+					else {
+						self.autoSlide(clearTimeout(self.autoslideTimeout));
+						self.clickable = true;
+					}
+				}
 				// Stops from speedy clicking for continuous sliding.
 				if (self.options.continuous) {clearTimeout(self.continuousTimeout);}
 			});
@@ -287,42 +245,43 @@ if ( typeof Object.create !== 'function' ) {
 					.parent().siblings().children().removeClass('current');
 				}
 				this.transition();
-				
 			}
 		},
 		
 		transition: function(){
 			var self = this;
-				// Adjust the height
-				if (self.options.autoHeight) {
-					$(self.panelContainer).parent().animate({
-						'height': $($(self.panelContainer).children()[self.panelHeightCount]).height()
-					}, {
-						easing: self.options.autoHeightEaseFunction,
-						duration: self.options.autoHeightEaseDuration,
-						queue: false
-						});
-				}
-				
-				// Adjust the margin for continuous sliding
-				if (self.options.continuous) {self.marginLeft = -(self.currentTab * self.slideWidth ) - self.slideWidth;}
-				// Otherwise adjust as normal
-				else {self.marginLeft = -(self.currentTab * self.slideWidth ); }
-				// Animate the slider
-				(self.panelContainer).animate({
-					'margin-left': self.marginLeft + self.pSign
+			// Adjust the height
+			if (self.options.autoHeight) {
+				$(self.panelContainer).parent().animate({
+					'height': $($(self.panelContainer).children()[self.panelHeightCount]).height()
 				}, {
-					easing: self.options.slideEaseFunction,
-					duration: self.options.slideEaseDuration,
-					queue: false,
-					complete: self.continuousSlide(self.options.slideEaseDuration + 50) // Wonder about this "+50", so far so good...
-				});
+					easing: self.options.autoHeightEaseFunction,
+					duration: self.options.autoHeightEaseDuration,
+					queue: false
+					});
+			}
+			
+			// Adjust the margin for continuous sliding
+			if (self.options.continuous) {self.marginLeft = -(self.currentTab * self.slideWidth ) - self.slideWidth;}
+			// Otherwise adjust as normal
+			else {self.marginLeft = -(self.currentTab * self.slideWidth ); }
+			// Animate the slider
+			(self.panelContainer).animate({
+				'margin-left': self.marginLeft + self.pSign
+			}, {
+				easing: self.options.slideEaseFunction,
+				duration: self.options.slideEaseDuration,
+				queue: false,
+				complete: self.continuousSlide(self.options.slideEaseDuration + 50)
+			});
 		},
 
 		autoSlide: function(){
 			var self = this;
-
-			if (self.options.autoSlideInterval < self.options.slideEaseDuration) {self.options.autoSlideInterval = self.options.slideEaseDuration;}
+			// Can't set the autoslide slower than the easing ;-)
+			if (self.options.autoSlideInterval < self.options.slideEaseDuration) {
+				self.options.autoSlideInterval = (self.options.slideEaseDuration > self.options.autoHeightEaseDuration) ? self.options.slideEaseDuration : self.options.autoHeightEaseDuration;
+			}
 			if (self.options.continuous) {self.clickable = false;}
 			self.autoslideTimeout = setTimeout(function() {
 				// Slide left or right
@@ -366,11 +325,11 @@ if ( typeof Object.create !== 'function' ) {
 	
 	$.fn.codaSlider.options = {
 		autoHeight: true,
-		autoHeightEaseDuration: 2000,
+		autoHeightEaseDuration: 1500,
 		autoHeightEaseFunction: "easeInOutExpo",
 		autoSlide: false,
 		autoSliderDirection: 'right',
-		autoSlideInterval: 4000,
+		autoSlideInterval: 7000,
 		autoSlideStopWhenClicked: true,
 		continuous: true,
 		crossLinking: true, // No longer used
@@ -384,11 +343,8 @@ if ( typeof Object.create !== 'function' ) {
 		externalTriggerSelector: "a.xtrig", //shouldnt need any more
 		firstPanelToLoad: 1,
 		panelTitleSelector: "h2.title",
-		//responsive:false,
-		slideEaseDuration: 2000,
+		slideEaseDuration: 1500,
 		slideEaseFunction: "easeInOutExpo"
 	};
-	
-
 
 })( jQuery, window, document );
