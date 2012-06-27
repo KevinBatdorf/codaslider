@@ -12,7 +12,7 @@ IMPORTING STYLES
 /*
  * Corrects block display not defined in IE6/7/8/9 & FF3
  */
-/* line 20, ../sass/normalize.scss */
+/* line 20, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 article,
 aside,
 details,
@@ -28,7 +28,7 @@ section {
 /*
  * Corrects inline-block display not defined in IE6/7/8/9 & FF3
  */
-/* line 30, ../sass/normalize.scss */
+/* line 30, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 audio,
 canvas,
 video {
@@ -39,7 +39,7 @@ video {
 /*
  * Prevents modern browsers from displaying 'audio' without controls
  */
-/* line 40, ../sass/normalize.scss */
+/* line 40, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 audio:not([controls]) {
   display: none; }
 
@@ -47,7 +47,7 @@ audio:not([controls]) {
  * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
  * Known issue: no IE6 support
  */
-/* line 49, ../sass/normalize.scss */
+/* line 49, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 [hidden] {
   display: none; }
 
@@ -61,7 +61,7 @@ audio:not([controls]) {
  * 3. Prevents iOS text size adjust after orientation change, without disabling user zoom
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
-/* line 66, ../sass/normalize.scss */
+/* line 66, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -75,14 +75,14 @@ html {
 /*
  * Addresses margins handled incorrectly in IE6/7
  */
-/* line 77, ../sass/normalize.scss */
+/* line 77, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 body {
   margin: 0; }
 
 /* 
  * Addresses font-family inconsistency between 'textarea' and other form elements.
  */
-/* line 89, ../sass/normalize.scss */
+/* line 89, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 body,
 button,
 input,
@@ -96,7 +96,7 @@ textarea {
 /*
  * Addresses outline displayed oddly in Chrome
  */
-/* line 102, ../sass/normalize.scss */
+/* line 102, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 a:focus {
   outline: thin dotted; }
 
@@ -104,7 +104,7 @@ a:focus {
  * Improves readability when focused and also mouse hovered in all browsers
  * people.opera.com/patrickl/experiments/keyboard/test
  */
-/* line 112, ../sass/normalize.scss */
+/* line 112, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 a:hover,
 a:active {
   outline: 0; }
@@ -115,40 +115,40 @@ a:active {
 /*
  * Neutralise smaller font-size in 'section' and 'article' in FF4+, Chrome, S5
  */
-/* line 125, ../sass/normalize.scss */
+/* line 125, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 h1 {
   font-size: 2em; }
 
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome
  */
-/* line 133, ../sass/normalize.scss */
+/* line 133, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /*
  * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
 */
-/* line 142, ../sass/normalize.scss */
+/* line 142, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 b,
 strong {
   font-weight: bold; }
 
-/* line 146, ../sass/normalize.scss */
+/* line 146, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 blockquote {
   margin: 1em 40px; }
 
 /*
  * Addresses styling not present in S5, Chrome
  */
-/* line 154, ../sass/normalize.scss */
+/* line 154, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 dfn {
   font-style: italic; }
 
 /*
  * Addresses styling not present in IE6/7/8/9
  */
-/* line 162, ../sass/normalize.scss */
+/* line 162, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
@@ -157,7 +157,7 @@ mark {
  * Corrects font family set oddly in IE6, S4/5, Chrome
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-/* line 175, ../sass/normalize.scss */
+/* line 175, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 pre,
 code,
 kbd,
@@ -169,7 +169,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers
  */
-/* line 185, ../sass/normalize.scss */
+/* line 185, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -180,18 +180,18 @@ pre {
  * 2. Addresses quote property not supported in S4
  */
 /* 1 */
-/* line 198, ../sass/normalize.scss */
+/* line 198, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 q {
   quotes: none; }
 
 /* 2 */
-/* line 205, ../sass/normalize.scss */
+/* line 205, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 q:before,
 q:after {
   content: '';
   content: none; }
 
-/* line 210, ../sass/normalize.scss */
+/* line 210, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 small {
   font-size: 75%; }
 
@@ -199,7 +199,7 @@ small {
  * Prevents sub and sup affecting line-height in all browsers
  * gist.github.com/413930
  */
-/* line 220, ../sass/normalize.scss */
+/* line 220, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -207,28 +207,28 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 227, ../sass/normalize.scss */
+/* line 227, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 231, ../sass/normalize.scss */
+/* line 231, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 sub {
   bottom: -0.25em; }
 
 /* =============================================================================
    Lists
    ========================================================================== */
-/* line 241, ../sass/normalize.scss */
+/* line 241, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 ul,
 ol {
   margin-left: 0;
   padding: 0 0 0 40px; }
 
-/* line 246, ../sass/normalize.scss */
+/* line 246, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 dd {
   margin: 0 0 0 40px; }
 
-/* line 251, ../sass/normalize.scss */
+/* line 251, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -242,7 +242,7 @@ nav ol {
  * 2. Improves image quality when scaled in IE7
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
-/* line 267, ../sass/normalize.scss */
+/* line 267, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -252,7 +252,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE9 
  */
-/* line 276, ../sass/normalize.scss */
+/* line 276, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -262,7 +262,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11
  */
-/* line 289, ../sass/normalize.scss */
+/* line 289, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 figure {
   margin: 0; }
 
@@ -272,14 +272,14 @@ figure {
 /*
  * Corrects margin displayed oddly in IE6/7
  */
-/* line 302, ../sass/normalize.scss */
+/* line 302, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 form {
   margin: 0; }
 
 /*
  * Define consistent border, margin, and padding
  */
-/* line 310, ../sass/normalize.scss */
+/* line 310, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -289,7 +289,7 @@ fieldset {
  * 1. Corrects color not being inherited in IE6/7/8/9
  * 2. Corrects alignment displayed oddly in IE6/7
  */
-/* line 321, ../sass/normalize.scss */
+/* line 321, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -301,7 +301,7 @@ legend {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
  * 3. Improves appearance and consistency in all browsers
  */
-/* line 335, ../sass/normalize.scss */
+/* line 335, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 button,
 input,
 select,
@@ -318,7 +318,7 @@ textarea {
 /*
  * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
  */
-/* line 347, ../sass/normalize.scss */
+/* line 347, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 button,
 input {
   line-height: normal;
@@ -330,7 +330,7 @@ input {
  * 3. Removes inner spacing in IE7 without affecting normal text inputs
  *    Known issue: inner spacing remains in IE6
  */
-/* line 361, ../sass/normalize.scss */
+/* line 361, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -346,7 +346,7 @@ input[type="submit"] {
  * 1. Addresses box sizing set to content-box in IE8/9
  * 2. Removes excess padding in IE8/9
  */
-/* line 373, ../sass/normalize.scss */
+/* line 373, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -358,7 +358,7 @@ input[type="radio"] {
  * 1. Addresses appearance set to searchfield in S5, Chrome
  * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
  */
-/* line 383, ../sass/normalize.scss */
+/* line 383, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -370,7 +370,7 @@ input[type="search"] {
 /*
  * Removes inner padding that is displayed in S5, Chrome on OS X
  */
-/* line 394, ../sass/normalize.scss */
+/* line 394, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
@@ -378,7 +378,7 @@ input[type="search"]::-webkit-search-decoration {
  * Removes inner padding and border in FF3+
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
-/* line 404, ../sass/normalize.scss */
+/* line 404, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -388,7 +388,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9
  * 2. Improves readability and alignment in all browsers
  */
-/* line 414, ../sass/normalize.scss */
+/* line 414, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -401,7 +401,7 @@ textarea {
 /* 
  * Remove most spacing between table cells
  */
-/* line 428, ../sass/normalize.scss */
+/* line 428, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -412,42 +412,42 @@ I added these extra styles as a more personalized reset. Feel free
 to remove them if you like or add your own. If you want to update
 the normalize styles, make sure to edit from this point up.
 ******************************************************************/
-/* line 440, ../sass/normalize.scss */
+/* line 440, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 ul, ol {
   padding: 0;
   list-style-type: none; }
 
-/* line 445, ../sass/normalize.scss */
+/* line 445, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 dd {
   margin: 0; }
 
-/* line 451, ../sass/normalize.scss */
+/* line 451, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 .sidebar ul,
 .sidebar ol,
 .commentlist {
   list-style: none; }
 
 /* proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens) */
-/* line 456, ../sass/normalize.scss */
+/* line 456, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 p {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -epub-hyphens: auto;
   hyphens: auto; }
 
-/* line 465, ../sass/normalize.scss */
+/* line 465, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 b,
 strong,
 .strong {
   font-weight: bold; }
 
-/* line 471, ../sass/normalize.scss */
+/* line 471, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 dfn,
 em,
 .em {
   font-style: italic; }
 
-/* line 475, ../sass/normalize.scss */
+/* line 475, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 small, .small {
   font-size: 75%; }
 
@@ -455,7 +455,7 @@ small, .small {
 CLEARFIXIN'
 *********************/
 /* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
-/* line 487, ../sass/normalize.scss */
+/* line 487, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 .clearfix:before,
 .clearfix:after,
 .nav .menu ul:before,
@@ -463,12 +463,12 @@ CLEARFIXIN'
   content: "";
   display: table; }
 
-/* line 489, ../sass/normalize.scss */
+/* line 489, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 .clearfix:after,
 .nav .menu ul:after {
   clear: both; }
 
-/* line 491, ../sass/normalize.scss */
+/* line 491, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/normalize.scss */
 .clearfix,
 .nav .menu ul {
   zoom: 1; }
@@ -517,7 +517,7 @@ BOX SHADOW
 /*********************
 BUTTONS
 *********************/
-/* line 188, ../sass/mixins.scss */
+/* line 188, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .button, .button:visited {
   border: 1px solid #006bbd;
   border-top-color: #007cdb;
@@ -549,7 +549,7 @@ BUTTONS
   -ms-box-shadow: 1px 1px 2px 0 black;
   -o-box-shadow: 1px 1px 2px 0 black;
   box-shadow: 1px 1px 2px 0 black; }
-  /* line 207, ../sass/mixins.scss */
+  /* line 207, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
   .button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
     color: white;
     border: 1px solid #006bbd;
@@ -562,7 +562,7 @@ BUTTONS
     background-image: -o-linear-gradient(top, #0082e6, #0073cc);
     background-image: -ms-linear-gradient(top, #0082e6, #0073cc);
     background-image: linear-gradient(top, #0082e6, #0073cc); }
-  /* line 215, ../sass/mixins.scss */
+  /* line 215, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
   .button:active, .button:visited:active {
     background-color: #0090ff;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#0082e6), to(#0090ff));
@@ -575,11 +575,11 @@ BUTTONS
 /*********************
 TYPOGRAPHY
 *********************/
-/* line 225, ../sass/mixins.scss */
+/* line 225, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .sans-serif {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-/* line 228, ../sass/mixins.scss */
+/* line 228, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .serif {
   font-family: "Georgia", Cambria, Times New Roman, Times, serif; }
 
@@ -605,26 +605,26 @@ TYPOGRAPHY
 use the best ampersand 
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
-/* line 256, ../sass/mixins.scss */
+/* line 256, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif;
   font-style: italic; }
 
 /* text alignment */
-/* line 262, ../sass/mixins.scss */
+/* line 262, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .text-left {
   text-align: left; }
 
-/* line 263, ../sass/mixins.scss */
+/* line 263, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .text-center {
   text-align: center; }
 
-/* line 264, ../sass/mixins.scss */
+/* line 264, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .text-right {
   text-align: right; }
 
 /* alerts & notices */
-/* line 268, ../sass/mixins.scss */
+/* line 268, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .help, .info, .error, .success {
   margin: 10px;
   padding: 5px 18px;
@@ -637,22 +637,22 @@ span.amp {
   border-radius: 15px;
   text-align: center; }
 
-/* line 277, ../sass/mixins.scss */
+/* line 277, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .help {
   border-color: #ffe033;
   background: #ffe44d; }
 
-/* line 282, ../sass/mixins.scss */
+/* line 282, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .info {
   border-color: #0082e6;
   background: #0090ff; }
 
-/* line 287, ../sass/mixins.scss */
+/* line 287, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .error {
   border-color: #f8cdce;
   background: #fbe3e4; }
 
-/* line 292, ../sass/mixins.scss */
+/* line 292, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/mixins.scss */
 .success {
   border-color: #e5e5e5;
   background: #f2f2f2; }
@@ -672,7 +672,7 @@ If you want to learn more, check out this article by Chris Coyier
 css-tricks.com/musings-on-preprocessing/
 
 ********************************************/
-/* line 18, ../sass/coda-slider.scss */
+/* line 18, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
 .coda-slider-wrapper {
   /* Eric Meyer's reset http://meyerweb.com/eric/tools/css/ */
   /*******************************************************
@@ -687,7 +687,7 @@ css-tricks.com/musings-on-preprocessing/
   *
   *******************************************************/
   padding: 20px 0; }
-  /* line 21, ../sass/coda-slider.scss */
+  /* line 21, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
   .coda-slider-wrapper div, .coda-slider-wrapper span, .coda-slider-wrapper applet, .coda-slider-wrapper object, .coda-slider-wrapper iframe, .coda-slider-wrapper h1, .coda-slider-wrapper h2, .coda-slider-wrapper h3, .coda-slider-wrapper h4, .coda-slider-wrapper h5, .coda-slider-wrapper h6, .coda-slider-wrapper p, .coda-slider-wrapper blockquote, .coda-slider-wrapper pre, .coda-slider-wrapper a, .coda-slider-wrapper abbr, .coda-slider-wrapper acronym, .coda-slider-wrapper address, .coda-slider-wrapper big, .coda-slider-wrapper cite, .coda-slider-wrapper code, .coda-slider-wrapper del, .coda-slider-wrapper dfn, .coda-slider-wrapper em, .coda-slider-wrapper font, .coda-slider-wrapper img, .coda-slider-wrapper ins, .coda-slider-wrapper kbd, .coda-slider-wrapper q, .coda-slider-wrapper s, .coda-slider-wrapper samp, .coda-slider-wrapper small, .coda-slider-wrapper strike, .coda-slider-wrapper strong, .coda-slider-wrapper sub, .coda-slider-wrapper sup, .coda-slider-wrapper tt, .coda-slider-wrapper var, .coda-slider-wrapper b, .coda-slider-wrapper u, .coda-slider-wrapper i, .coda-slider-wrapper center, .coda-slider-wrapper dl, .coda-slider-wrapper dt, .coda-slider-wrapper dd, .coda-slider-wrapper ol, .coda-slider-wrapper ul, .coda-slider-wrapper li, .coda-slider-wrapper fieldset, .coda-slider-wrapper form, .coda-slider-wrapper label, .coda-slider-wrapper legend, .coda-slider-wrapper table, .coda-slider-wrapper caption, .coda-slider-wrapper tbody, .coda-slider-wrapper tfoot, .coda-slider-wrapper thead, .coda-slider-wrapper tr, .coda-slider-wrapper th, .coda-slider-wrapper td {
     margin: 0;
     padding: 0;
@@ -697,20 +697,20 @@ css-tricks.com/musings-on-preprocessing/
     font-size: 100%;
     vertical-align: baseline;
     background: transparent; }
-  /* line 21, ../sass/coda-slider.scss */
+  /* line 21, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
   .coda-slider-wrapper body {
     line-height: 1; }
-  /* line 21, ../sass/coda-slider.scss */
+  /* line 21, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
   .coda-slider-wrapper ol, .coda-slider-wrapper ul {
     list-style: none; }
-  /* line 21, ../sass/coda-slider.scss */
+  /* line 21, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
   .coda-slider-wrapper blockquote, .coda-slider-wrapper q {
     quotes: none; }
-  /* line 21, ../sass/coda-slider.scss */
+  /* line 21, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
   .coda-slider-wrapper blockquote:before, .coda-slider-wrapper blockquote:after, .coda-slider-wrapper q:before, .coda-slider-wrapper q:after {
     content: '';
     content: none; }
-  /* line 37, ../sass/coda-slider.scss */
+  /* line 37, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
   .coda-slider-wrapper .coda-slider {
     /******************************************************
     * 
@@ -725,14 +725,14 @@ css-tricks.com/musings-on-preprocessing/
     *
     *******************************************************/
     width: 700px; }
-    /* line 53, ../sass/coda-slider.scss */
+    /* line 53, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .coda-nav {
       /******************************************************
       * 
       * Tab styles 
       *
       *******************************************************/ }
-      /* line 60, ../sass/coda-slider.scss */
+      /* line 60, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .coda-nav .current {
         /******************************************************
         * 
@@ -740,7 +740,7 @@ css-tricks.com/musings-on-preprocessing/
         *
         *******************************************************/
         background: #0090FF; }
-      /* line 69, ../sass/coda-slider.scss */
+      /* line 69, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .coda-nav a {
         /******************************************************
         * 
@@ -751,7 +751,7 @@ css-tricks.com/musings-on-preprocessing/
         color: #fff;
         margin-right: 1px;
         padding: 3px 6px; }
-      /* line 81, ../sass/coda-slider.scss */
+      /* line 81, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .coda-nav a:hover {
         /******************************************************
         * 
@@ -761,14 +761,14 @@ css-tricks.com/musings-on-preprocessing/
         background: #000;
         color: #fff;
         text-shadow: none; }
-    /* line 93, ../sass/coda-slider.scss */
+    /* line 93, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .coda-nav-left, .coda-slider-wrapper .coda-slider .coda-nav-right {
       /******************************************************
       * 
       * Arrow Styles 
       *
       *******************************************************/ }
-      /* line 100, ../sass/coda-slider.scss */
+      /* line 100, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .coda-nav-left a, .coda-slider-wrapper .coda-slider .coda-nav-right a {
         /******************************************************
         * 
@@ -779,7 +779,7 @@ css-tricks.com/musings-on-preprocessing/
         color: #fff;
         padding: 5px;
         width: 100px; }
-    /* line 113, ../sass/coda-slider.scss */
+    /* line 113, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .arrows .coda-slider {
       /******************************************************
       * 
@@ -787,7 +787,7 @@ css-tricks.com/musings-on-preprocessing/
       *
       *******************************************************/
       margin: 0 10px; }
-    /* line 122, ../sass/coda-slider.scss */
+    /* line 122, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .coda-nav-left-arrow {
       /******************************************************
       * 
@@ -795,9 +795,9 @@ css-tricks.com/musings-on-preprocessing/
       *
       *******************************************************/
       width: 42px;
-      height: 107px;
+      height: 25px;
       background: url(../img/arrow.png) no-repeat bottom left; }
-    /* line 133, ../sass/coda-slider.scss */
+    /* line 133, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .coda-nav-right-arrow {
       /******************************************************
       * 
@@ -805,9 +805,9 @@ css-tricks.com/musings-on-preprocessing/
       *
       *******************************************************/
       width: 42px;
-      height: 107px;
+      height: 25px;
       background: url(../img/arrow.png) no-repeat bottom right; }
-    /* line 144, ../sass/coda-slider.scss */
+    /* line 144, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .panel {
       /******************************************************
       * 
@@ -817,7 +817,7 @@ css-tricks.com/musings-on-preprocessing/
       *
       *******************************************************/
       width: 700px; }
-      /* line 154, ../sass/coda-slider.scss */
+      /* line 154, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .panel .panel-wrapper {
         /******************************************************
         * 
@@ -825,7 +825,7 @@ css-tricks.com/musings-on-preprocessing/
         *
         *******************************************************/
         padding: 20px; }
-    /* line 164, ../sass/coda-slider.scss */
+    /* line 164, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .loading {
       /******************************************************
       * 
@@ -841,7 +841,7 @@ css-tricks.com/musings-on-preprocessing/
 * Don't change anything below here unless you know what you're doing 
 *
 ***********************************************************************/
-/* line 183, ../sass/coda-slider.scss */
+/* line 183, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
 .coda-slider-wrapper {
   /************************************************
   * 
@@ -850,7 +850,7 @@ css-tricks.com/musings-on-preprocessing/
   *************************************************/
   clear: both;
   overflow: auto; }
-  /* line 192, ../sass/coda-slider.scss */
+  /* line 192, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
   .coda-slider-wrapper .coda-slider {
     /************************************************
     * 
@@ -860,14 +860,14 @@ css-tricks.com/musings-on-preprocessing/
     float: left;
     overflow: hidden;
     position: relative; }
-    /* line 202, ../sass/coda-slider.scss */
+    /* line 202, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .coda-nav {
       /************************************************
       * 
       * Navigation tabs 
       *
       *************************************************/ }
-      /* line 209, ../sass/coda-slider.scss */
+      /* line 209, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .coda-nav ul {
         /************************************************
         * 
@@ -878,7 +878,7 @@ css-tricks.com/musings-on-preprocessing/
         display: block;
         margin: auto;
         overflow: hidden; }
-        /* line 220, ../sass/coda-slider.scss */
+        /* line 220, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
         .coda-slider-wrapper .coda-slider .coda-nav ul li {
           /************************************************
           * 
@@ -886,7 +886,7 @@ css-tricks.com/musings-on-preprocessing/
           *
           *************************************************/
           display: inline; }
-          /* line 228, ../sass/coda-slider.scss */
+          /* line 228, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
           .coda-slider-wrapper .coda-slider .coda-nav ul li a {
             /************************************************
             * 
@@ -896,7 +896,7 @@ css-tricks.com/musings-on-preprocessing/
             display: block;
             float: left;
             text-decoration: none; }
-    /* line 242, ../sass/coda-slider.scss */
+    /* line 242, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .coda-nav-left-arrow, .coda-slider-wrapper .coda-slider .coda-nav-right-arrow {
       /************************************************
       * 
@@ -906,7 +906,7 @@ css-tricks.com/musings-on-preprocessing/
       cursor: pointer;
       float: left;
       margin-top: 50px; }
-      /* line 252, ../sass/coda-slider.scss */
+      /* line 252, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .coda-nav-left-arrow a, .coda-slider-wrapper .coda-slider .coda-nav-right-arrow a {
         /************************************************
         * 
@@ -914,7 +914,7 @@ css-tricks.com/musings-on-preprocessing/
         *
         *************************************************/
         display: block; }
-      /* line 261, ../sass/coda-slider.scss */
+      /* line 261, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .coda-nav-left-arrow:active, .coda-slider-wrapper .coda-slider .coda-nav-right-arrow:active {
         /************************************************
         * 
@@ -922,7 +922,7 @@ css-tricks.com/musings-on-preprocessing/
         *
         *************************************************/
         margin-top: 55px; }
-    /* line 271, ../sass/coda-slider.scss */
+    /* line 271, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .coda-nav-left, .coda-slider-wrapper .coda-slider .coda-nav-right {
       /************************************************
       * 
@@ -930,7 +930,7 @@ css-tricks.com/musings-on-preprocessing/
       *
       *************************************************/
       float: left; }
-      /* line 278, ../sass/coda-slider.scss */
+      /* line 278, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .coda-nav-left a, .coda-slider-wrapper .coda-slider .coda-nav-right a {
         /************************************************
         * 
@@ -940,7 +940,7 @@ css-tricks.com/musings-on-preprocessing/
         display: block;
         text-align: center;
         text-decoration: none; }
-    /* line 290, ../sass/coda-slider.scss */
+    /* line 290, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .coda-nav-left, .coda-slider-wrapper .coda-slider .coda-nav-left-arrow {
       /************************************************
       * 
@@ -948,7 +948,7 @@ css-tricks.com/musings-on-preprocessing/
       *
       *************************************************/
       clear: both; }
-    /* line 299, ../sass/coda-slider.scss */
+    /* line 299, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
     .coda-slider-wrapper .coda-slider .panel-container {
       /************************************************
       * 
@@ -956,7 +956,7 @@ css-tricks.com/musings-on-preprocessing/
       *
       *************************************************/
       position: relative; }
-      /* line 307, ../sass/coda-slider.scss */
+      /* line 307, C:/Users/SONY/Desktop/Web Design/Projects/Coda Slider/Coda Slider/CodaSlider/sass/coda-slider.scss */
       .coda-slider-wrapper .coda-slider .panel-container .panel {
         /************************************************
         * 
