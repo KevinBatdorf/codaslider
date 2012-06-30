@@ -2,7 +2,7 @@
 ============
 A jQuery HTML Content Slider Plugin
 
-[Download](https://github.com/KevinBatdorf/codaslider/zipball/master)
+[Standard Version](https://github.com/KevinBatdorf/codaslider/zipball/master)
 
 [Beta Version](https://github.com/KevinBatdorf/codaslider/zipball/experimental)
 
@@ -18,10 +18,10 @@ Beta Features
 -------------
 
 Responsive Design  
-Fade Transition
+Fade Transition  
 See the version update below.
 
-Download [Here](https://github.com/KevinBatdorf/codaslider/zipball/experimental)
+See [Here](https://github.com/KevinBatdorf/codaslider/tree/experimental) for more info.
 
 
 How to Use
@@ -83,7 +83,6 @@ Default Settings
          dynamicTabsPosition: "top",
             firstPanelToLoad: 1,
           panelTitleSelector: "h2.title",
-                  responsive: false,
            slideEaseDuration: 1500,
            slideEaseFunction: "easeInOutExpo"
 ```
@@ -91,19 +90,19 @@ Default Settings
 Version 3.1 (Beta)
 ------------------
 
-Added Responsive widths
-Added the fade transition
-Removed the preloader (for now)
-Slider updates height & width on browser resize
-Disabled 'left' and 'right' positioning when using non-graphical arrows
+Added Responsive widths.  
+Added the fade transition.  
+Removed the preloader (for now).  
+Slider updates height & width on browser resize.  
+Disabled 'left' and 'right' positioning when using non-graphical arrows.  
 
 Version 3.0
 -------------
 
-Complete rebuild from the bottom up.
-Added continuous sliding
-Added graphical arrows
-Small fixes.
+Complete rebuild from the bottom up.  
+Added continuous sliding.  
+Added graphical arrows.  
+Small fixes.  
 
 
 Documentation
