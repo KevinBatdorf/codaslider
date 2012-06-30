@@ -93,7 +93,7 @@ Version 3.1 (Beta)
 
 Added Responsive widths
 Added the fade transition
-Removed the preloader
+Removed the preloader (for now)
 Slider updates height & width on browser resize
 Disabled 'left' and 'right' positioning when using non-graphical arrows
 
