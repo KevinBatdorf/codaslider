@@ -27,12 +27,17 @@ css-tricks.com/musings-on-preprocessing/
 *
 ********************************************************/
 
+$mainColor: #f2f2f2;
+$panelWidth: 700px; // when not responsive
+$tabColor: #333;
+
+
 	/******************************************************
 	* 
 	* Main wrapper padding 
 	*
 	*******************************************************/
-	//padding: 20px 0;	
+
 
 	.coda-slider { 
 		/******************************************************
@@ -40,7 +45,7 @@ css-tricks.com/musings-on-preprocessing/
 		* Inner wrapper styles 
 		*
 		*******************************************************/
-		background: #f2f2f2;
+		background: $mainColor;
 		
 		/******************************************************
 		* 
@@ -48,7 +53,7 @@ css-tricks.com/musings-on-preprocessing/
 		* match this with the width of the panel as well. 
 		*
 		*******************************************************/
-		width:700px;
+		width:$panelWidth;
 
 		
 		.panel{
@@ -59,7 +64,7 @@ css-tricks.com/musings-on-preprocessing/
 			* of the container as well. 
 			*
 			*******************************************************/
-			width:700px; 
+			width:$panelWidth; 
 
 			.panel-wrapper { 
 				/******************************************************
@@ -85,7 +90,7 @@ css-tricks.com/musings-on-preprocessing/
 			* Current tab styles 
 			*
 			*******************************************************/
-			background: #0090FF 
+			background: $mainColor;
 		}
 
 		a{
@@ -94,8 +99,8 @@ css-tricks.com/musings-on-preprocessing/
 			* Tab styles 
 			*
 			*******************************************************/
-			background: #000; 
-			color: #fff;
+			background: darken($mainColor, 10%);
+			color: $tabColor;
 			margin-right:1px;
 			padding:3px 6px; 				
 		}
@@ -106,8 +111,8 @@ css-tricks.com/musings-on-preprocessing/
 			* Tab styles 
 			*
 			*******************************************************/
-			background:#000;
-			color:#fff;
+			background: darken(#f2f2f2, 5%);
+			color:$tabColor;
 			text-shadow:none; 
 		}
 	}
@@ -144,6 +149,7 @@ css-tricks.com/musings-on-preprocessing/
 		height:25px;
 		background: url(../img/arrow.png) no-repeat top left;
 		margin-top:50px;
+		margin-left:5px;
 
 		&:hover{
 			/************************************************
@@ -174,6 +180,7 @@ css-tricks.com/musings-on-preprocessing/
 		height:25px;
 		background: url(../img/arrow.png) no-repeat top right;
 		margin-top:50px;
+		margin-right:5px;
 
 		&:hover{
 			/************************************************
@@ -247,15 +254,13 @@ css-tricks.com/musings-on-preprocessing/
 			position:absolute;
 			left:0;
 			z-index:1;
-			margin-top:5px;
-			&:active{margin-top:10px;}
+			&:active{}
 		}
 		.coda-nav-right-arrow{
 			position:absolute;
 			right:0;
 			z-index:1;
-			margin-top:5px;
-			&:active{margin-top:10px;}
+			&:active{}
 		}
 		.small-tabs {
 			width:100%!important;
@@ -316,6 +321,12 @@ css-tricks.com/musings-on-preprocessing/
 				*************************************************/
 				display:block;
 				float:left;
+			}
+			.fadeClass {
+				position:absolute;
+				top:0;
+				left:0;
+				display:none;
 			}
 		}
 	}

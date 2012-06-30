@@ -1,24 +1,28 @@
-[Coda Slider](http://kevinbatdorf.github.com/codaslider)
+[Coda Slider](http://kevinbatdorf.github.com/codaslider) Beta
 ============
 A jQuery HTML Content Slider Plugin
 
-[Download](https://github.com/KevinBatdorf/codaslider/zipball/master)
+This is the Beta version and is not promised to work. 
 
+[Get the stable version.](https://github.com/KevinBatdorf/codaslider/tree/master)
 
-Features
---------
-
-Continuous Sliding  
-Dynamic Tabs & Arrows  
-Cross Linking
 
 Beta Features
 -------------
 
 Responsive Design  
 
+Fade Transition (Other transitions work, but are not stable)
+
 Download [Here](https://github.com/KevinBatdorf/codaslider/zipball/experimental)  
 Beta is not supported and not promised to work.
+
+Known Issues
+------------
+
+* Padding doesn't word on load (oddly, works fine if you have Chrome dev, tools open).
+* Non-fade transitions sometimes start at unexpected margins, then slide to the correct margin.
+* When using the non-graphical arrows, the tabs must be centered.
 
 How to Use
 -----------
@@ -59,31 +63,39 @@ One Panel:
     </div>
 ```
 
-Default Settings
+Default Settings for Beta
 ----------------
 ```javascript
                   autoHeight: true,
       autoHeightEaseDuration: 1500,
       autoHeightEaseFunction: "easeInOutExpo",
-                   autoSlide: false,
+                   autoSlide: true,
          autoSliderDirection: 'right',
            autoSlideInterval: 7000,
     autoSlideStopWhenClicked: true,
-                  continuous: true,
-               dynamicArrows: true,
-      dynamicArrowsGraphical: false,
+                  continuous: false,
+               dynamicArrows: false,
+      dynamicArrowsGraphical: true,
         dynamicArrowLeftText: "&#171; left",
        dynamicArrowRightText: "right &#187;",
                  dynamicTabs: true,
-            dynamicTabsAlign: "center",
+            dynamicTabsAlign: "left",
          dynamicTabsPosition: "top",
             firstPanelToLoad: 1,
           panelTitleSelector: "h2.title",
-                  responsive: false,
+                  responsive: true,
            slideEaseDuration: 1500,
-           slideEaseFunction: "easeInOutExpo"
+           slideEaseFunction: "fade"
 ```
 
+Version 3.1 (Beta)
+------------------
+
+Added Responsive widths
+Added the fade transition
+Removed the preloader
+Slider updates height & width on browser resize
+Disabled 'left' and 'right' positioning when using non-graphical arrows
 
 Version 3.0
 -------------
