@@ -13,9 +13,6 @@ if ( typeof Object.create !== 'function' ) {
 		init: function( options, elem ) {
 			var self = this;
 
-			//remove no JavaScript warning
-			$("body").removeClass("coda-slider-no-js");
-
 			// Cache the element
 			self.elem = elem;
 			self.$elem = $( elem );
@@ -353,7 +350,7 @@ if ( typeof Object.create !== 'function' ) {
 			// Transition for fade option
 			if (self.options.slideEaseFunction === 'fade') {
 				$($(self.panelContainer).children()[self.currentTab])
-					.fadeIn(self.options.slideEaseDuration)
+					.fadeTo(self.options.slideEaseDuration, 1.0)
 					.siblings().css('display', 'none');
 			}
 			else {
