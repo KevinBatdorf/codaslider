@@ -211,7 +211,7 @@ if ( typeof Object.create !== 'function' ) {
 			// Click to stop autoslider
 			$($(self.sliderId).parent()).find('*').on('click', function(e){
 				// AutoSlide controls.
-				if (self.options.autoSlideControls) {
+				if (self.options.autoSlideControls && autoSlideStopWhenClicked) {
 					$('body').find('[data-ref*=' + (self.sliderId).split('#')[1] + '][name=stop]').html(self.options.autoSlideStartText);
 					clearTimeout(self.autoslideTimeout);
 				}
