@@ -72,7 +72,7 @@ Default Settings
                    autoSlide: false,
          autoSliderDirection: 'right',
            autoSlideInterval: 7000,
-           autoSlideControls: true,
+           autoSlideControls: false,
           autoSlideStartText: 'Start',
            autoSlideStopText: 'Stop',
     autoSlideStopWhenClicked: true,
