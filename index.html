@@ -206,6 +206,7 @@
         </div>
         <div id="dynamic-cross-links">
         <p>Here are some cross-links (see <a href="#4" data-ref="dynamic-tabs">Tab 4</a> for more info):</p>
+          <p><a href="#" name="start" data-ref="dynamic-tabs">Start</a> Auto Play</p>
           <a href="#1" data-ref="dynamic-tabs">Dynamic Positioning</a><br />
           <a href="#2" data-ref="dynamic-tabs">Hard-coded Positioning</a><br />
           <a href="#3" data-ref="dynamic-tabs">CSS</a><br />
@@ -372,6 +373,28 @@
 <strong>autoSlideInterval</strong>
   Default: 4000
   Description: The speed at which the slider auto transitions to the next panel.
+
+<strong>autoSlideControls</strong>
+  Default: true
+  Description: Enables auto controls for the slider. Works even if autoslide is false. 
+
+  Usage: &lt;a href="#" name="start" data-ref="slider-id" &gt;Start&lt;/a&gt;
+              &lt;a href="#" name="stop"  data-ref="slider-id" &gt;Stop&lt;/a&gt;
+
+  Note that you only need one link, as it will dynamically update after being clicked. 
+  So if autoSlide is enabled, use "Stop" (see below), otherwise use "Start"
+
+<strong>autoSlideStartText</strong>
+  Default: 'Start'
+  Description: The text used as the start button. You must code it in manually too. 
+
+  Usage: &lt;a href="#" name="start" data-ref="slider-id"&gt;Start&lt;/a&gt;
+
+<strong>autoSlideStopText</strong>
+  Default: 'Stop'
+  Description: The text used as the start button. You must code it in manually too. 
+
+  Usage: &lt;a href="#" name="stop" data-ref="slider-id"&gt;Stop&lt;/a&gt;
 
 <strong>autoSlideStopWhenClicked</strong>
   Default: true
