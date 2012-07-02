@@ -452,7 +452,7 @@ if ( typeof Object.create !== 'function' ) {
 		autoSlideStartText: 'Start',
 		autoSlideStopText: 'Stop',
 		autoSlideStopWhenClicked: true,
-		continuous: true,
+		continuous: false,
 		dynamicArrows: true,
 		dynamicArrowsGraphical: true,
 		dynamicArrowLeftText: "&#171; left",
