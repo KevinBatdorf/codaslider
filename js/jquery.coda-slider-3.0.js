@@ -189,8 +189,21 @@ if ( typeof Object.create !== 'function' ) {
 			// Click cross links
 			$('[data-ref*=' + (self.sliderId).split('#')[1] + ']').on('click', function(e){
 				if (!self.clickable && self.options.continuous) {return false;}
+				// Stop and Play controls
+				if ($(this).attr('name') === 'stop') {
+					$(this).html(self.options.autoSlideStartText).attr('name', 'start');
+					clearTimeout(self.autoslideTimeout);
+					return false;
+				}
+				if ($(this).attr('name') === 'start') {
+					$(this).html(self.options.autoSlideStopText).attr('name', 'stop');
+					self.setCurrent(self.currentTab + 1);
+					self.autoSlide();
+					return false;
+				}
 				self.setCurrent( parseInt( $(this).attr('href').split('#')[1] -1, 10 ) );
 				if (self.options.continuous) {self.clickable = false;}
+				if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
 				return false;
 			});
 			// Click to stop autoslider
@@ -326,7 +339,9 @@ if ( typeof Object.create !== 'function' ) {
 		autoHeight: true,
 		autoHeightEaseDuration: 1500,
 		autoHeightEaseFunction: "easeInOutExpo",
-		autoSlide: false,
+		autoSlide: true,
+		autoSlideStartText: 'Start',
+		autoSlideStopText: 'Stop',
 		autoSliderDirection: 'right',
 		autoSlideInterval: 7000,
 		autoSlideStopWhenClicked: true,

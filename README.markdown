@@ -70,6 +70,8 @@ Default Settings
       autoHeightEaseDuration: 1500,
       autoHeightEaseFunction: "easeInOutExpo",
                    autoSlide: false,
+          autoSlideStartText: 'Start',
+           autoSlideStopText: 'Stop',
          autoSliderDirection: 'right',
            autoSlideInterval: 7000,
     autoSlideStopWhenClicked: true,
