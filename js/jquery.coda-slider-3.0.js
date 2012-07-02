@@ -275,12 +275,32 @@ if ( typeof Object.create !== 'function' ) {
 			// Click cross links
 			$('[data-ref*=' + (self.sliderId).split('#')[1] + ']').on('click', function(e){
 				if (!self.clickable && self.options.continuous) {return false;}
+				// Stop and Play controls
+				if (self.options.autoSlideControls) {
+					if ($(this).attr('name') === 'stop') {
+						$(this).html(self.options.autoSlideStartText).attr('name', 'start');
+						clearTimeout(self.autoslideTimeout);
+						return false;
+					}
+					if ($(this).attr('name') === 'start') {
+						$(this).html(self.options.autoSlideStopText).attr('name', 'stop');
+						self.setCurrent(self.currentTab + 1);
+						self.autoSlide();
+						return false;
+					}
+				}
 				self.setCurrent( parseInt( $(this).attr('href').split('#')[1] -1, 10 ) );
 				if (self.options.continuous) {self.clickable = false;}
+				if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
 				return false;
 			});
 			// Click to stop autoslider
 			$($(self.sliderId).parent()).find('*').on('click', function(e){
+				// AutoSlide controls.
+				if (self.options.autoSlideControls && autoSlideStopWhenClicked) {
+					$('body').find('[data-ref*=' + (self.sliderId).split('#')[1] + '][name=stop]').html(self.options.autoSlideStartText);
+					clearTimeout(self.autoslideTimeout);
+				}
 				if (!self.clickable && self.options.continuous) {
 					if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
 					return false;
@@ -428,6 +448,9 @@ if ( typeof Object.create !== 'function' ) {
 		autoSlide: true,
 		autoSliderDirection: 'right',
 		autoSlideInterval: 7000,
+		autoslideControls: true,
+		autoSlideStartText: 'Start',
+		autoSlideStopText: 'Stop',
 		autoSlideStopWhenClicked: true,
 		continuous: true,
 		dynamicArrows: true,
