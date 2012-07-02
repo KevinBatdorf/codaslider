@@ -51,18 +51,24 @@
       });
       </script>
       <script type="text/javascript">
+      /* Google Analytics Code */
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-32725877-1']);
-  _gaq.push(['_trackPageview']);
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-32725877-1']);
+        _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+        function recordOutboundLink(link, category, action) {
+          _gat._getTrackerByName()._trackEvent(category, action);
+          setTimeout('document.location = "' + link.href + '"', 100);
+        }
 
-</script>
+      </script>
   </head>
   <body>
 
@@ -429,8 +435,8 @@
 
 
         <h3>These are Affiliate banners</h3>
-        <a href="http://50dollarblogs.net/giggidy/?a_aid=4fa8e53f377b5" target="_blank"><img src="./img/50dollarblogs.png" width="300" height="225" alt="Start a Blog."></a>
-        <a href="http://www.themeforest.com?ref=kevinbatdorf" target="_blank"><img src="./img/tf_300x250_v1.gif" width="300" height="250" alt="Theme Forest"></a>
+        <a href="http://50dollarblogs.net/giggidy/?a_aid=4fa8e53f377b5" target="_blank" onClick="recordOutboundLink(this, 'Outbound Links', '50dollarblogs.net');return false;"><img src="./img/50dollarblogs.png" width="300" height="225" alt="Start a Blog."></a>
+        <a href="http://www.themeforest.com?ref=kevinbatdorf" target="_blank" onClick="recordOutboundLink(this, 'Outbound Links', 'themeforest.com');return false;"><img src="./img/tf_300x250_v1.gif" width="300" height="250" alt="Theme Forest"></a>
       </section>
 
     </section>
