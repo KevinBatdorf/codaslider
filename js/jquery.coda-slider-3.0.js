@@ -344,11 +344,10 @@ if ( typeof Object.create !== 'function' ) {
 					self.setTab = self.currentTab;
 				}
 				// Add and remove current class.
-				if (self.options.dynamicTabs){
-					$($(self.sliderId).parent()).find('.tab' + (self.setTab + 1) + ' a:first')
-					.addClass('current')
-					.parent().siblings().children().removeClass('current');
-				}
+				$($(self.sliderId).parent()).find('.tab' + (self.setTab + 1) + ' a:first')
+				.addClass('current')
+				.parent().siblings().children().removeClass('current');
+				
 				// Update the dropdown menu when small.
 				if (self.options.responsive) { $(self.sliderId + '-nav-select').val('tab' + (self.currentTab + 1)); }
 				this.transition();
