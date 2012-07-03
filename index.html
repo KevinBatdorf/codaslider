@@ -107,7 +107,6 @@
               <pre><code>&lt;div class=&#34;coda-slider&#34; id=&#34;slider-id&#34;&gt;
   &lt;div&gt;
     &lt;h2 class=&#34;title&#34;&gt;Panel1&lt;/h2&gt;
-    //Content goes here
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -180,20 +179,20 @@
           <div>
             <h2 class="title">Hard-coded Positioning</h2>
             <p>If you prefer, you can hard-code the naviation and tabs to get the perfect design. You must be sure to set both <code>dynamicTabs</code> and <code>dynamicArrows</code> to false in the settings. Then, use the following as a guide when building your html:</p>
-           <pre><code>&lt;div id=&#34;slider-id-wrapper&#34;&gt; class=&#34;coda-slider-wrapper&#34;&gt;
+           <pre><code>&lt;div id=&#34;slider-id-wrapper&#34; class=&#34;coda-slider-wrapper&#34;&gt;
   &lt;div class=&#34;coda-nav-left&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;prev&#34; title=&#34;Slide left&#34;&gt;&#171; left&lt;/a&gt;&lt;/div&gt;
-    &lt;div class=&#34;coda-nav&#34;&gt;
-      &lt;ul&gt;
-        &lt;li class=&#34;tab1&#34;&gt;&lt;a href=&#34;#1&#34; title=&#34;Panel 1&#34;&gt;Panel 1&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&#34;tab2&#34;&gt;&lt;a href=&#34;#2&#34; title=&#34;Panel 2&#34;&gt;Panel 2&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&#34;tab3&#34;&gt;&lt;a href=&#34;#3&#34; title=&#34;Panel 3&#34;&gt;Panel 3&lt;/a&gt;&lt;/li&gt;
-        &lt;li class=&#34;tab4&#34;&gt;&lt;a href=&#34;#4&#34; title=&#34;Panel 4&#34;&gt;Panel 4&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;coda-nav-right&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;next&#34; title=&#34;Slide right&#34;&gt;&#187; right&lt;/a&gt;&lt;/div&gt;
-    &lt;class=&#34;coda-slider&#34; id=&#34;slider-id&#34;&gt;
-    /* Panels go here */
-    &lt;/div&gt;
+  &lt;div class=&#34;coda-nav&#34;&gt;
+    &lt;ul&gt;
+      &lt;li class=&#34;tab1&#34;&gt;&lt;a href=&#34;#1&#34; title=&#34;Panel 1&#34;&gt;Panel 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&#34;tab2&#34;&gt;&lt;a href=&#34;#2&#34; title=&#34;Panel 2&#34;&gt;Panel 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&#34;tab3&#34;&gt;&lt;a href=&#34;#3&#34; title=&#34;Panel 3&#34;&gt;Panel 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&#34;tab4&#34;&gt;&lt;a href=&#34;#4&#34; title=&#34;Panel 4&#34;&gt;Panel 4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;coda-nav-right&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;next&#34; title=&#34;Slide right&#34;&gt;&#187; right&lt;/a&gt;&lt;/div&gt;
+  &lt;class=&#34;coda-slider&#34; id=&#34;slider-id&#34;&gt;
+  /* Panels go here */
+  &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
 
@@ -356,7 +355,8 @@
     <pre class="api-clickable"><span class="h4">Auto Height</span><code>
 <strong>autoHeight</strong>
   Default: true
-  Description: Automically adjusts the height to match the content, if true.
+  Description: Automically adjusts the height to match 
+               the content, if true.
 
 <strong>autoHeightEaseDuration</strong>
   Default: 7000
@@ -378,39 +378,46 @@
 
 <strong>autoSlideInterval</strong>
   Default: 4000
-  Description: The speed at which the slider auto transitions to the next panel.
+  Description: The speed at which the slider auto transitions 
+               to the next panel.
 
 <strong>autoSlideControls</strong>
   Default: false
-  Description: Enables auto controls for the slider. Works even if autoslide is false. 
+  Description: Enables auto controls for the slider. Works 
+               even when autoslide is false. 
 
   Usage: &lt;a href="#" name="start" data-ref="slider-id" &gt;Start&lt;/a&gt;
-              &lt;a href="#" name="stop"  data-ref="slider-id" &gt;Stop&lt;/a&gt;
+         &lt;a href="#" name="stop"  data-ref="slider-id" &gt;Stop&lt;/a&gt;
 
-  Note that you only need one link, as it will dynamically update after being clicked. 
-  So if autoSlide is enabled, use "Stop" (see below), otherwise use "Start"
+  Note that you only need one link, as it will dynamically update 
+  after being clicked. So if autoSlide is enabled, use "Stop" 
+  (see below), otherwise use "Start".
 
 <strong>autoSlideStartText</strong>
   Default: 'Start'
-  Description: The text used as the start button. You must code it in manually too. 
+  Description: The text used as the start button. You must code 
+               it in manually too. 
 
   Usage: &lt;a href="#" name="start" data-ref="slider-id"&gt;Start&lt;/a&gt;
 
 <strong>autoSlideStopText</strong>
   Default: 'Stop'
-  Description: The text used as the start button. You must code it in manually too. 
+  Description: The text used as the start button. You must code 
+               it in manually too. 
 
   Usage: &lt;a href="#" name="stop" data-ref="slider-id"&gt;Stop&lt;/a&gt;
 
 <strong>autoSlideStopWhenClicked</strong>
   Default: true
-  Description: The slider will stop if true and the user clicks anywhere on the slider.
+  Description: The slider will stop if true and the user clicks 
+               anywhere on the slider.
     </code></pre>
 
     <pre class="api-clickable"><span class="h4">Continuous Sliding</span><code>
 <strong>continuous</strong>
-  Default: false
-  Description: The slider will continuously slide as if it were never-ending.
+  Default: true
+  Description: The slider will continuously slide as if it 
+               were never-ending.
     </code></pre>
 
     <pre class="api-clickable"><span class="h4">Dynamic Arrows</span><code>
@@ -442,8 +449,8 @@
 
 <strong>dynamicTabsPosition</strong>
   Default: "top"
-  Description: Tabs can either be placed on the "top" or "bottom" of the container.
-
+  Description: Tabs can either be placed on the "top" or 
+               "bottom" of the container.
     </code></pre>      
         </section>
 
