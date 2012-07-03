@@ -180,16 +180,21 @@
           <div>
             <h2 class="title">Hard-coded Positioning</h2>
             <p>If you prefer, you can hard-code the naviation and tabs to get the perfect design. You must be sure to set both <code>dynamicTabs</code> and <code>dynamicArrows</code> to false in the settings. Then, use the following as a guide when building your html:</p>
-           <pre><code>&lt;div class=&#34;coda-nav-left&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;prev&#34; title=&#34;Slide left&#34;&gt;&#171; left&lt;/a&gt;&lt;/div&gt;
-&lt;div class=&#34;coda-nav&#34;&gt;
-  &lt;ul&gt;
-    &lt;li class=&#34;tab1&#34;&gt;&lt;a href=&#34;#1&#34; title=&#34;Panel 1&#34;&gt;Panel 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&#34;tab2&#34;&gt;&lt;a href=&#34;#2&#34; title=&#34;Panel 2&#34;&gt;Panel 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&#34;tab3&#34;&gt;&lt;a href=&#34;#3&#34; title=&#34;Panel 3&#34;&gt;Panel 3&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&#34;tab4&#34;&gt;&lt;a href=&#34;#4&#34; title=&#34;Panel 4&#34;&gt;Panel 4&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&#34;coda-nav-right&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;next&#34; title=&#34;Slide right&#34;&gt;&#187; right&lt;/a&gt;&lt;/div&gt;</code></pre>
+           <pre><code>&lt;div id=&#34;slider-id-wrapper&#34;&gt; class=&#34;coda-slider-wrapper&#34;&gt;
+  &lt;div class=&#34;coda-nav-left&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;prev&#34; title=&#34;Slide left&#34;&gt;&#171; left&lt;/a&gt;&lt;/div&gt;
+    &lt;div class=&#34;coda-nav&#34;&gt;
+      &lt;ul&gt;
+        &lt;li class=&#34;tab1&#34;&gt;&lt;a href=&#34;#1&#34; title=&#34;Panel 1&#34;&gt;Panel 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&#34;tab2&#34;&gt;&lt;a href=&#34;#2&#34; title=&#34;Panel 2&#34;&gt;Panel 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&#34;tab3&#34;&gt;&lt;a href=&#34;#3&#34; title=&#34;Panel 3&#34;&gt;Panel 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&#34;tab4&#34;&gt;&lt;a href=&#34;#4&#34; title=&#34;Panel 4&#34;&gt;Panel 4&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;coda-nav-right&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;next&#34; title=&#34;Slide right&#34;&gt;&#187; right&lt;/a&gt;&lt;/div&gt;
+    &lt;class=&#34;coda-slider&#34; id=&#34;slider-id&#34;&gt;
+    /* Panels go here */
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 
           </div>
