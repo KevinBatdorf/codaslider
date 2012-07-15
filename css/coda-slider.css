@@ -165,6 +165,17 @@ css-tricks.com/musings-on-preprocessing/
     margin-top:50px;
   }
 
+.coda-slider-wrapper .coda-nav-left-arrow a {
+    /******************************************************
+    * 
+    * Graphical arrow styles 
+    *
+    *******************************************************/
+    width: 0;
+    height: 0;
+    border:none;
+  }
+
   .coda-slider-wrapper .coda-nav-left-arrow:hover {
     /************************************************
     * 
@@ -184,6 +195,18 @@ css-tricks.com/musings-on-preprocessing/
     height: 25px;
     background: url(../img/arrow.png) no-repeat top right; 
     margin-top:50px;
+  }
+.coda-slider-wrapper .coda-nav-right-arrow a {
+    /******************************************************
+    * 
+    * Graphical arrow styles 
+    *
+    *******************************************************/
+    width: 0;
+    height: 0;
+    background: none; 
+    margin-top:0;
+    border:none;
   }
 
   .coda-slider-wrapper .coda-nav-right-arrow:hover {
