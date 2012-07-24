@@ -64,6 +64,7 @@ if ( typeof Object.create !== 'function' ) {
 
 			// Disable the autoheight for the first panel if responsive
 			if (self.options.responsive) {
+
 				// TODO allow for better floating when responsive
 				if (self.options.dynamicArrows && !self.options.dynamicArrowsGraphical) {
 					self.options.dynamicTabsAlign    = "center";
@@ -196,6 +197,7 @@ if ( typeof Object.create !== 'function' ) {
 
 		makeResponsive: function(){
 			var self = this;
+			
 
 			// Adjust widths and add classes to make responsive
 			$(self.sliderId + '-wrapper').addClass('coda-responsive').css({
@@ -204,9 +206,13 @@ if ( typeof Object.create !== 'function' ) {
 			});
 			$(self.sliderId + ' .panel-container').css('width', 100 * self.panelCount + self.pSign);
 			$(self.sliderId + ' .panel').css('width', 100 / self.panelCount + self.pSign);
+
+			// For some reason, this must be set twice in order to work... TODO
 			$(self.sliderId).css('height', $($(self.panelContainer).children()[self.currentTab + ~~(self.options.continuous)]).css('height'));
+			$(self.sliderId).css('height', $($(self.panelContainer).children()[self.currentTab + ~~(self.options.continuous)]).css('height'));
+
 			$(self.sliderId + '-nav-select').css('width', '100%');
-			
+
 			if (self.options.dynamicArrows || self.options.dynamicArrowsGraphical) {
 				// Add padding to the top equal to the height of the arrows to make room for arrows, if enabled..
 				$(self.sliderId).css('padding-top', $(self.sliderId + '-wrapper .coda-nav-right').css('height') );
@@ -289,7 +295,12 @@ if ( typeof Object.create !== 'function' ) {
 						return false;
 					}
 				}
-				self.setCurrent( parseInt( $(this).attr('href').split('#')[1] -1, 10 ) );
+				// Stores the clicked data-ref and checks if it is a # or left or right
+				var direction = ( $(this).attr('href').split('#')[1]);
+				if ( typeof( direction  != 'number' ) ) {
+					self.setCurrent(direction);
+				}
+				else { self.setCurrent( parseInt( direction -1, 10 ) ); }
 				if (self.options.continuous) {self.clickable = false;}
 				if (self.options.autoSlideStopWhenClicked) { clearTimeout(self.autoslideTimeout); }
 				return false;
@@ -451,7 +462,7 @@ if ( typeof Object.create !== 'function' ) {
 		autoSlideStartText: 'Start',
 		autoSlideStopText: 'Stop',
 		autoSlideStopWhenClicked: true,
-		continuous: false,
+		continuous: true,
 		dynamicArrows: true,
 		dynamicArrowsGraphical: true,
 		dynamicArrowLeftText: "&#171; left",

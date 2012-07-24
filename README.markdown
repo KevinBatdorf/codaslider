@@ -100,6 +100,8 @@ Removed the preloader (for now)
 Slider updates height & width on browser resize  
 Disabled 'left' and 'right' positioning when using non-graphical arrows  
 
+Added #left and #right navigation for cross-linking.
+
 Version 3.0
 -------------
 
