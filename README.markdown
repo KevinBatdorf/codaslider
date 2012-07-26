@@ -2,6 +2,9 @@
 ============
 A jQuery HTML Content Slider Plugin
 
+[Standard Version](https://github.com/KevinBatdorf/codaslider/zipball/master)
+
+[Responsive Version](http://kevinbatdorf.com/blog/2012/07/26/a-responsive-content-slider-preview/) Coming Soon
 
 Features
 --------
@@ -10,12 +13,6 @@ Continuous Sliding
 Dynamic Tabs & Arrows  
 Cross Linking
 
-Beta Features ( Download [Here](https://github.com/KevinBatdorf/codaslider/zipball/experimental) )
--------------
-
-Responsive Design 
-
-Beta is not supported and not promised to work.
 
 How to Use
 -----------
@@ -64,8 +61,8 @@ Default Settings
       autoHeightEaseFunction: "easeInOutExpo",
                    autoSlide: false,
          autoSliderDirection: 'right',
-           autoSlideInterval: 7000,  
-           autoSlideControls: false,                 
+           autoSlideInterval: 7000,
+           autoSlideControls: false,
           autoSlideStartText: 'Start',
            autoSlideStopText: 'Stop',
     autoSlideStopWhenClicked: true,
@@ -79,7 +76,6 @@ Default Settings
          dynamicTabsPosition: "top",
             firstPanelToLoad: 1,
           panelTitleSelector: "h2.title",
-                  responsive: false,
            slideEaseDuration: 1500,
            slideEaseFunction: "easeInOutExpo"
 ```
@@ -88,10 +84,10 @@ Default Settings
 Version 3.0
 -------------
 
-Complete rebuild from the bottom up.
-Added continuous sliding
-Added graphical arrows
-Small fixes.
+Complete rebuild from the bottom up.  
+Added continuous sliding.  
+Added graphical arrows.  
+Small fixes.  
 
 
 Documentation
