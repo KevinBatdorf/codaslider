@@ -4,8 +4,7 @@ A jQuery HTML Content Slider Plugin
 
 [Standard Version](https://github.com/KevinBatdorf/codaslider/zipball/master)
 
-[Beta Version](https://github.com/KevinBatdorf/codaslider/zipball/experimental)
-
+[Responsive Version](http://kevinbatdorf.com/blog/2012/07/26/a-responsive-content-slider-preview/) Coming Soon
 
 Features
 --------
@@ -13,15 +12,6 @@ Features
 Continuous Sliding  
 Dynamic Tabs & Arrows  
 Cross Linking
-
-Beta Features
--------------
-
-Responsive Design  
-Fade Transition  
-See the version update below.
-
-See [Here](https://github.com/KevinBatdorf/codaslider/tree/experimental) for more info.
 
 
 How to Use
@@ -90,14 +80,6 @@ Default Settings
            slideEaseFunction: "easeInOutExpo"
 ```
 
-Version 3.1 (Beta)
-------------------
-
-Added Responsive widths.  
-Added the fade transition.  
-Removed the preloader (for now).  
-Slider updates height & width on browser resize.  
-Disabled 'left' and 'right' positioning when using non-graphical arrows.  
 
 Version 3.0
 -------------
