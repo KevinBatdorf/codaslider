@@ -54,7 +54,8 @@ if ( typeof Object.create !== 'function' ) {
 			if ( $(self.sliderId).parent().attr('class') != 'coda-slider-wrapper' ) {$(self.sliderId).wrap('<div id="' + ( self.$elem ).attr('id') + '-wrapper" class="coda-slider-wrapper"></div>'); }
 			
 			// Add the .panel class to the individual panels (backwards compatable)
-			self.panelClass = self.sliderId + ' .' + $(self.sliderId + " > div").addClass('panel').attr('class');
+			$(self.sliderId + " > div").addClass(self.options.panelClass);
+			self.panelClass = self.sliderId + ' .' + self.options.panelClass;
 			
 			// Wrap all panels in a div, and wrap inner content in a div (backwards compatible)
 			$(self.panelClass).wrapAll('<div class="panel-container"></div>');
@@ -363,6 +364,7 @@ if ( typeof Object.create !== 'function' ) {
 		dynamicTabsPosition: "top",
 		externalTriggerSelector: "a.xtrig", //shouldnt need any more
 		firstPanelToLoad: 1,
+		panelClass: "panel",
 		panelTitleSelector: "h2.title",
 		slideEaseDuration: 1500,
 		slideEaseFunction: "easeInOutExpo"
