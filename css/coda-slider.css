@@ -14,7 +14,6 @@ css-tricks.com/musings-on-preprocessing/
 ********************************************/
 
 .coda-slider-wrapper {
-  /* Eric Meyer's reset http://meyerweb.com/eric/tools/css/ */
   /*******************************************************
   *
   * Most common stuff you'll need to change 
@@ -28,34 +27,6 @@ css-tricks.com/musings-on-preprocessing/
   *******************************************************/
   padding: 20px 0; 
 }
-  
-  .coda-slider-wrapper div, .coda-slider-wrapper span, .coda-slider-wrapper applet, .coda-slider-wrapper object, .coda-slider-wrapper iframe, .coda-slider-wrapper h1, .coda-slider-wrapper h2, .coda-slider-wrapper h3, .coda-slider-wrapper h4, .coda-slider-wrapper h5, .coda-slider-wrapper h6, .coda-slider-wrapper p, .coda-slider-wrapper blockquote, .coda-slider-wrapper pre, .coda-slider-wrapper a, .coda-slider-wrapper abbr, .coda-slider-wrapper acronym, .coda-slider-wrapper address, .coda-slider-wrapper big, .coda-slider-wrapper cite, .coda-slider-wrapper code, .coda-slider-wrapper del, .coda-slider-wrapper dfn, .coda-slider-wrapper em, .coda-slider-wrapper font, .coda-slider-wrapper img, .coda-slider-wrapper ins, .coda-slider-wrapper kbd, .coda-slider-wrapper q, .coda-slider-wrapper s, .coda-slider-wrapper samp, .coda-slider-wrapper small, .coda-slider-wrapper strike, .coda-slider-wrapper strong, .coda-slider-wrapper sub, .coda-slider-wrapper sup, .coda-slider-wrapper tt, .coda-slider-wrapper var, .coda-slider-wrapper b, .coda-slider-wrapper u, .coda-slider-wrapper i, .coda-slider-wrapper center, .coda-slider-wrapper dl, .coda-slider-wrapper dt, .coda-slider-wrapper dd, .coda-slider-wrapper ol, .coda-slider-wrapper ul, .coda-slider-wrapper li, .coda-slider-wrapper fieldset, .coda-slider-wrapper form, .coda-slider-wrapper label, .coda-slider-wrapper legend, .coda-slider-wrapper table, .coda-slider-wrapper caption, .coda-slider-wrapper tbody, .coda-slider-wrapper tfoot, .coda-slider-wrapper thead, .coda-slider-wrapper tr, .coda-slider-wrapper th, .coda-slider-wrapper td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent; 
-  }
-  
-  .coda-slider-wrapper body {
-    line-height: 1; 
-  }
-  
-  .coda-slider-wrapper ol, .coda-slider-wrapper ul {
-    list-style: none; 
-  }
-  
-  .coda-slider-wrapper blockquote, .coda-slider-wrapper q {
-    quotes: none; 
-  }
-  
-  .coda-slider-wrapper blockquote:before, .coda-slider-wrapper blockquote:after, .coda-slider-wrapper q:before, .coda-slider-wrapper q:after {
-    content: '';
-    content: none; 
-  }
   
   .coda-slider-wrapper .coda-slider {
     /******************************************************

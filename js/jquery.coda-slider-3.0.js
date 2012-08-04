@@ -54,8 +54,8 @@ if ( typeof Object.create !== 'function' ) {
 			if ( $(self.sliderId).parent().attr('class') != 'coda-slider-wrapper' ) {$(self.sliderId).wrap('<div id="' + ( self.$elem ).attr('id') + '-wrapper" class="coda-slider-wrapper"></div>'); }
 			
 			// Add the .panel class to the individual panels (backwards compatable)
-			self.panelClass = self.sliderId + ' .' + $(self.sliderId + " > div").addClass('panel').attr('class');
-			
+			$(self.sliderId + " > div").addClass('panel');
+			self.panelClass = self.sliderId + ' .panel';
 			// Wrap all panels in a div, and wrap inner content in a div (backwards compatible)
 			$(self.panelClass).wrapAll('<div class="panel-container"></div>');
 			if ( $(self.panelClass).children().attr('class') != 'panel-wrapper' ) { $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>'); }
@@ -139,7 +139,7 @@ if ( typeof Object.create !== 'function' ) {
 			if (self.options.dynamicTabsAlign != 'center') {
 				$($(self.sliderId).parent()).find('.coda-nav ul').css(
 					'margin-' + self.options.dynamicTabsAlign,
-					// Finds the width of the aarows and the margin
+					// Finds the width of the arrows and the margin
 						$($(self.sliderId).parent()).find(
 							'.coda-nav-' +
 							self.options.dynamicTabsAlign +
