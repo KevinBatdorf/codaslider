@@ -22,7 +22,7 @@
 
     <title>Coda Slider 3: A jQuery HTML Content Slider</title>
     <script>
-      $().ready(function() {
+      $(function() {
         $('#main-slider').codaSlider({
           autoHeight: false,
           continuous:false,
@@ -113,9 +113,9 @@
             </div>
             <div>
               <h2 class="title">Installation</h2>
-              <p>Installation is simple and only requires the following to be placed within the <code>&lt;head&gt;&lt;/head&gt;</code>.</p>
+              <p>Installation is simple and only requires the following to be placed after the jQuery script.</p>
               <pre><code>&lt;script&gt;
-  $().ready(function() {
+  $(function() {
     $('#slider-id').codaSlider();
 });
 &lt;/script&gt;
@@ -252,7 +252,7 @@
     <h2 class="title">Continuous Sliding</h2>
     <p>Continuous sliding is now a default feature. However, if you wish to disable it, set the options as follows:</p>
     <pre><code>&lt;/script&gt;
-  $().ready(function() {
+  $(function() {
       $('#slider-id').codaSlider({
           continuous:false
       });
@@ -265,7 +265,7 @@
     <h2 class="title">Dynamic Tabs & Cross-linking</h2>
     <p>Tabs are dynamically created based and positioned based on the settings. The positioning can be achieved as follows. Check the settings section below for other options.</p>
     <pre><code>&lt;/script&gt;
-  $().ready(function() {
+  $(function() {
       $('#slider-id').codaSlider({
           dynamicTabsAlign: "left",
           dynamicArrows: false
@@ -305,7 +305,7 @@
   &lt;script src="./js/jquery.coda-slider-3.0.js"&gt;&lt;/script&gt;
 
   &lt;/script&gt;
-      $().ready(function() {
+      $(function() {
           $('#slider-id').codaSlider();
       });
   &lt;/script&gt;
