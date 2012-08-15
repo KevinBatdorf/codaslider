@@ -74,7 +74,13 @@ if ( typeof Object.create !== 'function' ) {
 			if (self.options.dynamicArrows) { self.addArrows(); }
 
 			// Create a container width to allow for a smooth float right.
-			self.totalSliderWidth = $(self.sliderId).outerWidth(true) + $($(self.sliderId).parent()).children('[class^=coda-nav-left]').outerWidth(true) + $($(self.sliderId).parent()).children('[class^=coda-nav-right]').outerWidth(true);
+			self.totalSliderWidth = $(self.sliderId).outerWidth(true);
+			if($($(self.sliderId).parent()).children('[class^=coda-nav-left]').css('position') != 'absolute') {
+				self.totalSliderWidth += $($(self.sliderId).parent()).children('[class^=coda-nav-left]').outerWidth(true);
+			}
+			if($($(self.sliderId).parent()).children('[class^=coda-nav-right]').css('position') != 'absolute') {
+				self.totalSliderWidth += $($(self.sliderId).parent()).children('[class^=coda-nav-right]').outerWidth(true);
+			}
 			$($(self.sliderId).parent()).css('width', self.totalSliderWidth);
 
 			// Align navigation tabs
