@@ -75,6 +75,7 @@ Default Settings
             dynamicTabsAlign: "center",
          dynamicTabsPosition: "top",
             firstPanelToLoad: 1,
+                 hashLinking: false,
           panelTitleSelector: "h2.title",
            slideEaseDuration: 1500,
            slideEaseFunction: "easeInOutExpo"
