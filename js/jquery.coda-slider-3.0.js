@@ -61,8 +61,14 @@ if ( typeof Object.create !== 'function' ) {
 			if ( $(self.panelClass).children().attr('class') != 'panel-wrapper' ) { $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>'); }
 			self.panelContainer = ($(self.panelClass).parent());
 
+			// Store hash Links
+			if (self.options.hashLinking) {
+				self.hash = (window.location.hash);
+				self.hashPanel = (self.hash).replace('#', '');
+			}
+
 			// Store current tab
-			self.currentTab = self.options.firstPanelToLoad - 1;
+			self.currentTab = self.options.hashLinking ? self.hashPanel - 1 : self.options.firstPanelToLoad - 1;
 
 			// Apply starting height to the container
 			if (self.options.autoHeight) { $(self.sliderId).css('height', $($(self.panelContainer).children()[self.currentTab]).height() + $(self.sliderId + '-wrapper .coda-nav-right').height());	}
@@ -261,6 +267,20 @@ if ( typeof Object.create !== 'function' ) {
 				$($(self.sliderId).parent()).find('.tab' + (self.setTab + 1) + ' a:first')
 					.addClass('current')
 					.parent().siblings().children().removeClass('current');
+
+				// Update Hash Tags
+				if (self.options.hashLinking) {
+					//console.log( ((self.$elem).find(self.options.hashTitleSelector)[self.currentTab] ));
+				if (self.options.continuous) {
+					if (self.currentTab === self.panelCount - 2) {
+						window.location.hash = 1;
+					} else if (self.currentTab === -1) {
+						window.location.hash = self.panelCount - 2;
+					} else {
+						window.location.hash = self.currentTab + 1;
+					}
+				} else { window.location.hash = self.currentTab + 1; }
+			}
 				
 				this.transition();
 			}
@@ -363,6 +383,7 @@ if ( typeof Object.create !== 'function' ) {
 		dynamicTabsPosition: "top",
 		externalTriggerSelector: "a.xtrig", //shouldnt need any more
 		firstPanelToLoad: 1,
+		hashLinking: false,
 		panelTitleSelector: "h2.title",
 		slideEaseDuration: 1500,
 		slideEaseFunction: "easeInOutExpo"
