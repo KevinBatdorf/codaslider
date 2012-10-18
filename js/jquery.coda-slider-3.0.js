@@ -1,3 +1,14 @@
+/***********************************************************************
+*
+*  Coda Slider 3
+*  Kevin Batdorf
+*
+*  http://kevinbatdorf.github.com/codaslider
+*
+*  GPL license & MIT license
+*
+************************************************************************/
+
 // Utility for creating objects in older browsers
 if ( typeof Object.create !== 'function' ) {
 	Object.create = function( obj ) {
@@ -68,7 +79,7 @@ if ( typeof Object.create !== 'function' ) {
 			}
 
 			// Store current tab
-			self.currentTab = self.options.hashLinking ? self.hashPanel - 1 : self.options.firstPanelToLoad - 1;
+			self.currentTab = (self.options.hashLinking && self.hash) ? self.hashPanel - 1 : self.options.firstPanelToLoad - 1;
 
 			// Apply starting height to the container
 			if (self.options.autoHeight) { $(self.sliderId).css('height', $($(self.panelContainer).children()[self.currentTab]).height() + $(self.sliderId + '-wrapper .coda-nav-right').height());	}
