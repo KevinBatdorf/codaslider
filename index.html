@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" />
 
 
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
@@ -74,9 +74,21 @@
   <body>
 
     <!-- HEADER -->
+    <div class="top-wrap">
+      <div class="top-bar wrap">
+        <ul>
+          <li><span class="big-char">H</span><a href="http://kevinbatdorf.com">kevinbatdorf.com</a></li>
+        </ul>
+        <ul id="project-listing">
+          <li><a href="http://liquidslider.kevinbatdorf.com/" title="Liquid Slider">Liquid Slider</a></li>
+          <li><a href="http://kevinbatdorf.github.com/codaslider/">Coda Slider</a></li>
+        </ul>
+        <span id="project-label">Projects↝</span>
+      </div>
+    </div>
     <div id="header_wrap" class="outer">
         <header class="inner top">
-          <a id="forkme_banner" href="https://github.com/KevinBatdorf/CodaSlider/tree/master">View on GitHub</a>
+          <!-- <a id="forkme_banner" href="https://github.com/KevinBatdorf/CodaSlider/tree/master">View on GitHub</a> -->
 
           <h1 id="project_title">Coda Slider,</h1>
           <h2 id="project_tagline">A Lightweight, jQuery Content Slider by <a href="https://twitter.com/#!/kevinbatdorf" target="_blank" class="user-mention">Kevin Batdorf</a></h2>          
@@ -93,9 +105,14 @@
               <h2>Coda Slider 3.0</h2> 
               <p>Welcome to the Coda Slider version 3, the first major release since 2009. Originally released way back in 2007 by Niall Doherty, the Coda Slider has been rebuilt from the ground up, packed with new features and improved functionality.</p>
 
-              <h3>Your Favorite Coda Slider Just Got Better!</h3>
+              <h3>Looking for a responsive content slider?</h3>
 
-              <p>The most noticeable feature is the continuous sliding, but you'll likely also stumble upon little fixes here and there that improve the overall user experience. Check below for a few demos and stay tuned for future updates.</p>
+              <div class="clearfix" style="margin:15px 0; width:77%;padding: 3px 10px;">
+                <a title="Liquid Slider" href="http://liquidslider.kevinbatdorf.com"><img style="width:100px;height:auto;float:left" src="http://liquidslider.kevinbatdorf.com/wp-content/themes/liquidslider/library/images/logo.png" alt="Liquid Slider" /></a>
+                <div style="float:right; width:385px;">
+                  <p style="margin:0 0 10px 0">A fully <span style="font-size:145%;">Responsive</span>, HTML5-ready content slider that adapts brilliantly on mobile devices by utilizing hardware accelerated CSS3 Transitions.. It's <a title="Liquid Slider" href="http://liquidslider.kevinbatdorf.com" onClick="recordOutboundLink(this, 'liquid', 'liquid');return false;">available now </a>. </p>
+                </div>
+              </div>
 
               <div>Have a request or find a bug? Let me know on <a target="_blank" href="https://github.com/KevinBatdorf/CodaSlider/issues" class="user-mention">Github</a>, or if you prefer email, <a target="_blank" href="mailto:kevin@kevinbatdorf.com" class="user-mention">contact me here</a>.</div>
             </div>
@@ -204,9 +221,9 @@
           <div>
             <h2 class="title">Cross-linking</h2>
             <p>Cross-linking is simple. The links below were created as follows:</p>
-            <pre><code>&lt;a href="#1" data-ref="dynamic-tabs"&gt;Tab 1&lt;/a&gt;</code></pre>
+            <pre><code>&lt;a href="#1" data-ref="slider-id"&gt;Tab 1&lt;/a&gt;</code></pre>
             <p> the #1 points to the 1st tab, and the rel attribute points to the slider ID. Note that it's possible to link to multible sliders by separating the ids with a space, for example:</p>
-            <pre><code>&lt;a href="#1" data-ref="dynamic-tabs another-slider"&gt;Tab 1&lt;/a&gt;</code></pre>
+            <pre><code>&lt;a href="#1" data-ref="slider-id another-slider"&gt;Tab 1&lt;/a&gt;</code></pre>
           </div>
         </div>
         <div id="dynamic-cross-links">
@@ -231,14 +248,6 @@
   <!-- MAIN CONTENT -->
   <div id="main_content_wrap" class="outer clearfix">
     <section id="main_content" class="inner">
-      <div class="clearfix" style="width:50%;border:1px dotted;padding: 3px 10px;">
-        <a title="Liquid Slider" href="http://liquidslider.kevinbatdorf.com"><img style="width:100px;height:auto;float:left" src="http://liquidslider.kevinbatdorf.com/wp-content/themes/liquidslider/library/images/logo.png" alt="Liquid Slider" /></a>
-        <div style="float:right; width:385px;">
-          <h3 style="margin:10px 0 0 0">Introducing the Liquid Slider</h3>
-          <p style="margin:0 0 10px 0">A fully <span style="font-size:145%;">Responsive</span>, HTML5-ready content slider that adapts brilliantly on mobile devices by utilizing hardware accelerated CSS3 Transitions.. It's <a title="Liquid Slider" href="http://liquidslider.kevinbatdorf.com" onClick="recordOutboundLink(this, 'liquid', 'liquid');return false;">available now </a>. </p>
-        </div>
-      </div>
-
       <section class="left">
         <section id="downloads">
           <a class="zip_download_link" href="https://github.com/KevinBatdorf/CodaSlider/zipball/master" onClick="recordOutboundLink(this, 'Zipball', 'tarbal');return false;">Download this project as a .zip file</a>

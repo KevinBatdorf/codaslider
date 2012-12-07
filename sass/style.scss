@@ -14,9 +14,74 @@ IMPORTING STYLES
 /* import slider */
 @import "coda-slider";
 
+@font-face {
+    font-family: 'ModernPictogramsNormal';
+    src: url('../fonts/heydings_icons-webfont.eot');
+    src: url('../fonts/heydings_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/heydings_icons-webfont.woff') format('woff'),
+         url('../fonts/heydings_icons-webfont.ttf') format('truetype'),
+         url('../fonts/heydings_icons-webfont.svg#heydings_iconsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*******************************************************************************
 Theme Styles
 *******************************************************************************/
+.top-wrap {
+  background: #444;
+  border-bottom: 1px solid darken(#444, 15%);
+  width: 100%;
+  height:34px;
+  position:static;
+  top:0;
+
+}
+.top-bar {
+  background: #0090FF;
+  padding: 0;
+  ul {
+    float: left;
+    color: #ddd;
+    margin: 5px 30px 0 0;
+  }
+  li{
+    margin-top:-2px;
+    float: left;
+    padding: 5px 10px;
+    font-family: 'Old Standard TT', serif;
+    list-style: none;
+    &:hover {
+      cursor:pointer;
+    }
+  }
+  a{
+    color:#0090FF;
+    text-decoration: none;
+    text-shadow: 1px 1px 5px black;
+  }
+  .big-char {
+    font-size:200%;
+    font:20px/13px "ModernPictogramsNormal";
+    text-shadow: 1px 1px 5px black;
+  }
+  #project-listing {
+    display:block;
+    float:right;
+  }
+  #project-label {
+    display:block;
+    color:lime;
+    float:right;
+    margin:8px 30px 0;
+    text-shadow: 1px 1px 5px black;
+  }
+}
+.wrap {
+  width:1030px;
+  margin:0 auto;
+}
 
 body {
   box-sizing: border-box;
