@@ -1,3 +1,14 @@
+/***********************************************************************
+*
+*  Coda Slider 3
+*  Kevin Batdorf
+*
+*  http://kevinbatdorf.github.com/codaslider
+*
+*  GPL license & MIT license
+*
+************************************************************************/
+
 // Utility for creating objects in older browsers
 if ( typeof Object.create !== 'function' ) {
 	Object.create = function( obj ) {
@@ -54,15 +65,21 @@ if ( typeof Object.create !== 'function' ) {
 			if ( $(self.sliderId).parent().attr('class') != 'coda-slider-wrapper' ) {$(self.sliderId).wrap('<div id="' + ( self.$elem ).attr('id') + '-wrapper" class="coda-slider-wrapper"></div>'); }
 			
 			// Add the .panel class to the individual panels (backwards compatable)
-			self.panelClass = self.sliderId + ' .' + $(self.sliderId + " > div").addClass('panel').attr('class');
-			
+			$(self.sliderId + " > div").addClass('panel');
+			self.panelClass = self.sliderId + ' .panel';
 			// Wrap all panels in a div, and wrap inner content in a div (backwards compatible)
 			$(self.panelClass).wrapAll('<div class="panel-container"></div>');
 			if ( $(self.panelClass).children().attr('class') != 'panel-wrapper' ) { $(self.panelClass).wrapInner('<div class="panel-wrapper"></div>'); }
 			self.panelContainer = ($(self.panelClass).parent());
 
+			// Store hash Links
+			if (self.options.hashLinking) {
+				self.hash = (window.location.hash);
+				self.hashPanel = (self.hash).replace('#', '');
+			}
+
 			// Store current tab
-			self.currentTab = self.options.firstPanelToLoad - 1;
+			self.currentTab = (self.options.hashLinking && self.hash) ? self.hashPanel - 1 : self.options.firstPanelToLoad - 1;
 
 			// Apply starting height to the container
 			if (self.options.autoHeight) { $(self.sliderId).css('height', $($(self.panelContainer).children()[self.currentTab]).height() + $(self.sliderId + '-wrapper .coda-nav-right').height());	}
@@ -139,7 +156,7 @@ if ( typeof Object.create !== 'function' ) {
 			if (self.options.dynamicTabsAlign != 'center') {
 				$($(self.sliderId).parent()).find('.coda-nav ul').css(
 					'margin-' + self.options.dynamicTabsAlign,
-					// Finds the width of the aarows and the margin
+					// Finds the width of the arrows and the margin
 						$($(self.sliderId).parent()).find(
 							'.coda-nav-' +
 							self.options.dynamicTabsAlign +
@@ -151,7 +168,6 @@ if ( typeof Object.create !== 'function' ) {
 			else {
 				// Get total width of the navigation tabs and center it
 				$($(self.sliderId).parent()).find('.coda-nav li a').each(function(){self.totalNavWidth += $(this).outerWidth(true); });
-				if ($.browser.msie) { self.totalNavWidth = self.totalNavWidth + (5);} // Simple IE fix
 				$($(self.sliderId).parent()).find('.coda-nav ul').css('width', self.totalNavWidth + 1);
 			}
 		},
@@ -211,7 +227,7 @@ if ( typeof Object.create !== 'function' ) {
 			// Click to stop autoslider
 			$($(self.sliderId).parent()).find('*').on('click', function(e){
 				// AutoSlide controls.
-				if (self.options.autoSlideControls && self.options.autoSlideStopWhenClicked) {
+				if (self.options.autoSlideControls && autoSlideStopWhenClicked) {
 					$('body').find('[data-ref*=' + (self.sliderId).split('#')[1] + '][name=stop]').html(self.options.autoSlideStartText);
 					clearTimeout(self.autoslideTimeout);
 				}
@@ -259,9 +275,23 @@ if ( typeof Object.create !== 'function' ) {
 				}
 				// Add and remove current class.
 				$($(self.sliderId).parent()).find('.tab' + (self.setTab + 1) + ' a:first')
-				.addClass('current')
-				.parent().siblings().children().removeClass('current');
-			
+					.addClass('current')
+					.parent().siblings().children().removeClass('current');
+
+				// Update Hash Tags
+				if (self.options.hashLinking) {
+					//console.log( ((self.$elem).find(self.options.hashTitleSelector)[self.currentTab] ));
+				if (self.options.continuous) {
+					if (self.currentTab === self.panelCount - 2) {
+						window.location.hash = 1;
+					} else if (self.currentTab === -1) {
+						window.location.hash = self.panelCount - 2;
+					} else {
+						window.location.hash = self.currentTab + 1;
+					}
+				} else { window.location.hash = self.currentTab + 1; }
+			}
+				
 				this.transition();
 			}
 		},
@@ -363,6 +393,7 @@ if ( typeof Object.create !== 'function' ) {
 		dynamicTabsPosition: "top",
 		externalTriggerSelector: "a.xtrig", //shouldnt need any more
 		firstPanelToLoad: 1,
+		hashLinking: false,
 		panelTitleSelector: "h2.title",
 		slideEaseDuration: 1500,
 		slideEaseFunction: "easeInOutExpo"

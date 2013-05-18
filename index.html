@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
@@ -10,497 +9,102 @@
     <link rel="image_src" href="./img/image.png" />
     <link rel="shortcut icon" href="img/favicon.ico" />
 
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Didact Gothic&subset=latin" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto Condensed&subset=latin" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/style.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-    
-    <!--script src="./js/jquery-1.7.2.min.js"></script>
-    <script src="./js/jquery-ui-1.8.20.custom.min.js"></script>-->
-    <script src="./js/jquery.coda-slider-3.0.js"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
     <title>Coda Slider 3: A jQuery HTML Content Slider</title>
-    <script>
-      $(function() {
-        $('#main-slider').codaSlider({
-          autoHeight: false,
-          continuous:false,
-          dynamicArrows: false,
-          dynamicTabs: false
-        });
-        $('#showcase').codaSlider();
-        $('#continuous').codaSlider({
-          autoSlide: true,
-          continuous: true,
-          dynamicArrowsGraphical: true,
-          dynamicTabsAlign: "right",
-          dynamicTabsPosition: "bottom",
-          panelTitleSelector: "div.title"
-        });
-        $('#dynamic-tabs').codaSlider({
-          autoSlideControls:true,
-          dynamicTabsAlign: "left",
-          dynamicTabsPosition: "top",
-          dynamicArrows: false
-        })
-        $('#information').codaSlider({
-          dynamicArrows: false,
-          dynamicTabs: false,
-          slideEaseFunction: "easeOutCirc"
-        });
-      });
-      </script>
-      <script type="text/javascript">
+
+    <!-- Javascripts (more in footer) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    
+    <script type="text/javascript">      
       /* Google Analytics Code */
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32725877-1']);
+      _gaq.push(['_trackPageview']);
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-32725877-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        
-        function recordOutboundLink(link, category, action) {
-          _gat._getTrackerByName()._trackEvent(category, action);
-          setTimeout('document.location = "' + link.href + '"', 100);
-        }
-
-      </script>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </head>
+
   <body>
-
-    <!-- HEADER -->
-    <div class="top-wrap">
-      <div class="top-bar wrap">
-        <ul>
-          <li><span class="big-char">H</span><a href="http://kevinbatdorf.com">kevinbatdorf.com</a></li>
-        </ul>
-        <ul id="project-listing">
-          <li><a href="http://liquidslider.kevinbatdorf.com/" title="Liquid Slider">Liquid Slider</a></li>
-          <li><a href="http://kevinbatdorf.github.com/codaslider/">Coda Slider</a></li>
-        </ul>
-        <span id="project-label">Projects↝</span>
-      </div>
-    </div>
-    <div id="header_wrap" class="outer">
-        <header class="inner top">
-          <!-- <a id="forkme_banner" href="https://github.com/KevinBatdorf/CodaSlider/tree/master">View on GitHub</a> -->
-
-          <h1 id="project_title">Coda Slider,</h1>
-          <h2 id="project_tagline">A Lightweight, jQuery Content Slider by <a href="https://twitter.com/#!/kevinbatdorf" target="_blank" class="user-mention">Kevin Batdorf</a></h2>          
-        </header>
-        <hr class="soften" />  
-    </div>
-    <!-- Main Slider -->
-    <div class="coda-slider"  id="main-slider">
-      <div>
-        <!-- Showcase Slider -->
-          <div class="coda-slider"  id="showcase">
-            <div>
-              <h2 class="title" style="display:none">Home</h2>
-              <h2>Coda Slider 3.0</h2> 
-              <p>Welcome to the Coda Slider version 3, the first major release since 2009. Originally released way back in 2007 by Niall Doherty, the Coda Slider has been rebuilt from the ground up, packed with new features and improved functionality.</p>
-
-              <h3>Looking for a responsive content slider?</h3>
-
-              <div class="clearfix" style="margin:15px 0; width:77%;padding: 3px 10px;">
-                <a title="Liquid Slider" href="http://liquidslider.kevinbatdorf.com"><img style="width:100px;height:auto;float:left" src="http://liquidslider.kevinbatdorf.com/wp-content/themes/liquidslider_v2/library/images/logo.png" alt="Liquid Slider" /></a>
-                <div style="float:right; width:385px;">
-                  <p style="margin:0 0 10px 0">A fully <span style="font-size:145%;">Responsive</span>, HTML5-ready content slider that adapts brilliantly on mobile devices by utilizing hardware accelerated CSS3 Transitions.. It's <a title="Liquid Slider" href="http://liquidslider.kevinbatdorf.com" onClick="recordOutboundLink(this, 'liquid', 'liquid');return false;">available now </a>. </p>
-                </div>
-              </div>
-
-              <div>Have a request or find a bug? Let me know on <a target="_blank" href="https://github.com/KevinBatdorf/CodaSlider/issues" class="user-mention">Github</a>, or if you prefer email, <a target="_blank" href="mailto:kevin@kevinbatdorf.com" class="user-mention">contact me here</a>.</div>
-            </div>
-            <div>
-              <h2 class="title">How does it work?</h2>
-              <p>It's simple! Each slide can be built and styled anyway you choose. The entire slider is created dynamically around your HTML and can be modified via the settings below. Additionally, version 3.0 is backwards compatible meaning that if you are already using version 2.0, you don't need to change a thing.</p>
-              <p>Creating a panel is as simple as this:</p>
-
-              <pre><code>&lt;div class=&#34;coda-slider&#34; id=&#34;slider-id&#34;&gt;
-  &lt;div&gt;
-    &lt;h2 class=&#34;title&#34;&gt;Panel1&lt;/h2&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-            </div>
-            <div>
-              <h2 class="title">Installation</h2>
-              <p>Installation is simple and only requires the following to be placed after the jQuery script.</p>
-              <pre><code>&lt;script&gt;
-  $(function() {
-    $('#slider-id').codaSlider();
-});
-&lt;/script&gt;
-                </code></pre>
-                <p>The <code>#slider-id</code> can be any unique id that you apply to the slider. You also need to be sure you import the jQuery, jQuery UI, and the Coda Slider script files as well as the Coda Slider stylesheet. See below for detailed instructions and advanced options.</p>
-              
-            </div>
-            <div>
-              <h2 class="title">Contact</h2>
-              <form>
-                <div style="margin-bottom:10px;">Here's an example of a contact form.</div>
-                <div class="myRow">
-                  <label class="labelCol" for="myName">Name:</label> 
-                  <input type="text" name="myName" id="myName" /> 
-                </div>
-                <div class="myRow">
-                  <label class="labelCol" for="myEmail">E-mail:</label>
-                  <input type="text" name="myEmail" id="myEmail" />
-                </div>
-                <div>
-                  <label class="labelCol" for="myComments">Comments:</label>
-                  <textarea name="myComments" id="myComments" rows="6" cols="60"></textarea>
-                </div>
-                <div class="tweet">This form won't submit, but you can always try me on twitter <a target="_blank" href="https://twitter.com/#!/kevinbatdorf" class="user-mention">@kevinbatdorf</a></div>
+  <main class="site-main container">
+    <article>
+      <!-- HEADER -->
+      <header class="site-header">
+        <div>
+          <h1>The Coda Slider has been modernized!</h1>
+        </div>
+      </header>
+      <section class="top">
+        <p class="desc">You heard that right. The Coda Slider has been a great, reliable plugin for thousands of websites since way back in 2007. However, the web has changed a lot since back then. Most drastically how we access it. With the variety of mobile devices of varying screen resolutions now commonly used by many, the way we previously approached web design is no longer good enough.</p>
+        <h2>Introducing the <span class="ls">Liquid Slider</span></h2>
+        <p class="ls-desc desc">A fully responsive, powerful content slider with swipe functionality. Built upon everything you love about the Coda Slider, the <span class="ls">Liquid Slider</span> takes advantage of modern CSS technology to provide a smooth experience no matter the device.</p>
+        <a class="download-btn" href="http://liquidslider.com/" "Liquid Slider homepage">
+          <button type="button" class="btn btn-primary btn-large">
+          DOWNLOAD IT HERE
+          </button>
+        </a>
+        <p class="desc">Oh, did I mention it's also free?</p>
+        <hr class="ls">
+        <h3>Still want the Coda Slider?</h3>
+        <p class="desc">If you still would like to use the Coda Slider, it will forever be available on <a href="https://github.com/KevinBatdorf/codaslider" title="Coda Slider on GitHub">GitHub</a>.</p>
+        <!-- Donate Button -->
+        <button type="button" class="donate-btn btn btn-primary btn-large">
+        <form name="paypal" id="paypal-form" style="padding:0;border:0;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="KYU9V5SAZA7YU">
+                <a href="#" onclick="document.getElementById('paypal-form').submit();">MAKE A DONATION</a>
               </form>
-            </div>
-          </div>
-        <!-- End Showcase Slider -->
-      </div>
-      <div>
-        <h2 class="title">Continuous Sliding</h2>
-        <!-- Continuous Slider -->
-        <div class="coda-slider"  id="continuous">
+        </button>
+        <div class="coda-slider"  id="slider-id">
           <div>
-            <h2>Angkor Wat</h2>
-            <div class="title">*</div>
-            <img src="./img/angkor_wat.png" alt="Angkor Wat" height="280" width="660" />
-            <p>Cambodia's Angkor Wat temple.</p> 
+            <h2 class="title">Slide 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Sed volutpat ante id mauris laoreet vestibulum. Nam blandit felis non neque cursus aliquet. Morbi vel enim dignissim massa dignissim commodo vitae quis tellus.</p>
           </div>
           <div>
-            <h2>Sihanoukville Beach</h2>
-            <div class="title">*</div>
-            <img src="./img/beach.png" alt="Angkor Wat" height="280" width="660" />
+            <h2 class="title">Slide 2</h2>
+            <p>Proin nec turpis eget dolor dictum lacinia. Nullam nunc magna, tincidunt eu porta in, faucibus sed magna. Suspendisse laoreet ornare ullamcorper. Nulla in tortor nibh. Pellentesque sed est vitae odio vestibulum aliquet in nec leo.</p>
+          </div>          
+          <div>
+            <h2 class="title">Slide 3</h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
           </div>
           <div>
-            <h2>Ayutthaya, Thailand</h2>
-            <div class="title">*</div>
-            <img src="./img/monk.png" alt="Angkor Wat" height="280" width="660" />
+            <h2 class="title">Slide 4</h2>
+            <p>Proin nec turpis eget dolor dictum lacinia. Nullam nunc magna, tincidunt eu porta in, faucibus sed magna. Suspendisse laoreet ornare ullamcorper. Nulla in tortor nibh. Pellentesque sed est vitae odio vestibulum aliquet in nec leo.</p>
           </div>
-        </div>
-        <!-- End Continuous Slider -->
-      </div>
-      <div>
-      <h2 class="title">Panel 3</h2>
-        <!-- Dynamic Tabs Slider -->
-        <div class="coda-slider"  id="dynamic-tabs">
-          <div>
-            <h2 class="title">Dynamic Positioning</h2>
-            <p>The tabs are dynamically positioned based on the settings. Options include "top", "bottom", "left", "right" and "center"</p>
-          </div>
-          <div>
-            <h2 class="title">Hard-coded Positioning</h2>
-            <p>If you prefer, you can hard-code the naviation and tabs to get the perfect design. You must be sure to set both <code>dynamicTabs</code> and <code>dynamicArrows</code> to false in the settings. Then, use the following as a guide when building your html:</p>
-           <pre><code>&lt;div id=&#34;slider-id-wrapper&#34; class=&#34;coda-slider-wrapper&#34;&gt;
-  &lt;div class=&#34;coda-nav-left&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;prev&#34; title=&#34;Slide left&#34;&gt;&#171; left&lt;/a&gt;&lt;/div&gt;
-  &lt;div class=&#34;coda-nav&#34;&gt;
-    &lt;ul&gt;
-      &lt;li class=&#34;tab1&#34;&gt;&lt;a href=&#34;#1&#34; title=&#34;Panel 1&#34;&gt;Panel 1&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&#34;tab2&#34;&gt;&lt;a href=&#34;#2&#34; title=&#34;Panel 2&#34;&gt;Panel 2&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&#34;tab3&#34;&gt;&lt;a href=&#34;#3&#34; title=&#34;Panel 3&#34;&gt;Panel 3&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&#34;tab4&#34;&gt;&lt;a href=&#34;#4&#34; title=&#34;Panel 4&#34;&gt;Panel 4&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;coda-nav-right&#34;&gt;&lt;a href=&#34;#&#34; data-dir=&#34;next&#34; title=&#34;Slide right&#34;&gt;&#187; right&lt;/a&gt;&lt;/div&gt;
-  &lt;class=&#34;coda-slider&#34; id=&#34;slider-id&#34;&gt;
-  /* Panels go here */
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-
-          </div>
-          <div>
-            <h2 class="title">CSS</h2>
-            <p>The entire panel is styled with CSS exactly how you would expect. You can make changes directly to the included CSS file, or you can create your own style sheet. If you are using SASS, I have also included a SCSS stylesheet for your convenience.</p>
-          </div>
-          <div>
-            <h2 class="title">Cross-linking</h2>
-            <p>Cross-linking is simple. The links below were created as follows:</p>
-            <pre><code>&lt;a href="#1" data-ref="slider-id"&gt;Tab 1&lt;/a&gt;</code></pre>
-            <p> the #1 points to the 1st tab, and the rel attribute points to the slider ID. Note that it's possible to link to multible sliders by separating the ids with a space, for example:</p>
-            <pre><code>&lt;a href="#1" data-ref="slider-id another-slider"&gt;Tab 1&lt;/a&gt;</code></pre>
-          </div>
-        </div>
-        <div id="dynamic-cross-links">
-        <p>Here are some cross-links (see <a href="#4" data-ref="dynamic-tabs">Tab 4</a> for more info):</p>
-          <p><a href="#" name="start" data-ref="dynamic-tabs">Start</a> Auto Play</p>
-          <a href="#1" data-ref="dynamic-tabs">Dynamic Positioning</a><br />
-          <a href="#2" data-ref="dynamic-tabs">Hard-coded Positioning</a><br />
-          <a href="#3" data-ref="dynamic-tabs">CSS</a><br />
-          <a href="#4" data-ref="dynamic-tabs">Cross-linking</a>
-        </div>
-
-        <!-- End Dynamic Tabs Slider -->
-    </div>
-    <div>
-      <h2 class="title">Panel 4</h2>
-      <p>Nulla ultricies ornare erat, a rutrum lacus varius nec. Pellentesque vehicula lobortis dignissim. Ut scelerisque auctor eros sed porttitor. Nullam pulvinar ultrices malesuada. Quisque lobortis bibendum nisi et condimentum. Mauris quis erat vel dui lobortis dignissim.</p>
-    </div>
-  </div>
-  <!-- End Main Slider -->
-
-            
-  <!-- MAIN CONTENT -->
-  <div id="main_content_wrap" class="outer clearfix">
-    <section id="main_content" class="inner">
-      <section class="left">
-        <section id="downloads">
-          <a class="zip_download_link" href="https://github.com/KevinBatdorf/CodaSlider/zipball/master" onClick="recordOutboundLink(this, 'Zipball', 'tarbal');return false;">Download this project as a .zip file</a>
-          <a class="tar_download_link" href="https://github.com/KevinBatdorf/CodaSlider/tarball/master" onClick="recordOutboundLink(this, 'Tarball', 'zipball');return false;">Download this project as a tar.gz file</a>
-          <div style="float:right;padding-right:5px;">Download Here</div>
-        </section>
-
-<!-- Information Slider -->
-<div class="coda-slider"  id="information">
-  <div>
-    <h2 class="title" style="display:none;">Panel 1</h2>
-    <p></p>
-  </div>
-  <div>
-    <h2 class="title">Continuous Sliding</h2>
-    <p>Continuous sliding is now a default feature. However, if you wish to disable it, set the options as follows:</p>
-    <pre><code>&lt;/script&gt;
-  $(function() {
-      $('#slider-id').codaSlider({
-          continuous:false
-      });
-});
-&lt;/script&gt;</code></pre>
-
-        <a href="#1" data-ref="main-slider information">... back</a>
-  </div>
-  <div>
-    <h2 class="title">Dynamic Tabs & Cross-linking</h2>
-    <p>Tabs are dynamically created based and positioned based on the settings. The positioning can be achieved as follows. Check the settings section below for other options.</p>
-    <pre><code>&lt;/script&gt;
-  $(function() {
-      $('#slider-id').codaSlider({
-          dynamicTabsAlign: "left",
-          dynamicArrows: false
-      });
-});
-&lt;/script&gt;</code></pre>
-
-        <a href="#1" data-ref="main-slider information">... back</a>
-  </div>
-</div>
-<!-- End Information Slider -->
-        <section id="features">
-          <h3>Features</h3>
-          <p>Click each feature below to learn more and see it in action.</p>
-
-          <a class="button" href="#2" data-ref="main-slider information">Continuous Sliding</a>
-          <a class="button" href="#3" data-ref="main-slider information">Dynamic Tabs & Cross-Linking</a>
-
-
-        </section>
-        <section id="how-to-install">
-          <h3>How to Install</h3>
-          <ul>
-            <li>Download and extract the files to your working directory.</li>
-            <li>Import the scripts and styles within your html code.</li>
-            <li>Structure your html accordingly. I'll use a basic two panel example below.</li>
-            <li>Initialize the code by calling it just before closing the <code>&lt;head&gt;&lt;/head&gt;</code>.</li>
-          </ul>
-          <pre class="install-instructions"><code style="cursor:pointer">Click to see a two panel example.
-
-&lt;html&gt;
-  &lt;head&gt;
-  &lt;link rel="stylesheet" type="text/css" media="screen" href="./css/coda-slider.css"&gt;
-
-  &lt;script src="./js/jquery-1.7.2.min.js"&gt;&lt;/script&gt;
-  &lt;script src="./js/jquery-ui-1.8.20.custom.min.js"&gt;&lt;/script&gt;
-  &lt;script src="./js/jquery.coda-slider-3.0.js"&gt;&lt;/script&gt;
-
-  &lt;script&gt;
-      $(function() {
-          $('#slider-id').codaSlider();
-      });
-  &lt;/script&gt;
-  &lt;/head&gt;
-
-  &lt;body&gt;
-      &lt;div class=&#34;coda-slider&#34; id=&#34;slider-id&#34;&gt;
-          &lt;div&gt;
-              &lt;h2 class=&#34;title&#34;&gt;Panel 1&lt;/h2&gt;
-              //Content goes here
-          &lt;/div&gt;
-          &lt;div&gt;
-              &lt;h2 class=&#34;title&#34;&gt;Panel 2&lt;/h2&gt;
-              //Content goes here
-          &lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-          </section>
-
-          <section id="api-settings" class='clearfix'>
-            <h3>Advanced Settings</h3>
-            <pre><code>$('#slider-id').codaSlider({
-  option:value
-});</code></pre>
-    <pre class="api-clickable"><span class="h4">Basic Settings</span><code>
-<strong>firstPanelToLoad</strong>
-  Default: 1
-  Description: Slides the panel to the specified number.
-
-<strong>hashLinking</strong>
-  Default: false
-  Description: Will update and collect info from URL hash tags.
-
-<strong>panelTitleSelector</strong>
-  Default: "h2.title"
-  Description: Selects the element to use as the tab display name. 
-
-<strong>slideEaseDuration</strong>
-  Default: 2000
-  Description: Sets the speed one panel moves to the next.
-
-<strong>slideEaseFunction</strong>
-  Default: "easeInOutExpo"
-  Description: Sets the easing effect for the slider. <a href="http://www.commadot.com/jquery/easing.php" title="jQuery easing effects" target="_blank">See all available</a>
-    </code></pre>
-    
-    <pre class="api-clickable"><span class="h4">Auto Height</span><code>
-<strong>autoHeight</strong>
-  Default: true
-  Description: Automically adjusts the height to match 
-               the content, if true.
-
-<strong>autoHeightEaseDuration</strong>
-  Default: 7000
-  Description: Sets the speed at which the height will adjust.
-
-<strong>autoHeightEaseFunction</strong>
-  Default: "easeInOutExpo"
-  Description: Sets the easing effect for the slider. <a href="http://jqueryui.com/demos/effect/easing.html" title="jQuery easing effects" target="_blank">See all available</a>
-    </code></pre>
-    
-    <pre class="api-clickable"><span class="h4">Auto Slide</span><code>
-<strong>autoSlide</strong>
-  Default: false
-  Description: If true, the slide will automatically slide.
-
-<strong>autoSliderDirection</strong>
-  Default: 'right'
-  Description: "left" or "right" sliding are supported.
-
-<strong>autoSlideInterval</strong>
-  Default: 4000
-  Description: The speed at which the slider auto transitions 
-               to the next panel.
-
-<strong>autoSlideControls</strong>
-  Default: false
-  Description: Enables auto controls for the slider. Works 
-               even when autoslide is false. 
-
-  Usage: &lt;a href="#" name="start" data-ref="slider-id" &gt;Start&lt;/a&gt;
-         &lt;a href="#" name="stop"  data-ref="slider-id" &gt;Stop&lt;/a&gt;
-
-  Note that you only need one link, as it will dynamically update 
-  after being clicked. So if autoSlide is enabled, use "Stop" 
-  (see below), otherwise use "Start".
-
-<strong>autoSlideStartText</strong>
-  Default: 'Start'
-  Description: The text used as the start button. You must code 
-               it in manually too. 
-
-  Usage: &lt;a href="#" name="start" data-ref="slider-id"&gt;Start&lt;/a&gt;
-
-<strong>autoSlideStopText</strong>
-  Default: 'Stop'
-  Description: The text used as the start button. You must code 
-               it in manually too. 
-
-  Usage: &lt;a href="#" name="stop" data-ref="slider-id"&gt;Stop&lt;/a&gt;
-
-<strong>autoSlideStopWhenClicked</strong>
-  Default: true
-  Description: The slider will stop if true and the user clicks 
-               anywhere on the slider.
-    </code></pre>
-
-    <pre class="api-clickable"><span class="h4">Continuous Sliding</span><code>
-<strong>continuous</strong>
-  Default: true
-  Description: The slider will continuously slide as if it 
-               were never-ending.
-    </code></pre>
-
-    <pre class="api-clickable"><span class="h4">Dynamic Arrows</span><code>
-<strong>dynamicArrows</strong>
-  Default: true
-  Description: If true, the slider will automatically create arrows.
-
-<strong>dynamicArrowsGraphical</strong>
-  Default: false
-  Description: If true, the slider will use graphical arrows.
-
-<strong>dynamicArrowLeftText</strong>
-  Default: "&#171; left"
-  Description: The text for the non-graphical left arrow.
-
-<strong>dynamicArrowRightText</strong>
-  Default: "right &#187;"
-  Description: The text for the non-graphical right arrow.
-    </code></pre>
-
-    <pre class="api-clickable" style="clear:right;"><span class="h4">Dynamic Tabs</span><code>
-<strong>dynamicTabs</strong>
-  Default: true
-  Description: If true, the slider will dynamically create navigation tabs.
-    
-<strong>dynamicTabsAlign</strong>
-  Default: "center"
-  Description: Tabs will be aligned either: "left", "center", or "right".
-
-<strong>dynamicTabsPosition</strong>
-  Default: "top"
-  Description: Tabs can either be placed on the "top" or 
-               "bottom" of the container.
-    </code></pre>      
-        </section>
-
-        <section id="contact">
-          <h3>Sites Built With The Coda Slider</h3>
-          <p>If you are using the Coda Slider in a creative or obvious way on your website, let me know and I will feature it here.</p>
-        </section>
+        </div><!-- Coda Slider Ends Here -->
+        <p class="desc">Basic documentation is available on the Coda Slider's <a href="https://github.com/KevinBatdorf/codaslider" title="Coda Slider on GitHub">GitHub</a> page.</p>
       </section>
-
-      <section class="right">
-        <h3>This is a donate button</h3>
-        <p>Coda Slider will always be free, but if you want to help out, consider a small donation.</p>
-        <form style="padding:0;border:0;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="KYU9V5SAZA7YU">
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
-        </form>
-
-      </section>
-
-    </section>
+    </article>    
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="profile">
+        <a class="circle-image-link" href="https://twitter.com/kevinbatdorf" title="Kevin Batdorf on Twitter">
+          <img src="https://api.twitter.com/1/users/profile_image?screen_name=kevinbatdorf&size=original">
+        </a>
+        <div class="info">
+          <h2>by Kevin Batdorf</h2>
+          <a href="https://twitter.com/kevinbatdorf" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true">Follow @kevinbatdorf</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <p>Hey there fellow developer. I wrote the <a href="https://github.com/KevinBatdorf/codaslider" title="Liquid Slider">Liquid Slider</a> based off of the <a href="https://github.com/KevinBatdorf/codaslider" title="Coda Slider download">Coda Slider</a> because I wanted something more responsive. I am also a <a href="http://paniki-studios.com/" title="Websites in Manila" rel="designer">freelance web developer</a> currently living in Manila, Philippines. You can find me on <a href="http://plus.google.com/118132051528769460950?rel=author">Google+</a>, <a href="http://www.twitter.com/#!/kevinbatdorf?rel=author">Twitter</a> or check out all my videos on <a href="http://www.youtube.com/user/kbat82?rel=author">Youtube</a>.</p>
+        </div>
+      </div>
     </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Codaslider maintained by <a target="_blank" href="https://github.com/KevinBatdorf">KevinBatdorf</a></p>
-      </footer>
-    </div>
-
-    
-
-      <script>
-        $('.install-instructions').on('click', function(){$(this).toggleClass('install-instructions')});
-        $('.api-clickable').on('click', function(){$(this).removeClass('api-clickable')});
-     </script>
-  </body>
+  </footer>
+  <!-- Load Javascripts -->
+  <script src="./js/jquery.easing.1.3.js"></script>
+  <script src="./js/jquery.coda-slider-3.0.js"></script>
+  <script>$('#slider-id').codaSlider();</script>
+</body>
 </html>

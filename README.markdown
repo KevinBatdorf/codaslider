@@ -1,31 +1,21 @@
-[Coda Slider](http://kevinbatdorf.github.com/codaslider)
+Coda Slider
 ============
-A jQuery HTML Content Slider Plugin
+A jQuery HTML Content Slider 
 
-[Standard Version](https://github.com/KevinBatdorf/codaslider/zipball/master)
+[Download Here](https://github.com/KevinBatdorf/codaslider/zipball/master)
 
-[Responsive Version](http://kevinbatdorf.com/blog/2012/07/26/a-responsive-content-slider-preview/) Coming Soon
-
-Features
---------
-
-Continuous Sliding  
-Dynamic Tabs & Arrows  
-Cross Linking
+How to upgrade to the [Liquid Slider](http://liquidslider.com/examples/upgrade-from-coda-slider)
 
 
 How to Use
 -----------
 
-See [here](http://kevinbatdorf.github.com/codaslider) for further details.
-
-Install the slider in the head after jQuery.
+Install the slider in the footer.
 
 ```javascript
-    <script src="./js/jquery.coda-slider-3.0.js"></script>  
-    $().ready(function(){
-        $('#slider-id').codaSlider();
-      });
+  <script src="./js/jquery.easing.1.3.js"></script>
+  <script src="./js/jquery.coda-slider-3.0.js"></script>
+  <script>$('#slider-id').codaSlider();</script>
 ```
 
 Where the slider-id matches the id of the content, as follows:
@@ -33,11 +23,11 @@ Where the slider-id matches the id of the content, as follows:
 ```html
       <div class="coda-slider"  id="slider-id">
           <div>
-            <h2 class="title">Panel 1</h2>
+            <h2 class="title">Slide 1</h2>
             <p>Content</p>
           </div>
           <div>
-            <h2 class="title">Panel 2</h2>
+            <h2 class="title">Slide 2</h2>
             <p>Content</p>
           </div>
       </div>
@@ -80,27 +70,31 @@ Default Settings
            slideEaseFunction: "easeInOutExpo"
 ```
 
-
-Version 3.0
+Cross Links
 -------------
 
-Complete rebuild from the bottom up.  
-Added continuous sliding.  
-Added graphical arrows.  
-Small fixes.  
+In order to control the slider from anywhere on the page, use the following code:
+(Note that this would control 2 sliders)  
 
+```html
+<a href="#1" data-ref="slider-id another-slider">Tab 1</a>
+```
 
-Documentation
+Auto Slide Controls
 -------------
 
-http://kevinbatdorf.github.com/codaslider
+Use one or the other depending on whether autoSlide is enabled. 
+
+```html
+<a href="#" name="start" data-ref="slider-id" >Start</a>
+<a href="#" name="stop"  data-ref="slider-id" >Stop</a>
+```
+
+Support
+-------------
 
 Submit bugs [here](https://github.com/kevinbatdorf/codaslider/issues)
 
-Maintained by [Kevin Batdorf](http://twitter.com/#!/kevinbatdorf)
+Maintained by [Kevin Batdorf](https://twitter.com/kevinbatdorf)
 
 Released under the GNU General Public License and the MIT License.
-
-### Very Special Thanks to:
-Niall Doherty, the original creater of the Coda Slider.
-
