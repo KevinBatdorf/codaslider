@@ -178,10 +178,12 @@ if ( typeof Object.create !== 'function' ) {
 			if(self.options.dynamicArrowsGraphical){
 				$(self.sliderId).before('<div class="coda-nav-left-arrow" data-dir="prev" title="Slide left"><a href="#"></a></div>');
 				$(self.sliderId).after('<div class="coda-nav-right-arrow" data-dir="next" title="Slide right"><a href="#"></a></div>');
+				if (!self.options.continuousArrows) { $(".coda-nav-left-arrow").css('visibility','hidden'); }
 			}
 			else{
 				$(self.sliderId).before('<div class="coda-nav-left" data-dir="prev" title="Slide left"><a href="#">' + self.options.dynamicArrowLeftText + '</a></div>');
 				$(self.sliderId).after('<div class="coda-nav-right" data-dir="next" title="Slide right"><a href="#">' + self.options.dynamicArrowRightText + '</a></div>');
+				if (!self.options.continuousArrows) { $(".coda-nav-left").css('visibility','hidden'); }
 			}
 		},
 
@@ -192,6 +194,7 @@ if ( typeof Object.create !== 'function' ) {
 				// These prevent clicking when in continuous mode, which would break it otherwise.
 				if (!self.clickable && self.options.continuous) {return false;}
 				self.setCurrent($(this).attr('class').split('-')[2]);
+				self.showArrows();
 				if (self.options.continuous) {self.clickable = false;}
 				return false;
 			});
@@ -199,6 +202,7 @@ if ( typeof Object.create !== 'function' ) {
 			$($(self.sliderId).parent()).find('[class^=coda-nav] li').on('click', function(e){
 				if (!self.clickable && self.options.continuous) {return false;}
 				self.setCurrent(parseInt( $(this).attr('class').split('tab')[1], 10) - 1 );
+				self.showArrows();
 				if (self.options.continuous) {self.clickable = false;}
 				return false;
 			});
@@ -246,6 +250,33 @@ if ( typeof Object.create !== 'function' ) {
 				// Stops from speedy clicking for continuous sliding.
 				if (self.options.continuous) {clearTimeout(self.continuousTimeout);}
 			});
+		},
+
+		// if the continuousArrows option is set to false, 
+		// this function will hide the left arrow on the first slide and hide the right arrow on the last slide
+		showArrows : function(){
+			var self = this;
+			
+			if(self.options.dynamicArrowsGraphical){
+				navLeft = ".coda-nav-left-arrow";
+				navRight = ".coda-nav-right-arrow";
+			} else {
+				navLeft = ".coda-nav-left";
+				navRight = ".coda-nav-right";
+			}
+			
+			if (!self.options.continuousArrows) {
+				if (self.currentTab === self.panelCount - 3){
+					$(navLeft).css('visibility','visible');
+					$(navRight).css('visibility','hidden');
+				}else if (self.currentTab === 0) {
+					$(navLeft).css('visibility','hidden');
+					$(navRight).css('visibility','visible');
+				}else {
+					$(navLeft).css('visibility','visible');
+					$(navRight).css('visibility','visible');
+				}
+			}
 		},
 
 		setCurrent: function( direction ){
@@ -344,7 +375,6 @@ if ( typeof Object.create !== 'function' ) {
 
 			if (self.options.continuous) {
 				self.continuousTimeout = setTimeout(function() {
-
 					// If on the last panel (the clone of panel 1), set the margin to the original.
 					if (self.currentTab === self.panelCount - 2){
 						$(self.panelContainer).css('margin-left', -self.slideWidth + self.pSign);
@@ -383,6 +413,7 @@ if ( typeof Object.create !== 'function' ) {
 		autoSlideStopText: 'Stop',
 		autoSlideStopWhenClicked: true,
 		continuous: true,
+		continuousArrows: true,
 		crossLinking: true, // No longer used
 		dynamicArrows: true,
 		dynamicArrowsGraphical: false,
