@@ -20,18 +20,16 @@
     <title>Coda Slider 3: A jQuery HTML Content Slider</title>
 
     <!-- Javascripts (more in footer) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>    
-    <script type="text/javascript">      
-      /* Google Analytics Code */
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-32725877-1']);
-      _gaq.push(['_trackPageview']);
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+      ga('create', 'UA-32725877-1', 'auto');
+      ga('send', 'pageview');
+
     </script>
   </head>
 
@@ -57,17 +55,15 @@
         <hr class="ls">
         <h3>Still want the Coda Slider?</h3>
         <p class="desc">If you still would like to use the Coda Slider, it will forever be available on <a onClick="_gaq.push(['_trackEvent', 'GitHub Link 1', 'GitHub Link', 'Clicked',, false]);" href="https://github.com/KevinBatdorf/codaslider" title="Coda Slider on GitHub">GitHub</a>.</p>
-        <div class="advert"> 
-          <script type="text/javascript"><!--
-            google_ad_client = "ca-pub-3827380040284749";
-            /* coda slider */
-            google_ad_slot = "7797092737";
-            google_ad_width = 728;
-            google_ad_height = 90;
-            //-->
-          </script>
-          <script type="text/javascript"
-            src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+        <div class="advert">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- coda slider -->
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:728px;height:90px"
+               data-ad-client="ca-pub-3827380040284749"
+               data-ad-slot="7797092737"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
       </div>
         <!-- Donate Button -->
@@ -86,7 +82,7 @@
           <div>
             <h2 class="title">Slide 2</h2>
             <p>Proin nec turpis eget dolor dictum lacinia. Nullam nunc magna, tincidunt eu porta in, faucibus sed magna. Suspendisse laoreet ornare ullamcorper. Nulla in tortor nibh. Pellentesque sed est vitae odio vestibulum aliquet in nec leo.</p>
-          </div>          
+          </div>
           <div>
             <h2 class="title">Slide 3</h2>
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra.</p>
@@ -98,7 +94,7 @@
         </div><!-- Coda Slider Ends Here -->
         <p class="desc">Basic documentation is available on the Coda Slider's <a onClick="_gaq.push(['_trackEvent', 'GitHub Link 2', 'GitHub Link', 'Clicked',, false]);" href="https://github.com/KevinBatdorf/codaslider" title="Coda Slider on GitHub">GitHub</a> page.</p>
       </section>
-    </article>    
+    </article>
   </main>
   <footer class="site-footer" role="contentinfo">
     <div class="container">
