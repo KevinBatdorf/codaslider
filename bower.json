@@ -11,6 +11,7 @@
     "obsolete",
     "defunct"
   ],
+  "ignore":[],
   "license": "MIT",
   "dependencies": {
     "jQuery": ">=1.6",

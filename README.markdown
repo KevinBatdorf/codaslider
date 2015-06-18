@@ -1,11 +1,11 @@
 Coda Slider
 ============
-A jQuery HTML Content Slider 
+A jQuery HTML Content Slider
 
 [Download Here](https://github.com/KevinBatdorf/codaslider/zipball/master)
 
-How to upgrade to the [Liquid Slider](http://liquidslider.com/examples/upgrade-from-coda-slider)
-
+You can install with bower
+`bower install jquery-codaslider`
 
 How to Use
 -----------
@@ -35,7 +35,7 @@ Where the slider-id matches the id of the content, as follows:
 
 Add as many panels as you like within the `<div class="coda-slider id="slider-id"></div>`
 
-One Panel:   
+One Panel:
 ```html
     <div>
       <h2 class="title">Panel</h2>
@@ -74,7 +74,7 @@ Cross Links
 -------------
 
 In order to control the slider from anywhere on the page, use the following code:
-(Note that this would control 2 sliders)  
+(Note that this would control 2 sliders)
 
 ```html
 <a href="#1" data-ref="slider-id another-slider">Tab 1</a>
@@ -83,7 +83,7 @@ In order to control the slider from anywhere on the page, use the following code
 Auto Slide Controls
 -------------
 
-Use one or the other depending on whether autoSlide is enabled. 
+Use one or the other depending on whether autoSlide is enabled.
 
 ```html
 <a href="#" name="start" data-ref="slider-id" >Start</a>
