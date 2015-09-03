@@ -14,7 +14,7 @@
   "ignore":[],
   "license": "MIT",
   "dependencies": {
-    "jQuery": ">=1.7",
+    "jquery": ">=1.7",
     "jquery.easing": "~1.3.1"
   }
 }
